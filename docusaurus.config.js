@@ -2,32 +2,35 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 /* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /* eslint-enable @typescript-eslint/no-var-requires */
 
-const GITHUB_LINK = 'https://github.com/agoralabs-sh/kibisis-website';
+// directories
+const SOURCE_DIR = path.resolve(__dirname, 'src');
+const STATIC_DIR = path.resolve(__dirname, 'static');
+const STYLES_DIR = path.resolve(SOURCE_DIR, 'styles');
+
+// links
+const GITHUB_LINK = 'https://github.com/agoralabs-sh/kibisis-web-extension';
+
+// application
+const TITLE = 'Kibisis';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Kibisis',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
-
-  url: 'https://kibis.is',
   baseUrl: '/',
-  organizationName: 'agoralabs-sh ',
-  projectName: 'kibisis-website',
-  trailingSlash: false,
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
+  deploymentBranch: 'gh-pages',
+  favicon: 'images/favicon.ico',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
+  onDuplicateRoutes: 'throw',
+  organizationName: 'agoralabs-sh ',
   presets: [
     [
       'classic',
@@ -40,35 +43,47 @@ const config = {
           showReadingTime: true,
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve(path.resolve(STYLES_DIR, 'global.css')),
+            require.resolve(path.resolve(STYLES_DIR, 'navbar.css')),
+          ],
         },
       }),
     ],
   ],
-
+  projectName: 'kibisis-website',
+  staticDirectories: [STATIC_DIR],
+  tagline: 'The friendly AVM utility wallet',
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'images/docusaurus-social-card.jpg', // TODO: change social card
       navbar: {
-        title: 'My Site',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Kibisis Site Logo',
+          src: 'images/logo.svg',
+          srcDark: 'images/logo-dark.svg',
         },
         items: [
+          // left
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorial',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            label: 'Blog',
+            position: 'left',
+            to: '/blog',
+          },
+
+          // right
           {
             href: GITHUB_LINK,
-            label: 'GitHub',
             position: 'right',
+            className: 'header__icon--github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
@@ -107,13 +122,16 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc.`,
+        copyright: `Developed with ❤️ by Agora Labs. Licensed under <a href="${GITHUB_LINK}/blob/main/LICENSE" target="_blank">GPL-2.0</a>.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+  title: TITLE,
+  trailingSlash: false,
+  url: 'https://kibis.is',
 };
 
 module.exports = config;
