@@ -19,8 +19,6 @@ jobs:
           cache: yarn
       - name: "📦 Install"
         run: yarn global add semantic-release @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/npm @semantic-release/github @semantic-release/git @semantic-release/changelog
-      - name: "🏗️ Build"
-        run: yarn build
       - name: "🔖 Release"
         env:
           # appears on the release commits
