@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  release:
+    types: [released] # triggered on main branch releases
+
+jobs:
+  deploy:
+    name: "Deploy"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "🛎 Checkout"
+        uses: actions/checkout@v3
+      - name: "🔧 Setup"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+      - name: "📦 Install"
+        run: yarn install --frozen-lockfile
+      - name: "🏗️ Build"
+        run: yarn build
+      - name: "🚀 Deploy"
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.WRITE_REPOS_TOKEN }}
+          publish_dir: ./build
+          user_name: agoralabs-bot
+          user_email: tech@agoralabs.sh
