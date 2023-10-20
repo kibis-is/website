@@ -23,7 +23,9 @@ jobs:
       - name: "🚀 Deploy"
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.WRITE_REPOS_TOKEN }}
+          force_orphan: true
+          personal_token: ${{ secrets.WRITE_REPOS_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./build
           user_name: agoralabs-bot
           user_email: tech@agoralabs.sh
