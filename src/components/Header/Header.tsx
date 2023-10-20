@@ -1,18 +1,29 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import clsx from 'clsx';
 import React, { FC } from 'react';
 
 // styles
 import styles from './index.module.scss';
+import clsx from 'clsx';
 
 const Header: FC = () => {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <header className={clsx('hero hero--primary', styles.hero__banner)}>
+    <header className={styles.header}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1
+          className={clsx(styles.header__text, styles['header__text--title'])}
+        >
+          {siteConfig.title}
+        </h1>
+        <p
+          className={clsx(
+            styles.header__text,
+            styles['header__text--subtitle']
+          )}
+        >
+          {siteConfig.tagline}
+        </p>
       </div>
     </header>
   );
