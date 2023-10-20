@@ -53,7 +53,7 @@ const config = {
   ],
   projectName: 'kibisis-website',
   staticDirectories: [STATIC_DIR],
-  tagline: 'The friendly AVM utility wallet',
+  tagline: 'The AVM utility wallet',
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

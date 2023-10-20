@@ -4,8 +4,31 @@
  * work well for content-centric websites.
  */
 
+@font-face {
+  font-family: 'AnonymousPro - Bold';
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url('/static/fonts/AnonymousPro/AnonymousPro-Bold.ttf') format('truetype'),
+  url('/static/fonts/AnonymousPro/AnonymousPro-Bold.woff2') format('woff2'),
+  url('/static/fonts/AnonymousPro/AnonymousPro-Bold.woff') format('woff'),
+  url('/static/fonts/AnonymousPro/AnonymousPro-Bold.svg#AnonymousPro-Bold') format('svg');
+  }
+
+@font-face {
+  font-family: 'AnonymousPro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/static/fonts/AnonymousPro/AnonymousPro-Regular.ttf') format('truetype'),
+  url('/static/fonts/AnonymousPro/AnonymousPro-Regular.woff2') format('woff2'),
+  url('/static/fonts/AnonymousPro/AnonymousPro-Regular.woff') format('woff'),
+  url('/static/fonts/AnonymousPro/AnonymousPro-Regular.svg#AnonymousPro-Regular') format('svg');
+}
+
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-color-content: #4A5568;
   --ifm-color-primary: #8D029B;
   --ifm-color-primary-dark: #7B0285;
   --ifm-color-primary-darker: #66026F;
@@ -14,11 +37,14 @@
   --ifm-color-primary-lighter: #E707FB;
   --ifm-color-primary-lightest: #EC39FC;
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'AnonymousPro';
+  --ifm-heading-font-family: 'AnonymousPro - Bold';
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
+  --ifm-color-content: rgba(255, 255, 255, 0.92);
   --ifm-color-primary: #E0B0FF;
   --ifm-color-primary-dark: #C875FF;
   --ifm-color-primary-darker: #AF37FF;

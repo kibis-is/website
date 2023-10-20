@@ -12,7 +12,7 @@ const IndexPage: FC = () => {
 
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={siteConfig.tagline}
       description="Description will go into a meta tag in <head />"
     >
       <Header />
