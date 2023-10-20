@@ -1,12 +1,19 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import clsx from 'clsx';
 import React, { FC } from 'react';
+
+// hooks
+import useTypewriterEffect from '../../hooks/useTypewriterEffect';
 
 // styles
 import styles from './index.module.scss';
-import clsx from 'clsx';
 
 const Header: FC = () => {
   const { siteConfig } = useDocusaurusContext();
+  // hooks
+  const tagline: string = useTypewriterEffect({
+    text: siteConfig.tagline,
+  });
 
   return (
     <header className={styles.header}>
@@ -22,7 +29,7 @@ const Header: FC = () => {
             styles['header__text--subtitle']
           )}
         >
-          {siteConfig.tagline}
+          {tagline}
         </p>
       </div>
     </header>
