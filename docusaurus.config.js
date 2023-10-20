@@ -31,6 +31,7 @@ const config = {
   onBrokenMarkdownLinks: 'throw',
   onDuplicateRoutes: 'throw',
   organizationName: 'agoralabs-sh ',
+  plugins: ['docusaurus-plugin-sass'],
   presets: [
     [
       'classic',
@@ -44,8 +45,8 @@ const config = {
         },
         theme: {
           customCss: [
-            require.resolve(path.resolve(STYLES_DIR, 'global.css')),
-            require.resolve(path.resolve(STYLES_DIR, 'navbar.css')),
+            require.resolve(path.resolve(STYLES_DIR, 'global.scss')),
+            require.resolve(path.resolve(STYLES_DIR, 'navbar.scss')),
           ],
         },
       }),

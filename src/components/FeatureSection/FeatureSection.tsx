@@ -9,7 +9,7 @@ import focusOnWhatMatterSvg from '@site/static/images/undraw_docusaurus_tree.svg
 import poweredByReact from '@site/static/images/undraw_docusaurus_react.svg';
 
 // styles
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 // types
 import { IFeatureItem } from './types';
@@ -49,7 +49,7 @@ const FeatureSection: FC = () => {
   ];
 
   return (
-    <section className={styles.features}>
+    <section className={styles.feature__section}>
       <div className="container">
         <div className="row">
           {features.map(({ description, SvgComponent, title }, index) => (
