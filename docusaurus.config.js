@@ -49,6 +49,12 @@ const config = {
             require.resolve(path.resolve(STYLES_DIR, 'navbar.scss')),
           ],
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
@@ -58,7 +64,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'images/docusaurus-social-card.jpg', // TODO: change social card
+      image: 'images/kibisis_social-card.png',
+      metadata: [
+        {
+          name: 'keywords',
+          content:
+            'algorand, algosdk, blockchain, browser, chrome, cryptocurrency, firefox, opera, wallet',
+        },
+      ],
       navbar: {
         logo: {
           alt: 'Kibisis Site Logo',
@@ -78,15 +91,8 @@ const config = {
             position: 'left',
             to: '/blog',
           },
-
-          // right
-          {
-            href: GITHUB_LINK,
-            position: 'right',
-            className: 'header__icon--github-link',
-            'aria-label': 'GitHub repository',
-          },
         ],
+        title: TITLE,
       },
       footer: {
         style: 'dark',
@@ -101,7 +107,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Social',
             items: [
               {
                 label: 'Twitter',
