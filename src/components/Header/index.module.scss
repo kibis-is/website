@@ -1,0 +1,24 @@
+.header {
+  align-items: center;
+  background-image: url('/static/images/hero_background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: calc(100vh - var(--ifm-navbar-height));
+  padding: 0 2rem;
+
+  &__text {
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 4px 4px 6px #1A202C;
+    width: 35%;
+
+    &--title {
+      font-size: 3rem;
+    }
+
+    &--subtitle {
+      font-size: 1.5rem;
+    }
+  }
+}

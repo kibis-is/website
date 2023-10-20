@@ -11,6 +11,11 @@
     "email": "kieran@agoralabs.sh",
     "url": "https://github.com/kieranroneill"
   },
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "algorand",
+    "blockchain"
+  ],
   "private": true,
   "engines": {
     "node": ">=16.14"
@@ -46,6 +51,7 @@
     "@commitlint/config-conventional": "^17.8.0",
     "@docusaurus/module-type-aliases": "^2.4.3",
     "@tsconfig/docusaurus": "^2.0.2",
+    "@types/node": "^20.8.7",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
     "eslint": "^8.51.0",
@@ -60,8 +66,10 @@
     "@docusaurus/preset-classic": "2.4.3",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.2.1",
+    "docusaurus-plugin-sass": "^0.2.5",
     "prism-react-renderer": "^1.3.5",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sass": "^1.69.4"
   }
 }
