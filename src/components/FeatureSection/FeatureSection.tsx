@@ -17,32 +17,32 @@ import { IFeatureItem } from './types';
 const FeatureSection: FC = () => {
   const features: IFeatureItem[] = [
     {
-      title: 'Easy to Use',
+      title: 'Not Just For DeFi',
       SvgComponent: easyToUseSvg,
       description: (
         <>
-          Docusaurus was designed from the ground up to be easily installed and
-          used to get your website up and running quickly.
+          Kibisis differs from most wallets by focusing on tokens as a utility,
+          not just DeFi.
         </>
       ),
     },
     {
-      title: 'Focus on What Matters',
+      title: 'AVM Compatible',
       SvgComponent: focusOnWhatMatterSvg,
       description: (
         <>
-          Docusaurus lets you focus on your docs, and we&apos;ll do the chores.
-          Go ahead and move your docs into the <code>docs</code> directory.
+          Kibisis not only works with Algorand, but endeavours to encompass all
+          AVM chains. With Algorand AND Voi compatibility.
         </>
       ),
     },
     {
-      title: 'Powered by React',
+      title: 'Browser Extension',
       SvgComponent: poweredByReact,
       description: (
         <>
-          Extend or customize your website layout by reusing React. Docusaurus
-          can be extended while reusing the same header and footer.
+          Leveraging the security and convenience of browser extensions, Kibisis
+          will always be there when you need it most.
         </>
       ),
     },

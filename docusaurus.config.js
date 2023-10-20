@@ -79,16 +79,16 @@ const config = {
           srcDark: 'images/logo-dark.svg',
         },
         items: [
-          // left
+          // right
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
-            position: 'left',
+            position: 'right',
             label: 'Tutorial',
           },
           {
             label: 'Blog',
-            position: 'left',
+            position: 'right',
             to: '/blog',
           },
         ],

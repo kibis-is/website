@@ -12,7 +12,7 @@ const Header: FC = () => {
   const { siteConfig } = useDocusaurusContext();
   // hooks
   const tagline: string = useTypewriterEffect({
-    text: siteConfig.tagline,
+    text: 'A wallet that focus on asset utility.',
   });
 
   return (
@@ -21,7 +21,7 @@ const Header: FC = () => {
         <h1
           className={clsx(styles.header__text, styles['header__text--title'])}
         >
-          {siteConfig.title}
+          {siteConfig.tagline}
         </h1>
         <p
           className={clsx(
