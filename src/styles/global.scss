@@ -1,9 +1,3 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
 @font-face {
   font-family: 'AnonymousPro - Bold';
   font-style: normal;
@@ -26,9 +20,9 @@
   url('/static/fonts/AnonymousPro/AnonymousPro-Regular.svg#AnonymousPro-Regular') format('svg');
 }
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-content: #4A5568;
+  --ifm-navbar-background-color: var(--kb-background-color);
+  --ifm-color-content: --kb-text-color;
   --ifm-color-primary: #8D029B;
   --ifm-color-primary-dark: #7B0285;
   --ifm-color-primary-darker: #66026F;
@@ -39,12 +33,13 @@
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'AnonymousPro';
   --ifm-heading-font-family: 'AnonymousPro - Bold';
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --kb-background-color: var(--ifm-color-white);
+  --kb-sub-text-color: rgba(255, 255, 255, 0.64);
+  --kb-text-color: #4A5568;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-content: rgba(255, 255, 255, 0.92);
+  --ifm--navbar-background-color: var(--kb-background-color);
   --ifm-color-primary: #E0B0FF;
   --ifm-color-primary-dark: #C875FF;
   --ifm-color-primary-darker: #AF37FF;
@@ -52,5 +47,7 @@
   --ifm-color-primary-light: #E5BDFF;
   --ifm-color-primary-lighter: #E9C8FF;
   --ifm-color-primary-lightest: #EED3FF;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --kb-background-color: #1A202C;
+  --kb-sub-text-color: #718096;
+  --kb-text-color: rgba(255, 255, 255, 0.92);
 }

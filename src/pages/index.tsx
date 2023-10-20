@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 // components
 import FeatureSection from '@site/src/components/FeatureSection';
 import Header from '@site/src/components/Header';
+import Main from '@site/src/components/Main';
 
 const IndexPage: FC = () => {
   const { siteConfig } = useDocusaurusContext();
@@ -17,9 +18,9 @@ const IndexPage: FC = () => {
     >
       <Header />
 
-      <main>
+      <Main>
         <FeatureSection />
-      </main>
+      </Main>
     </Layout>
   );
 };
