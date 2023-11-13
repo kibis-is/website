@@ -1,6 +1,63 @@
 @import "../../styles/functions";
 @import "../../styles/mixins";
 
+.container {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.image {
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  @include tablet-and-up {
+    max-height: 600px;
+  }
+}
+
+.image-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  color: text-color("light");
+
+  &--title {
+    font-size: 2rem;
+    font-weight: 600;
+    @include tablet-and-up {
+      font-size: 4.5rem;
+    }
+  }
+
+  &--subtitle {
+    font-size: 1rem;
+    @include tablet-and-up {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.text-container {
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  align-items: center;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--ifm-navbar-height));
+  padding: 0 2rem;
+  @include tablet-and-up {
+    background-image: url("/static/images/header_background.jpeg");
+    background-size: cover;
+    flex-direction: row;
+  }
+}
+
 .header {
   align-items: center;
   background-color: #f4f4f4;

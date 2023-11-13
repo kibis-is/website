@@ -7,40 +7,23 @@ import styles from './index.module.scss';
 
 const Header: FC = () => {
   return (
-    <header className={styles.header}>
+    <header className={styles.wrapper}>
       {/*title*/}
-      <div
-        className={clsx(
-          styles['header__container'],
-          styles['header__text-container']
-        )}
-      >
-        <h1
-          className={clsx(styles.header__text, styles['header__text--title'])}
-        >
+      <div className={clsx(styles.container, styles['text-container'])}>
+        <h1 className={clsx(styles.text, styles['text--title'])}>
           The AVM utility wallet
         </h1>
 
-        <p
-          className={clsx(
-            styles.header__text,
-            styles['header__text--subtitle']
-          )}
-        >
+        <p className={clsx(styles.text, styles['text--subtitle'])}>
           A wallet that is not just for DeFi, but also focuses on utility.
         </p>
       </div>
 
       {/*image*/}
-      <div
-        className={clsx(
-          styles['header__container'],
-          styles['header__image-container']
-        )}
-      >
+      <div className={clsx(styles.container, styles['image-container'])}>
         <ThemedImage
           alt="Wallet home screen"
-          className={styles['header__image']}
+          className={styles.image}
           sources={{
             dark: '/images/wallet_home_screen-dark.png',
             light: '/images/wallet_home_screen-light.png',
