@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 
 // components
+import SectionTitle from '../SectionTitle';
 import Feature from './Feature';
 
 // images
-import easyToUseSvg from '@site/static/images/undraw_docusaurus_mountain.svg';
-import focusOnWhatMatterSvg from '@site/static/images/undraw_docusaurus_tree.svg';
-import poweredByReact from '@site/static/images/undraw_docusaurus_react.svg';
+import feature001Svg from '@site/static/images/feature_001.svg';
+import feature002Svg from '@site/static/images/feature_002.svg';
+import feature003Svg from '@site/static/images/feature_003.svg';
 
 // styles
 import styles from './styles.module.scss';
@@ -18,17 +19,17 @@ const FeatureSection: FC = () => {
   const features: IFeatureItem[] = [
     {
       title: 'Not Just For DeFi',
-      SvgComponent: easyToUseSvg,
+      SvgComponent: feature001Svg,
       description: (
         <>
           Kibisis differs from most wallets by focusing on tokens as a utility,
-          not just DeFi.
+          not just for DeFi.
         </>
       ),
     },
     {
       title: 'AVM Compatible',
-      SvgComponent: focusOnWhatMatterSvg,
+      SvgComponent: feature002Svg,
       description: (
         <>
           Kibisis not only works with Algorand, but endeavours to encompass all
@@ -38,7 +39,7 @@ const FeatureSection: FC = () => {
     },
     {
       title: 'Browser Extension',
-      SvgComponent: poweredByReact,
+      SvgComponent: feature003Svg,
       description: (
         <>
           Leveraging the security and convenience of browser extensions, Kibisis
@@ -49,18 +50,18 @@ const FeatureSection: FC = () => {
   ];
 
   return (
-    <section className={styles.feature__section}>
-      <div className="container">
-        <div className="row">
-          {features.map(({ description, SvgComponent, title }, index) => (
-            <Feature
-              description={description}
-              key={`feature-item-${index}`}
-              SvgComponent={SvgComponent}
-              title={title}
-            />
-          ))}
-        </div>
+    <section className={styles.container}>
+      <SectionTitle id="#features">Features</SectionTitle>
+
+      <div className={styles['items-container']}>
+        {features.map(({ description, SvgComponent, title }, index) => (
+          <Feature
+            description={description}
+            key={`feature-item-${index}`}
+            SvgComponent={SvgComponent}
+            title={title}
+          />
+        ))}
       </div>
     </section>
   );

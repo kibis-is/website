@@ -21,8 +21,10 @@
 }
 
 :root {
+  // overrides
   --ifm-navbar-background-color: var(--kb-background-color);
-  --ifm-color-content: --kb-text-color;
+  --ifm-navbar-link-color: var(--kb-text-color);
+  --ifm-color-content: var(--kb-text-color);
   --ifm-color-primary: #8D029B;
   --ifm-color-primary-dark: #7B0285;
   --ifm-color-primary-darker: #66026F;
@@ -33,6 +35,8 @@
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'AnonymousPro';
   --ifm-heading-font-family: 'AnonymousPro - Bold';
+
+  // custom
   --kb-background-color: var(--ifm-color-white);
   --kb-sub-text-color: rgba(255, 255, 255, 0.64);
   --kb-text-color: #4A5568;

@@ -1,0 +1,43 @@
+@import "../../styles/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-shrink: 1;
+  justify-content: center;
+  @include tablet-and-up {
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 50px;
+  }
+}
+
+.line {
+  background-color: var(--ifm-color-primary);
+  height: 5px;
+  margin-right: 0.85rem;
+  width: 100%;
+  @include tablet-and-up {
+    height: 100%;
+    width: 5px;
+  }
+}
+
+.text {
+  color: var(--kb-text-color);
+  font-family: "AnonymousPro - Bold", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  width: 100%;
+  @include tablet-and-up {
+    justify-content: flex-start;
+  }
+}

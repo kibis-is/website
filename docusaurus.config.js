@@ -46,6 +46,7 @@ const config = {
         theme: {
           customCss: [
             require.resolve(path.resolve(STYLES_DIR, 'global.scss')),
+            require.resolve(path.resolve(STYLES_DIR, 'mixins.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'navbar.scss')),
           ],
         },
@@ -60,11 +61,11 @@ const config = {
   ],
   projectName: 'kibisis-website',
   staticDirectories: [STATIC_DIR],
-  tagline: 'The AVM utility wallet',
+  tagline: 'Not just for DeFi',
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'images/kibisis_social-card.png',
+      image: 'images/social_card.png',
       metadata: [
         {
           name: 'keywords',
@@ -81,10 +82,15 @@ const config = {
         items: [
           // right
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            label: 'Features',
             position: 'right',
-            label: 'Tutorial',
+            to: '#features',
+          },
+          {
+            label: 'Learn',
+            position: 'right',
+            sidebarId: 'tutorialSidebar',
+            type: 'docSidebar',
           },
           {
             label: 'Blog',
@@ -98,11 +104,15 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Learn More',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Learn',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Blog',
+                to: '/blog',
               },
             ],
           },
@@ -111,17 +121,13 @@ const config = {
             items: [
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/kibisis_wallet',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Get Involved',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: GITHUB_LINK,

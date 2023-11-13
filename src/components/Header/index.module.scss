@@ -1,24 +1,59 @@
+@import "../../styles/functions";
+@import "../../styles/mixins";
+
 .header {
   align-items: center;
-  background-image: url('/static/images/hero_background.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f4f4f4;
   display: flex;
+  flex-direction: column;
   height: calc(100vh - var(--ifm-navbar-height));
   padding: 0 2rem;
+  @include tablet-and-up {
+    background-image: url("/static/images/header_background.jpeg");
+    background-size: cover;
+    flex-direction: row;
+  }
+
+  &__container {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+  }
+
+  &__image {
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    @include tablet-and-up {
+      max-height: 600px;
+    }
+  }
+
+  &__image-container {
+    align-items: center;
+    justify-content: center;
+  }
 
   &__text {
-    color: rgba(255, 255, 255, 0.92);
-    text-shadow: 4px 4px 6px #1A202C;
-    width: 35%;
+    color: text-color("light");
 
     &--title {
-      font-size: 3rem;
+      font-size: 2rem;
+      font-weight: 600;
+      @include tablet-and-up {
+        font-size: 4.5rem;
+      }
     }
 
     &--subtitle {
-      font-size: 1.5rem;
+      font-size: 1rem;
+      @include tablet-and-up {
+        font-size: 1.5rem;
+      }
     }
+  }
+
+  &__text-container {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
   }
 }
