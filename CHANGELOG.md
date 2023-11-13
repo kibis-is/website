@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/agoralabs-sh/kibisis-website/compare/v1.1.0...v1.1.1) (2023-11-13)
+
+
+### Bug Fixes
+
+* invalid font family on header ([#5](https://github.com/agoralabs-sh/kibisis-website/issues/5)) ([6db3c1e](https://github.com/agoralabs-sh/kibisis-website/commit/6db3c1ea15db680f3068edd5d9c417b5d598c824))
+
 # [1.1.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.0.0...v1.1.0) (2023-11-13)
 
 
