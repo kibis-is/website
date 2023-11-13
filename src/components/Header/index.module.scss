@@ -37,6 +37,7 @@
 
     &--title {
       font-size: 2rem;
+      font-weight: 600;
       @include tablet-and-up {
         font-size: 4.5rem;
       }

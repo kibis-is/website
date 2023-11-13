@@ -1,4 +1,3 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ThemedImage from '@theme/ThemedImage';
 import clsx from 'clsx';
 import React, { FC } from 'react';
@@ -7,8 +6,6 @@ import React, { FC } from 'react';
 import styles from './index.module.scss';
 
 const Header: FC = () => {
-  const { siteConfig } = useDocusaurusContext();
-
   return (
     <header className={styles.header}>
       {/*title*/}
@@ -21,7 +18,7 @@ const Header: FC = () => {
         <h1
           className={clsx(styles.header__text, styles['header__text--title'])}
         >
-          {siteConfig.tagline}
+          The AVM utility wallet
         </h1>
 
         <p
@@ -30,7 +27,7 @@ const Header: FC = () => {
             styles['header__text--subtitle']
           )}
         >
-          A wallet that focuses on utility, not just DeFi.
+          A wallet that is not just for DeFi, but also focuses on utility.
         </p>
       </div>
 

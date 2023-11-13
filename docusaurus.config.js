@@ -61,7 +61,7 @@ const config = {
   ],
   projectName: 'kibisis-website',
   staticDirectories: [STATIC_DIR],
-  tagline: 'The AVM utility wallet',
+  tagline: 'Not just for DeFi',
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -82,10 +82,15 @@ const config = {
         items: [
           // right
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            label: 'Features',
             position: 'right',
+            to: '#features',
+          },
+          {
             label: 'Learn',
+            position: 'right',
+            sidebarId: 'tutorialSidebar',
+            type: 'docSidebar',
           },
           {
             label: 'Blog',

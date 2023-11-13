@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 
 // components
+import SectionTitle from '../SectionTitle';
 import Feature from './Feature';
 
 // images
@@ -49,15 +50,19 @@ const FeatureSection: FC = () => {
   ];
 
   return (
-    <section className={styles.feature__section}>
-      {features.map(({ description, SvgComponent, title }, index) => (
-        <Feature
-          description={description}
-          key={`feature-item-${index}`}
-          SvgComponent={SvgComponent}
-          title={title}
-        />
-      ))}
+    <section className={styles.container}>
+      <SectionTitle id="#features">Features</SectionTitle>
+
+      <div className={styles['items-container']}>
+        {features.map(({ description, SvgComponent, title }, index) => (
+          <Feature
+            description={description}
+            key={`feature-item-${index}`}
+            SvgComponent={SvgComponent}
+            title={title}
+          />
+        ))}
+      </div>
     </section>
   );
 };
