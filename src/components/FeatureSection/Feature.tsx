@@ -1,5 +1,9 @@
 import React, { FC } from 'react';
 
+// components
+import Heading from '@site/src/components/Heading';
+import Text from '@site/src/components/Text';
+
 // styles
 import styles from './styles.module.scss';
 
@@ -16,8 +20,8 @@ const Feature: FC<IProps> = ({ title, SvgComponent, description }: IProps) => {
       </div>
 
       <div className={styles['feature__text-container']}>
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <Heading level="h2">{title}</Heading>
+        <Text>{description}</Text>
       </div>
     </div>
   );

@@ -65,7 +65,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'images/kibisis_social-card.png',
+      image: 'images/social_card.png',
       metadata: [
         {
           name: 'keywords',
@@ -116,7 +116,7 @@ const config = {
             items: [
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/kibisis_wallet',
               },
             ],
           },

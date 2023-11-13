@@ -1,0 +1,10 @@
+/**
+ * Gets the text color for a specific theme.
+ */
+@function text-color($theme) {
+  @if $theme != "light" {
+    @return rgba(255, 255, 255, 0.92);
+  }
+
+  @return #4A5568;
+}
