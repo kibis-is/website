@@ -46,6 +46,7 @@ const config = {
         theme: {
           customCss: [
             require.resolve(path.resolve(STYLES_DIR, 'global.scss')),
+            require.resolve(path.resolve(STYLES_DIR, 'mixins.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'navbar.scss')),
           ],
         },
@@ -84,7 +85,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'right',
-            label: 'Tutorial',
+            label: 'Learn',
           },
           {
             label: 'Blog',
@@ -98,11 +99,15 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Learn More',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Learn',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Blog',
+                to: '/blog',
               },
             ],
           },
@@ -116,12 +121,8 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Get Involved',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: GITHUB_LINK,

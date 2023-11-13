@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React, { FC } from 'react';
 
 // styles
@@ -11,11 +10,12 @@ type IProps = IFeatureItem;
 
 const Feature: FC<IProps> = ({ title, SvgComponent, description }: IProps) => {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <SvgComponent className={styles.feature__svg} role="img" />
+    <div className={styles.feature__item}>
+      <div className={styles['feature__image-container']}>
+        <SvgComponent className={styles.feature__image} role="img" />
       </div>
-      <div className="text--center padding-horiz--md">
+
+      <div className={styles['feature__text-container']}>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
