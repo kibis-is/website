@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'AnonymousPro - Bold';
+  font-family: 'AnonymousPro';
   font-style: normal;
   font-weight: 600 700;
   font-display: swap;
@@ -34,9 +34,7 @@
   --ifm-color-primary-lightest: #EC39FC;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'AnonymousPro';
-  --ifm-heading-font-family: 'AnonymousPro - Bold';
-
-  // custom
+  --ifm-heading-font-family: 'AnonymousPro';
   --kb-background-color: var(--ifm-color-white);
   --kb-sub-text-color: rgba(255, 255, 255, 0.64);
   --kb-text-color: #4A5568;
