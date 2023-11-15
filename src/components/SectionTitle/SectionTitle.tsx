@@ -5,13 +5,12 @@ import styles from './index.module.scss';
 
 interface IProps {
   children: ReactElement | string;
-  id?: string;
 }
 
-const SectionTitle: FC<IProps> = ({ children, id }: IProps) => {
+const SectionTitle: FC<IProps> = ({ children }: IProps) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container} id={id}>
+      <div className={styles.container}>
         <div className={styles.line} />
         <h1 className={styles.text}>{children}</h1>
       </div>

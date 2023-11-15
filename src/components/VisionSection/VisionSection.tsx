@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 // components
 import SectionTitle from '../SectionTitle';
-import Feature from './Feature';
+import VisionItem from './VisionItem';
 
 // images
 import feature001Svg from '@site/static/images/feature_001.svg';
@@ -13,10 +13,10 @@ import feature003Svg from '@site/static/images/feature_003.svg';
 import styles from './styles.module.scss';
 
 // types
-import { IFeatureItem } from './types';
+import { IVisionItemProps } from './types';
 
-const FeatureSection: FC = () => {
-  const features: IFeatureItem[] = [
+const VisionSection: FC = () => {
+  const visionItems: IVisionItemProps[] = [
     {
       title: 'Not Just For DeFi',
       SvgComponent: feature001Svg,
@@ -50,14 +50,14 @@ const FeatureSection: FC = () => {
   ];
 
   return (
-    <section className={styles.container}>
-      <SectionTitle id="#features">Features</SectionTitle>
+    <section className={styles.container} id="#vision">
+      <SectionTitle>Vision</SectionTitle>
 
       <div className={styles['items-container']}>
-        {features.map(({ description, SvgComponent, title }, index) => (
-          <Feature
+        {visionItems.map(({ description, SvgComponent, title }, index) => (
+          <VisionItem
             description={description}
-            key={`feature-item-${index}`}
+            key={`vision-item-${index}`}
             SvgComponent={SvgComponent}
             title={title}
           />
@@ -67,4 +67,4 @@ const FeatureSection: FC = () => {
   );
 };
 
-export default FeatureSection;
+export default VisionSection;

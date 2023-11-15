@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import Layout from '@theme/Layout';
 
 // components
-import FeatureSection from '@site/src/components/FeatureSection';
+import VisionSection from '@site/src/components/VisionSection';
 import Header from '@site/src/components/Header';
 import Main from '@site/src/components/Main';
 
@@ -19,7 +19,7 @@ const IndexPage: FC = () => {
       <Header />
 
       <Main>
-        <FeatureSection />
+        <VisionSection />
       </Main>
     </Layout>
   );

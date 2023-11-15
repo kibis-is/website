@@ -8,11 +8,15 @@ import Text from '@site/src/components/Text';
 import styles from './styles.module.scss';
 
 // types
-import { IFeatureItem } from './types';
+import { IVisionItemProps } from './types';
 
-type IProps = IFeatureItem;
+type IProps = IVisionItemProps;
 
-const Feature: FC<IProps> = ({ title, SvgComponent, description }: IProps) => {
+const VisionItem: FC<IProps> = ({
+  title,
+  SvgComponent,
+  description,
+}: IProps) => {
   return (
     <div className={styles.item}>
       <div className={styles['image-container']}>
@@ -27,4 +31,4 @@ const Feature: FC<IProps> = ({ title, SvgComponent, description }: IProps) => {
   );
 };
 
-export default Feature;
+export default VisionItem;
