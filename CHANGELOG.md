@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.1.1...v1.2.0) (2023-11-15)
+
+
+### Features
+
+* add feature carousel ([#6](https://github.com/agoralabs-sh/kibisis-website/issues/6)) ([b7be772](https://github.com/agoralabs-sh/kibisis-website/commit/b7be7721b6830f3bbfc209ddff902d43925feb74))
+
 ## [1.1.1](https://github.com/agoralabs-sh/kibisis-website/compare/v1.1.0...v1.1.1) (2023-11-13)
 
 
