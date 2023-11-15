@@ -19,16 +19,16 @@ const FeaturesSection: FC<IProps> = ({ variant }: IProps) => {
     {
       alt: 'Home screen',
       description:
-        'View all your assets in one place. Kibisis focuses on assets for utility.',
+        'Kibisis treats assets more as a utility rather than just a fungible currency.',
       imageSources: {
         dark: '/images/home_screen-dark.png',
         light: '/images/home_screen-light.png',
       },
-      title: 'View Your Assets',
+      title: 'Assets Are Not Just Fungible Currency',
     },
     {
       alt: 'Asset transfer screen',
-      description: 'Seamlessly transfer any asset.',
+      description: 'Seamlessly transfer any asset to another address.',
       imageSources: {
         dark: '/images/asset_transfer_screen-dark.png',
         light: '/images/asset_transfer_screen-light.png',
@@ -37,7 +37,8 @@ const FeaturesSection: FC<IProps> = ({ variant }: IProps) => {
     },
     {
       alt: 'Atomic transaction screen',
-      description: 'Sign multiple transactions.',
+      description:
+        'With AVM chains allowing up to 16 transactions to be grouped as an atomic transfer, Kibisis can sign all or multiple transactions within the atomic group.',
       imageSources: {
         dark: '/images/atomic_transaction_screen-dark.png',
         light: '/images/atomic_transaction_screen-light.png',
@@ -46,7 +47,7 @@ const FeaturesSection: FC<IProps> = ({ variant }: IProps) => {
     },
     {
       alt: 'Sign JWT screen',
-      description: 'Support for JWT allows for a more intuitive interface.',
+      description: `Kibisis allows you to sign arbitrary data, using your account's private key, but Kibisis can also recognise standardized formats, such as JWTs, which is presented into a more intuitive interface.`,
       imageSources: {
         dark: '/images/jwt_support_screen-dark.png',
         light: '/images/jwt_support_screen-light.png',
