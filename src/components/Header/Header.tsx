@@ -1,6 +1,8 @@
-import ThemedImage from '@theme/ThemedImage';
 import clsx from 'clsx';
 import React, { FC } from 'react';
+
+// components
+import ThemedImage from '@theme/ThemedImage';
 
 // styles
 import styles from './index.module.scss';
@@ -25,8 +27,8 @@ const Header: FC = () => {
           alt="Wallet home screen"
           className={styles.image}
           sources={{
-            dark: '/images/wallet_home_screen-dark.png',
-            light: '/images/wallet_home_screen-light.png',
+            dark: '/images/home_screen-dark.png',
+            light: '/images/home_screen-light.png',
           }}
         />
       </div>

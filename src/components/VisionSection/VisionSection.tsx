@@ -19,7 +19,7 @@ import { IVisionItemProps } from './types';
 type IProps = IDefaultSectionProps;
 
 const VisionSection: FC<IProps> = ({ variant }: IProps) => {
-  const visionItems: IVisionItemProps[] = [
+  const items: IVisionItemProps[] = [
     {
       title: 'Not Just For DeFi',
       SvgComponent: feature001Svg,
@@ -55,7 +55,7 @@ const VisionSection: FC<IProps> = ({ variant }: IProps) => {
   return (
     <Section id="vision" title="Vision" variant={variant}>
       <div className={styles['items-container']}>
-        {visionItems.map(({ description, SvgComponent, title }, index) => (
+        {items.map(({ description, SvgComponent, title }, index) => (
           <VisionItem
             description={description}
             key={`vision-item-${index}`}

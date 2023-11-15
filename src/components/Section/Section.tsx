@@ -27,7 +27,7 @@ const Section: FC<IProps> = ({
   }
 
   return (
-    <section className={containerClass} id={`#${id}`}>
+    <section className={containerClass} id={id}>
       <SectionTitle>{title}</SectionTitle>
 
       {children}
