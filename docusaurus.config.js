@@ -8,6 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 // directories
+const NODE_MODULES_DIR = path.resolve(__dirname, 'node_modules');
 const SOURCE_DIR = path.resolve(__dirname, 'src');
 const STATIC_DIR = path.resolve(__dirname, 'static');
 const STYLES_DIR = path.resolve(SOURCE_DIR, 'styles');
@@ -48,6 +49,16 @@ const config = {
             require.resolve(path.resolve(STYLES_DIR, 'global.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'mixins.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'navbar.scss')),
+            // vendor
+            require.resolve(
+              path.resolve(
+                NODE_MODULES_DIR,
+                'react-responsive-carousel',
+                'lib',
+                'styles',
+                'carousel.min.css'
+              )
+            ),
           ],
         },
         sitemap: {
@@ -82,20 +93,29 @@ const config = {
         items: [
           // right
           {
-            label: 'Features',
+            items: [
+              {
+                label: 'Vision',
+                to: '#vision',
+              },
+              {
+                label: 'Features',
+                to: '#features',
+              },
+            ],
+            label: 'Overview',
             position: 'right',
-            to: '#features',
-          },
-          {
-            label: 'Learn',
-            position: 'right',
-            sidebarId: 'tutorialSidebar',
-            type: 'docSidebar',
           },
           {
             label: 'Blog',
             position: 'right',
             to: '/blog',
+          },
+          {
+            label: 'Docs',
+            position: 'right',
+            sidebarId: 'tutorialSidebar',
+            type: 'docSidebar',
           },
         ],
         title: TITLE,
