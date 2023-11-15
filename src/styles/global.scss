@@ -22,8 +22,6 @@
 
 :root {
   // overrides
-  --ifm-navbar-background-color: var(--kb-background-color);
-  --ifm-navbar-link-color: var(--kb-text-color);
   --ifm-color-content: var(--kb-text-color);
   --ifm-color-primary: #8D029B;
   --ifm-color-primary-dark: #7B0285;
@@ -35,13 +33,18 @@
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'AnonymousPro';
   --ifm-heading-font-family: 'AnonymousPro';
-  --kb-background-color: var(--ifm-color-white);
+  --ifm-navbar-background-color: var(--kb-background-primary-color);
+  --ifm-navbar-link-color: var(--kb-text-color);
+
+  // custom
+  --kb-background-primary-color: #fff;
+  --kb-background-accent-color: #f4f4f4;
   --kb-sub-text-color: rgba(255, 255, 255, 0.64);
   --kb-text-color: #4A5568;
 }
 
 [data-theme='dark'] {
-  --ifm--navbar-background-color: var(--kb-background-color);
+  // overrides
   --ifm-color-primary: #E0B0FF;
   --ifm-color-primary-dark: #C875FF;
   --ifm-color-primary-darker: #AF37FF;
@@ -49,7 +52,11 @@
   --ifm-color-primary-light: #E5BDFF;
   --ifm-color-primary-lighter: #E9C8FF;
   --ifm-color-primary-lightest: #EED3FF;
-  --kb-background-color: #1A202C;
+  --ifm--navbar-background-color: var(--kb-background-primary-color);
+
+  // custom
+  --kb-background-primary-color: #1A202C;
+  --kb-background-accent-color: #303846;
   --kb-sub-text-color: #718096;
   --kb-text-color: rgba(255, 255, 255, 0.92);
 }

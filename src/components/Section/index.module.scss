@@ -1,0 +1,17 @@
+@import "../../styles/mixins";
+
+.container {
+  background-color: var(--kb-background-primary-color);
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 1rem;
+  width: 100%;
+
+  @include tablet-and-up {
+    padding: 5rem;
+  }
+
+  &--accent {
+    background-color: var(--kb-background-accent-color);
+  }
+}

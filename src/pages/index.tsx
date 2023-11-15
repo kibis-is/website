@@ -20,9 +20,9 @@ const IndexPage: FC = () => {
       <Header />
 
       <Main>
-        <VisionSection />
+        <VisionSection variant="accent" />
 
-        <FeaturesSection />
+        <FeaturesSection variant="primary" />
       </Main>
     </Layout>
   );

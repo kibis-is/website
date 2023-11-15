@@ -13,9 +13,12 @@ import feature003Svg from '@site/static/images/feature_003.svg';
 import styles from './styles.module.scss';
 
 // types
+import { IDefaultSectionProps } from '@site/src/types';
 import { IVisionItemProps } from './types';
 
-const VisionSection: FC = () => {
+type IProps = IDefaultSectionProps;
+
+const VisionSection: FC<IProps> = ({ variant }: IProps) => {
   const visionItems: IVisionItemProps[] = [
     {
       title: 'Not Just For DeFi',
@@ -50,7 +53,7 @@ const VisionSection: FC = () => {
   ];
 
   return (
-    <Section id="vision" title="Vision">
+    <Section id="vision" title="Vision" variant={variant}>
       <div className={styles['items-container']}>
         {visionItems.map(({ description, SvgComponent, title }, index) => (
           <VisionItem
