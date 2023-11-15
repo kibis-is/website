@@ -12,7 +12,7 @@ import { IVisionItemProps } from './types';
 
 type IProps = IVisionItemProps;
 
-const VisionItem: FC<IProps> = ({
+const ConceptItem: FC<IProps> = ({
   title,
   SvgComponent,
   description,
@@ -31,4 +31,4 @@ const VisionItem: FC<IProps> = ({
   );
 };
 
-export default VisionItem;
+export default ConceptItem;

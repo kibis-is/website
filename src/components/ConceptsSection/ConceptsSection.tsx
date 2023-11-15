@@ -2,12 +2,12 @@ import React, { FC } from 'react';
 
 // components
 import Section from '@site/src/components/Section';
-import VisionItem from './VisionItem';
+import ConceptItem from './ConceptItem';
 
 // images
-import feature001Svg from '@site/static/images/feature_001.svg';
-import feature002Svg from '@site/static/images/feature_002.svg';
-import feature003Svg from '@site/static/images/feature_003.svg';
+import concept001Svg from '@site/static/images/concept_001.svg';
+import concept002Svg from '@site/static/images/concept_002.svg';
+import concept003Svg from '@site/static/images/concept_003.svg';
 
 // styles
 import styles from './styles.module.scss';
@@ -18,11 +18,11 @@ import { IVisionItemProps } from './types';
 
 type IProps = IDefaultSectionProps;
 
-const VisionSection: FC<IProps> = ({ variant }: IProps) => {
+const ConceptsSection: FC<IProps> = ({ variant }: IProps) => {
   const items: IVisionItemProps[] = [
     {
       title: 'Not Just For DeFi',
-      SvgComponent: feature001Svg,
+      SvgComponent: concept001Svg,
       description: (
         <>
           Kibisis differs from most wallets by focusing on tokens as a utility,
@@ -32,7 +32,7 @@ const VisionSection: FC<IProps> = ({ variant }: IProps) => {
     },
     {
       title: 'AVM Compatible',
-      SvgComponent: feature002Svg,
+      SvgComponent: concept002Svg,
       description: (
         <>
           Kibisis not only works with Algorand, but endeavours to encompass all
@@ -42,7 +42,7 @@ const VisionSection: FC<IProps> = ({ variant }: IProps) => {
     },
     {
       title: 'Browser Extension',
-      SvgComponent: feature003Svg,
+      SvgComponent: concept003Svg,
       description: (
         <>
           Leveraging the security and convenience of browser extensions, Kibisis
@@ -53,10 +53,10 @@ const VisionSection: FC<IProps> = ({ variant }: IProps) => {
   ];
 
   return (
-    <Section id="vision" title="Vision" variant={variant}>
+    <Section id="concepts" title="Concepts" variant={variant}>
       <div className={styles['items-container']}>
         {items.map(({ description, SvgComponent, title }, index) => (
-          <VisionItem
+          <ConceptItem
             description={description}
             key={`vision-item-${index}`}
             SvgComponent={SvgComponent}
@@ -68,4 +68,4 @@ const VisionSection: FC<IProps> = ({ variant }: IProps) => {
   );
 };
 
-export default VisionSection;
+export default ConceptsSection;

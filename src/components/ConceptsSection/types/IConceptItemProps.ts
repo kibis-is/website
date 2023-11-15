@@ -1,9 +1,9 @@
 import { ComponentProps, ComponentType, ReactElement } from 'react';
 
-interface IVisionItemProps {
+interface IConceptItemProps {
   SvgComponent: ComponentType<ComponentProps<'svg'>>;
   description: ReactElement;
   title: string;
 }
 
-export default IVisionItemProps;
+export default IConceptItemProps;

@@ -95,12 +95,12 @@ const config = {
           {
             items: [
               {
-                label: 'Vision',
-                to: '#vision',
-              },
-              {
                 label: 'Features',
                 to: '#features',
+              },
+              {
+                label: 'Concepts',
+                to: '#concepts',
               },
             ],
             label: 'Overview',
@@ -127,7 +127,7 @@ const config = {
             title: 'Learn More',
             items: [
               {
-                label: 'Learn',
+                label: 'Docs',
                 to: '/docs/intro',
               },
               {
