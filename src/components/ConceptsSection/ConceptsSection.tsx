@@ -1,25 +1,28 @@
 import React, { FC } from 'react';
 
 // components
-import SectionTitle from '../SectionTitle';
-import Feature from './Feature';
+import Section from '@site/src/components/Section';
+import ConceptItem from './ConceptItem';
 
 // images
-import feature001Svg from '@site/static/images/feature_001.svg';
-import feature002Svg from '@site/static/images/feature_002.svg';
-import feature003Svg from '@site/static/images/feature_003.svg';
+import concept001Svg from '@site/static/images/concept_001.svg';
+import concept002Svg from '@site/static/images/concept_002.svg';
+import concept003Svg from '@site/static/images/concept_003.svg';
 
 // styles
 import styles from './styles.module.scss';
 
 // types
-import { IFeatureItem } from './types';
+import { IDefaultSectionProps } from '@site/src/types';
+import { IVisionItemProps } from './types';
 
-const FeatureSection: FC = () => {
-  const features: IFeatureItem[] = [
+type IProps = IDefaultSectionProps;
+
+const ConceptsSection: FC<IProps> = ({ variant }: IProps) => {
+  const items: IVisionItemProps[] = [
     {
       title: 'Not Just For DeFi',
-      SvgComponent: feature001Svg,
+      SvgComponent: concept001Svg,
       description: (
         <>
           Kibisis differs from most wallets by focusing on tokens as a utility,
@@ -29,7 +32,7 @@ const FeatureSection: FC = () => {
     },
     {
       title: 'AVM Compatible',
-      SvgComponent: feature002Svg,
+      SvgComponent: concept002Svg,
       description: (
         <>
           Kibisis not only works with Algorand, but endeavours to encompass all
@@ -39,7 +42,7 @@ const FeatureSection: FC = () => {
     },
     {
       title: 'Browser Extension',
-      SvgComponent: feature003Svg,
+      SvgComponent: concept003Svg,
       description: (
         <>
           Leveraging the security and convenience of browser extensions, Kibisis
@@ -50,21 +53,19 @@ const FeatureSection: FC = () => {
   ];
 
   return (
-    <section className={styles.container}>
-      <SectionTitle id="#features">Features</SectionTitle>
-
+    <Section id="concepts" title="Concepts" variant={variant}>
       <div className={styles['items-container']}>
-        {features.map(({ description, SvgComponent, title }, index) => (
-          <Feature
+        {items.map(({ description, SvgComponent, title }, index) => (
+          <ConceptItem
             description={description}
-            key={`feature-item-${index}`}
+            key={`vision-item-${index}`}
             SvgComponent={SvgComponent}
             title={title}
           />
         ))}
       </div>
-    </section>
+    </Section>
   );
 };
 
-export default FeatureSection;
+export default ConceptsSection;
