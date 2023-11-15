@@ -4,9 +4,10 @@ import React, { FC } from 'react';
 import Layout from '@theme/Layout';
 
 // components
-import VisionSection from '@site/src/components/VisionSection';
+import FeaturesSection from '@site/src/components/FeaturesSection';
 import Header from '@site/src/components/Header';
 import Main from '@site/src/components/Main';
+import VisionSection from '@site/src/components/VisionSection';
 
 const IndexPage: FC = () => {
   const { siteConfig } = useDocusaurusContext();
@@ -20,6 +21,8 @@ const IndexPage: FC = () => {
 
       <Main>
         <VisionSection />
+
+        <FeaturesSection />
       </Main>
     </Layout>
   );

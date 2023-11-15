@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 // components
-import SectionTitle from '../SectionTitle';
+import Section from '@site/src/components/Section';
 import VisionItem from './VisionItem';
 
 // images
@@ -50,9 +50,7 @@ const VisionSection: FC = () => {
   ];
 
   return (
-    <section className={styles.container} id="#vision">
-      <SectionTitle>Vision</SectionTitle>
-
+    <Section id="vision" title="Vision">
       <div className={styles['items-container']}>
         {visionItems.map(({ description, SvgComponent, title }, index) => (
           <VisionItem
@@ -63,7 +61,7 @@ const VisionSection: FC = () => {
           />
         ))}
       </div>
-    </section>
+    </Section>
   );
 };
 
