@@ -5,7 +5,7 @@ import React, { FC, ReactElement } from 'react';
 import SectionTitle from '@site/src/components/SectionTitle';
 
 // styles
-import styles from './index.module.scss';
+import styles from './styles.module.scss';
 
 interface IProps {
   children: ReactElement;

@@ -18,10 +18,12 @@
   z-index: 1;
 
   &--next {
+    @extend .container;
     right: 0;
   }
 
   &--previous {
+    @extend .container;
     left: 0;
   }
 }

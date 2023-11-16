@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { IconType } from 'react-icons';
 
 // styles
-import styles from './index.module.scss';
+import styles from './styles.module.scss';
 
 interface IProps {
   Icon: IconType;
@@ -15,10 +15,9 @@ interface IProps {
 const CarouselButton: FC<IProps> = ({ Icon, isPrev, onClick }: IProps) => {
   return (
     <div
-      className={clsx(
-        styles.container,
+      className={
         isPrev ? styles['container--previous'] : styles['container--next']
-      )}
+      }
     >
       <button className={styles.button} onClick={onClick}>
         <Icon className={styles.icon} />
