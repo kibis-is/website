@@ -14,12 +14,12 @@ import styles from './styles.module.scss';
 
 // types
 import { IDefaultSectionProps } from '@site/src/types';
-import { IVisionItemProps } from './types';
+import { IConceptItemProps } from './types';
 
 type IProps = IDefaultSectionProps;
 
 const ConceptsSection: FC<IProps> = ({ variant }: IProps) => {
-  const items: IVisionItemProps[] = [
+  const items: IConceptItemProps[] = [
     {
       title: 'Not Just For DeFi',
       SvgComponent: concept001Svg,
@@ -55,13 +55,8 @@ const ConceptsSection: FC<IProps> = ({ variant }: IProps) => {
   return (
     <Section id="concepts" title="Concepts" variant={variant}>
       <div className={styles['items-container']}>
-        {items.map(({ description, SvgComponent, title }, index) => (
-          <ConceptItem
-            description={description}
-            key={`vision-item-${index}`}
-            SvgComponent={SvgComponent}
-            title={title}
-          />
+        {items.map((props, index) => (
+          <ConceptItem {...props} key={`concept-item-${index}`} />
         ))}
       </div>
     </Section>

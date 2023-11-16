@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 
 // styles
-import styles from './index.module.scss';
+import styles from './styles.module.scss';
 
 interface IProps {
   bold?: boolean;

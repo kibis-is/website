@@ -1,1 +1,1 @@
-export { default as IVisionItemProps } from './IConceptItemProps';
+export { default as IConceptItemProps } from './IConceptItemProps';

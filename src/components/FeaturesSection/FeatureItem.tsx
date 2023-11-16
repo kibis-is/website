@@ -7,7 +7,7 @@ import Text from '@site/src/components/Text';
 import ThemedImage from '@theme/ThemedImage';
 
 // styles
-import styles from './index.module.scss';
+import styles from './styles.module.scss';
 
 // types
 import { IFeatureItemProps } from './types';

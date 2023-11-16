@@ -8,6 +8,7 @@ $max-width: 300px;
   flex-direction: column;
   padding: 3rem 0;
   width: 100%;
+
   @include tablet-and-up {
     align-items: flex-start;
     flex-direction: row;
@@ -29,6 +30,7 @@ $max-width: 300px;
 
 .item {
   padding: 1rem;
+
   @include desktop-and-up {
     padding: 0 2rem;
   }

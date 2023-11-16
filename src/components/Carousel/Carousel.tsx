@@ -7,7 +7,7 @@ import { Carousel as ReactResponsiveCarousel } from 'react-responsive-carousel';
 import CarouselButton from './CarouselButton';
 
 // styles
-import styles from './index.module.scss';
+import styles from './styles.module.scss';
 
 // types
 import { ICarouselItemProps } from './types';
@@ -19,7 +19,6 @@ interface IProps {
 const Carousel: FC<IProps> = ({ items }: IProps) => {
   return (
     <ReactResponsiveCarousel
-      emulateTouch={true}
       renderArrowNext={(
         onClickHandler: () => void,
         hasNext: boolean,

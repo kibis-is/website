@@ -20,7 +20,7 @@ $section-y-padding: 3rem;
 
 .item {
   flex: 1;
-  padding-bottom: $section-y-padding * 2;
+  padding-bottom: $section-y-padding;
 
   @include tablet-and-up {
     padding-bottom: 0;
@@ -30,7 +30,7 @@ $section-y-padding: 3rem;
 .item-container {
    display: flex;
    flex-direction: column;
-   padding: 0 1rem;
+   padding: 0 3rem;
 
    @include tablet-and-up {
      flex-direction: row;
