@@ -102,6 +102,10 @@ const config = {
                 label: 'Concepts',
                 to: '#concepts',
               },
+              {
+                label: 'Download',
+                to: '#download',
+              },
             ],
             label: 'Overview',
             position: 'right',
@@ -123,6 +127,23 @@ const config = {
       footer: {
         style: 'dark',
         links: [
+          {
+            title: 'Kibisis',
+            items: [
+              {
+                label: 'Concepts',
+                to: '#concepts',
+              },
+              {
+                label: 'Features',
+                to: '#features',
+              },
+              {
+                label: 'Download',
+                to: '#download',
+              },
+            ],
+          },
           {
             title: 'Learn More',
             items: [
