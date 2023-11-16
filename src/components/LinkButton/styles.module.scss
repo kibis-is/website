@@ -1,0 +1,34 @@
+@import "../../styles/button";
+
+.disabled {
+  background-color: var(--ifm-color-gray-300);
+  border-color: var(--ifm-color-gray-300);
+  color: var(--ifm-color-gray-600);
+}
+
+.link-button {
+  @extend .default-button;
+  display: block;
+
+  &:active,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--disabled {
+    @extend .link-button;
+    @extend .disabled;
+    cursor: not-allowed;
+
+    &:active,
+    &:hover {
+      @extend .disabled;
+    }
+  }
+
+  &--full-width {
+    @extend .link-button;
+
+    width: 100%;
+  }
+}

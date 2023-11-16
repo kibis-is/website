@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 import ThemedImage from '@theme/ThemedImage';
 
 // styles
-import styles from './index.module.scss';
+import styles from './styles.module.scss';
 
 const Header: FC = () => {
   return (

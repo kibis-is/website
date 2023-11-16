@@ -8,9 +8,9 @@ import Text from '@site/src/components/Text';
 import styles from './styles.module.scss';
 
 // types
-import { IVisionItemProps } from './types';
+import { IConceptItemProps } from './types';
 
-type IProps = IVisionItemProps;
+type IProps = IConceptItemProps;
 
 const ConceptItem: FC<IProps> = ({
   title,

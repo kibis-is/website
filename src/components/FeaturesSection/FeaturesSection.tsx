@@ -6,7 +6,7 @@ import Section from '@site/src/components/Section';
 import FeatureItem from './FeatureItem';
 
 // styles
-import styles from './index.module.scss';
+import styles from './styles.module.scss';
 
 // types
 import { IDefaultSectionProps } from '@site/src/types';
