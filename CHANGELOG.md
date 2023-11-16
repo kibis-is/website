@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.2.0...v1.3.0) (2023-11-16)
+
+
+### Features
+
+* add download extension section ([#7](https://github.com/agoralabs-sh/kibisis-website/issues/7)) ([669e0c0](https://github.com/agoralabs-sh/kibisis-website/commit/669e0c0adec52959b06fa8a80a960a71b637ad69))
+
 # [1.2.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.1.1...v1.2.0) (2023-11-15)
 
 
