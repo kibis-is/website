@@ -96,15 +96,15 @@ const config = {
             items: [
               {
                 label: 'Features',
-                to: '#features',
+                to: '/#features',
               },
               {
                 label: 'Concepts',
-                to: '#concepts',
+                to: '/#concepts',
               },
               {
                 label: 'Download',
-                to: '#download',
+                to: '/#download',
               },
             ],
             label: 'Overview',
@@ -118,7 +118,7 @@ const config = {
           {
             label: 'Docs',
             position: 'right',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docsSidebar',
             type: 'docSidebar',
           },
         ],
@@ -172,6 +172,15 @@ const config = {
               {
                 label: 'GitHub',
                 href: GITHUB_LINK,
+              },
+            ],
+          },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Privacy',
+                to: '/privacy-policy',
               },
             ],
           },
