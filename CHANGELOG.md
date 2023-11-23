@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.3.0...v1.4.0) (2023-11-23)
+
+
+### Features
+
+* add privacy policy ([#8](https://github.com/agoralabs-sh/kibisis-website/issues/8)) ([aff5ba4](https://github.com/agoralabs-sh/kibisis-website/commit/aff5ba4280b6a3f24a229fa1b9b57a81d0448e00))
+
 # [1.3.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.2.0...v1.3.0) (2023-11-16)
 
 
