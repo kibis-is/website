@@ -84,6 +84,7 @@ const Carousel: FC<IProps> = ({ items }: IProps) => {
         );
       }}
       showStatus={false}
+      swipeable={false}
       useKeyboardArrows={true}
     >
       {items.map(({ children }) => children)}
