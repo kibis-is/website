@@ -15,6 +15,12 @@ const STYLES_DIR = path.resolve(SOURCE_DIR, 'styles');
 
 // links
 const GITHUB_LINK = 'https://github.com/agoralabs-sh/kibisis-web-extension';
+const KIBISIS_LINK = 'https://kibis.is';
+const REPORT_A_BUG_LINK =
+  'https://github.com/agoralabs-sh/kibisis-web-extension/issues/new?assignees=kieranroneill&labels=%F0%9F%90%9B+bug&projects=&template=bug_report_template.yml&title=%5BBug%5D%3A+';
+const SUGGEST_A_FEATURE_LINK =
+  'https://github.com/agoralabs-sh/kibisis-web-extension/issues/new?assignees=&labels=%E2%9C%A8+feature&projects=&template=feature_request_template.yml&title=%5BFeature%5D%3A+';
+const X_LINK = 'https://x.com/kibisis_wallet';
 
 // application
 const TITLE = 'Kibisis';
@@ -81,7 +87,7 @@ const config = {
         {
           name: 'keywords',
           content:
-            'algorand, algosdk, blockchain, browser, chrome, cryptocurrency, firefox, opera, wallet',
+            'algorand, algosdk, blockchain, browser, chrome, cryptocurrency, edge, firefox, opera, voi, wallet',
         },
       ],
       navbar: {
@@ -110,59 +116,66 @@ const config = {
             label: 'Overview',
             position: 'right',
           },
-          {
-            label: 'Blog',
-            position: 'right',
-            to: '/blog',
-          },
-          {
-            label: 'Docs',
-            position: 'right',
-            sidebarId: 'docsSidebar',
-            type: 'docSidebar',
-          },
+          // {
+          //   label: 'Blog',
+          //   position: 'right',
+          //   to: '/blog',
+          // },
+          // {
+          //   label: 'Docs',
+          //   position: 'right',
+          //   sidebarId: 'docsSidebar',
+          //   type: 'docSidebar',
+          // },
         ],
         title: TITLE,
       },
       footer: {
-        style: 'dark',
+        copyright: `Licensed under <a href="${GITHUB_LINK}/blob/main/LICENSE" target="_blank">GPL-2.0</a>.`,
+        logo: {
+          alt: 'Agora Labs logo',
+          height: '50px',
+          href: 'https://agoralabs.sh',
+          src: '/images/developed_by_agora_labs_banner.svg',
+          target: '_blank',
+        },
         links: [
           {
             title: 'Kibisis',
             items: [
               {
                 label: 'Concepts',
-                to: '#concepts',
+                to: '/#concepts',
               },
               {
                 label: 'Features',
-                to: '#features',
+                to: '/#features',
               },
               {
                 label: 'Download',
-                to: '#download',
+                to: '/#download',
               },
             ],
           },
-          {
-            title: 'Learn More',
-            items: [
-              {
-                label: 'Docs',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-            ],
-          },
+          // {
+          //   title: 'Learn More',
+          //   items: [
+          //     {
+          //       label: 'Docs',
+          //       to: '/docs/intro',
+          //     },
+          //     {
+          //       label: 'Blog',
+          //       to: '/blog',
+          //     },
+          //   ],
+          // },
           {
             title: 'Social',
             items: [
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/kibisis_wallet',
+                label: 'X, formerly Twitter',
+                href: X_LINK,
               },
             ],
           },
@@ -172,6 +185,14 @@ const config = {
               {
                 label: 'GitHub',
                 href: GITHUB_LINK,
+              },
+              {
+                label: 'Report a bug',
+                href: REPORT_A_BUG_LINK,
+              },
+              {
+                label: 'Suggest a feature',
+                href: SUGGEST_A_FEATURE_LINK,
               },
             ],
           },
@@ -185,7 +206,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Developed with ❤️ by Agora Labs. Licensed under <a href="${GITHUB_LINK}/blob/main/LICENSE" target="_blank">GPL-2.0</a>.`,
+        style: 'dark',
       },
       prism: {
         theme: lightCodeTheme,
@@ -194,7 +215,7 @@ const config = {
     }),
   title: TITLE,
   trailingSlash: false,
-  url: 'https://kibis.is',
+  url: KIBISIS_LINK,
 };
 
 module.exports = config;
