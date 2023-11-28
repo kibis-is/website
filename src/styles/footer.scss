@@ -12,7 +12,7 @@
   color: text-color("dark");
   margin: 0;
 
-  a {
+  &--link {
     color: primary-color("light");
   }
 }

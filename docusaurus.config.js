@@ -138,12 +138,7 @@ const config = {
       footer: {
         copyright: `
 <div class="footer-container">
-    <p class="footer-text">
-        Licensed under <a href="${GITHUB_LINK}/blob/main/LICENSE" target="_blank">GPL-2.0</a>.
-    </p>
-    <p class="footer-text">
-        Icons provided by <a href="https://www.flaticon.com/" target="_blank">flaticon</a>.
-    </p>
+    <p class="footer-text">Licensed under <a class="footer-text--link" href="${GITHUB_LINK}/blob/main/LICENSE" target="_blank">GPL-2.0</a>. Icons provided by <a class="footer-text--link" href="https://www.flaticon.com/" target="_blank">flaticon</a>.</p>
 </div>
         `,
         logo: {
