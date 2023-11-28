@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.4.0...v1.5.0) (2023-11-28)
+
+
+### Features
+
+* update concept content ([#9](https://github.com/agoralabs-sh/kibisis-website/issues/9)) ([1ebc79a](https://github.com/agoralabs-sh/kibisis-website/commit/1ebc79af435ebabbf77dfc624b837e0b064a940b))
+
 # [1.4.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.3.0...v1.4.0) (2023-11-23)
 
 
