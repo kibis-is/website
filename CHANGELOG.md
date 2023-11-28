@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.5.0...v1.6.0) (2023-11-28)
+
+
+### Features
+
+* enforce light primary color on footer links ([#10](https://github.com/agoralabs-sh/kibisis-website/issues/10)) ([5fea996](https://github.com/agoralabs-sh/kibisis-website/commit/5fea996cc2935c36cc1962bb0652d3514a99f350))
+
 # [1.5.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.4.0...v1.5.0) (2023-11-28)
 
 
