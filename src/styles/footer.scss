@@ -1,0 +1,18 @@
+@import "./functions";
+
+.footer-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-text {
+  color: text-color("dark");
+  margin: 0;
+
+  a {
+    color: primary-color("light");
+  }
+}
