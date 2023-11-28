@@ -14,6 +14,7 @@ const STATIC_DIR = path.resolve(__dirname, 'static');
 const STYLES_DIR = path.resolve(SOURCE_DIR, 'styles');
 
 // links
+const AGORA_LABS_LINK = 'https://agoralabs.sh';
 const GITHUB_LINK = 'https://github.com/agoralabs-sh/kibisis-web-extension';
 const KIBISIS_LINK = 'https://kibis.is';
 const REPORT_A_BUG_LINK =
@@ -135,13 +136,13 @@ const config = {
         logo: {
           alt: 'Agora Labs logo',
           height: '50px',
-          href: 'https://agoralabs.sh',
+          href: AGORA_LABS_LINK,
           src: '/images/developed_by_agora_labs_banner.svg',
           target: '_blank',
         },
         links: [
           {
-            title: 'Kibisis',
+            title: TITLE,
             items: [
               {
                 label: 'Concepts',
