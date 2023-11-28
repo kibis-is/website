@@ -1,3 +1,5 @@
+@import "./functions";
+
 @font-face {
   font-family: 'AnonymousPro';
   font-style: normal;
@@ -61,4 +63,13 @@
   --kb-background-accent-color: #303846;
   --kb-sub-text-color: #718096;
   --kb-text-color: rgba(255, 255, 255, 0.92);
+}
+
+/* overrides */
+.footer {
+  &__link-item {
+    &:hover {
+      color: primary-color("light");
+    }
+  }
 }
