@@ -8,3 +8,11 @@
 
   @return #4A5568;
 }
+
+@function primary-color($theme) {
+  @if $theme != "light" {
+    @return var(--kb-primary-color-light);
+  }
+
+  @return var(--kb-primary-color-dark);
+}

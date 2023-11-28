@@ -53,9 +53,13 @@ const config = {
         },
         theme: {
           customCss: [
+            require.resolve(path.resolve(STYLES_DIR, 'button.scss')),
+            require.resolve(path.resolve(STYLES_DIR, 'footer.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'global.scss')),
+            require.resolve(path.resolve(STYLES_DIR, 'functions.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'mixins.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'navbar.scss')),
+            require.resolve(path.resolve(STYLES_DIR, 'variables.scss')),
             // vendor
             require.resolve(
               path.resolve(
@@ -132,7 +136,16 @@ const config = {
         title: TITLE,
       },
       footer: {
-        copyright: `Licensed under <a href="${GITHUB_LINK}/blob/main/LICENSE" target="_blank">GPL-2.0</a>.`,
+        copyright: `
+<div class="footer-container">
+    <p class="footer-text">
+        Licensed under <a href="${GITHUB_LINK}/blob/main/LICENSE" target="_blank">GPL-2.0</a>.
+    </p>
+    <p class="footer-text">
+        Icons provided by <a href="https://www.flaticon.com/" target="_blank">flaticon</a>.
+    </p>
+</div>
+        `,
         logo: {
           alt: 'Agora Labs logo',
           height: '50px',

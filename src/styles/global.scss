@@ -23,7 +23,7 @@
 :root {
   // overrides
   --ifm-color-content: var(--kb-text-color);
-  --ifm-color-primary: #8D029B;
+  --ifm-color-primary: var(--kb-primary-color-light);
   --ifm-color-primary-dark: #7B0285;
   --ifm-color-primary-darker: #66026F;
   --ifm-color-primary-darkest: #520159;
@@ -37,6 +37,8 @@
   --ifm-navbar-link-color: var(--kb-text-color);
 
   // custom
+  --kb-primary-color-dark: #E0B0FF;
+  --kb-primary-color-light: #8D029B;
   --kb-background-primary-color: #fff;
   --kb-background-accent-color: #f4f4f4;
   --kb-sub-text-color: rgba(255, 255, 255, 0.64);
@@ -45,7 +47,7 @@
 
 [data-theme='dark'] {
   // overrides
-  --ifm-color-primary: #E0B0FF;
+  --ifm-color-primary: var(--kb-primary-color-dark);
   --ifm-color-primary-dark: #C875FF;
   --ifm-color-primary-darker: #AF37FF;
   --ifm-color-primary-darkest: #9500F8;
