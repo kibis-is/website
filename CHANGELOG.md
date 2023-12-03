@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.6.0...v1.7.0) (2023-12-03)
+
+
+### Features
+
+* use social icons ([#11](https://github.com/agoralabs-sh/kibisis-website/issues/11)) ([7d0145b](https://github.com/agoralabs-sh/kibisis-website/commit/7d0145bedebcc0d5b605c45c41857b2b0b8b503f))
+
 # [1.6.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.5.0...v1.6.0) (2023-11-28)
 
 
