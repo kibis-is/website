@@ -23,53 +23,76 @@
 }
 
 :root {
-  // overrides
+  // custom
+  --kb-background-accent-color-dark: #303846;
+  --kb-background-accent-color-light: #f4f4f4;
+  --kb-background-primary-color-dark: #1A202C;
+  --kb-background-primary-color-light: #ffffff;
+  --kb-primary-color-dark-50: #F6E9FF;
+  --kb-primary-color-dark-100: #F2DEFF;
+  --kb-primary-color-dark-200: #EED3FF;
+  --kb-primary-color-dark-300: #E9C8FF;
+  --kb-primary-color-dark-400: #E5BDFF;
+  --kb-primary-color-dark-500: #E0B0FF;
+  --kb-primary-color-dark-600: #C875FF;
+  --kb-primary-color-dark-700: #AF37FF;
+  --kb-primary-color-dark-800: #9500F8;
+  --kb-primary-color-dark-900: #6F00BA;
+  --kb-primary-color-light-50: #F59CFD;
+  --kb-primary-color-light-100: #F16AFD;
+  --kb-primary-color-light-200: #EC39FC;
+  --kb-primary-color-light-300: #E707FB;
+  --kb-primary-color-light-400: #BC03CD;
+  --kb-primary-color-light-500: #8D029B;
+  --kb-primary-color-light-600: #7B0285;
+  --kb-primary-color-light-700: #66026F;
+  --kb-primary-color-light-800: #520159;
+  --kb-primary-color-light-900: #3D0143;
+  --kb-sub-text-color-dark: rgba(255, 255, 255, 0.64);
+  --kb-sub-text-color-light: #718096;
+  --kb-text-color-dark: rgba(255, 255, 255, 0.92);
+  --kb-text-color-light: #4A5568;
+
+  // overrides - light theme
   --ifm-color-content: var(--kb-text-color);
-  --ifm-color-primary: var(--kb-primary-color-light);
-  --ifm-color-primary-dark: #7B0285;
-  --ifm-color-primary-darker: #66026F;
-  --ifm-color-primary-darkest: #520159;
-  --ifm-color-primary-light: #BC03CD;
-  --ifm-color-primary-lighter: #E707FB;
-  --ifm-color-primary-lightest: #EC39FC;
+  --ifm-color-primary: var(--kb-primary-color-light-500);
+  --ifm-color-primary-dark: var(--kb-primary-color-light-600);
+  --ifm-color-primary-darker: var(--kb-primary-color-light-700);
+  --ifm-color-primary-darkest: var(--kb-primary-color-light-800);
+  --ifm-color-primary-light: var(--kb-primary-color-light-400);
+  --ifm-color-primary-lighter: var(--kb-primary-color-light-300);
+  --ifm-color-primary-lightest: var(--kb-primary-color-light-200);
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'AnonymousPro';
   --ifm-heading-font-family: 'AnonymousPro';
   --ifm-navbar-background-color: var(--kb-background-primary-color);
   --ifm-navbar-link-color: var(--kb-text-color);
-
-  // custom
-  --kb-primary-color-dark: #E0B0FF;
-  --kb-primary-color-light: #8D029B;
-  --kb-background-primary-color: #fff;
-  --kb-background-accent-color: #f4f4f4;
-  --kb-sub-text-color: rgba(255, 255, 255, 0.64);
-  --kb-text-color: #4A5568;
+  --kb-background-accent-color: var(--kb-background-accent-color-light);
+  --kb-background-primary-color: var(--kb-background-primary-color-light);
+  --kb-sub-text-color: var(--kb-sub-text-color-light);
+  --kb-text-color: var(--kb-text-color-light);
 }
 
 [data-theme='dark'] {
-  // overrides
-  --ifm-color-primary: var(--kb-primary-color-dark);
-  --ifm-color-primary-dark: #C875FF;
-  --ifm-color-primary-darker: #AF37FF;
-  --ifm-color-primary-darkest: #9500F8;
-  --ifm-color-primary-light: #E5BDFF;
-  --ifm-color-primary-lighter: #E9C8FF;
-  --ifm-color-primary-lightest: #EED3FF;
-  --ifm--navbar-background-color: var(--kb-background-primary-color);
-
-  // custom
-  --kb-background-primary-color: #1A202C;
-  --kb-background-accent-color: #303846;
-  --kb-sub-text-color: #718096;
-  --kb-text-color: rgba(255, 255, 255, 0.92);
+  // overrides - dark theme
+  --ifm-color-primary: var(--kb-primary-color-dark-500);
+  --ifm-color-primary-dark: var(--kb-primary-color-dark-600);
+  --ifm-color-primary-darker: var(--kb-primary-color-dark-700);
+  --ifm-color-primary-darkest: var(--kb-primary-color-dark-800);
+  --ifm-color-primary-light: var(--kb-primary-color-dark-400);
+  --ifm-color-primary-lighter: var(--kb-primary-color-dark-300);
+  --ifm-color-primary-lightest: var(--kb-primary-color-dark-200);
+  --kb-background-accent-color: var(--kb-background-accent-color-dark);
+  --kb-background-primary-color: var(--kb-background-primary-color-dark);
+  --kb-sub-text-color: var(--kb-sub-text-color-dark);
+  --kb-text-color: var(--kb-text-color-dark);
 }
 
 /* overrides */
 .footer {
   &__link-item {
     &:hover {
-      color: primary-color("light");
+      color: primary-color("dark");
     }
   }
 }

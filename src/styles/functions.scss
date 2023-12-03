@@ -3,16 +3,16 @@
  */
 @function text-color($theme) {
   @if $theme != "light" {
-    @return rgba(255, 255, 255, 0.92);
+    @return var(--kb-text-color-dark);
   }
 
-  @return #4A5568;
+  @return var(--kb-text-color-light);
 }
 
 @function primary-color($theme) {
   @if $theme != "light" {
-    @return var(--kb-primary-color-light);
+    @return var(--kb-primary-color-dark-500);
   }
 
-  @return var(--kb-primary-color-dark);
+  @return var(--kb-primary-color-light-500);
 }
