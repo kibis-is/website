@@ -25,7 +25,7 @@ const ConceptsSection: FC<IProps> = ({ variant }: IProps) => {
       SvgComponent: concept001Svg,
       description: (
         <>
-          Kibisis differs from most wallets by focusing on tokens as a utility,
+          Kibisis differs from most wallets by focusing on assets as a utility,
           not just for DeFi.
         </>
       ),
@@ -36,7 +36,7 @@ const ConceptsSection: FC<IProps> = ({ variant }: IProps) => {
       description: (
         <>
           Kibisis not only works with Algorand, but endeavours to encompass all
-          AVM chains. With Algorand AND Voi compatibility.
+          AVM chains.
         </>
       ),
     },
@@ -54,7 +54,7 @@ const ConceptsSection: FC<IProps> = ({ variant }: IProps) => {
 
   return (
     <Section id="concepts" title="Concepts" variant={variant}>
-      <div className={styles['items-container']}>
+      <div className={styles.container__items}>
         {items.map((props, index) => (
           <ConceptItem {...props} key={`concept-item-${index}`} />
         ))}

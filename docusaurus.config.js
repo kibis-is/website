@@ -24,6 +24,7 @@ const SUGGEST_A_FEATURE_LINK =
 const X_LINK = 'https://x.com/kibisis_wallet';
 
 // application
+const TAGLINE = 'Not just for DeFi';
 const TITLE = 'Kibisis';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -83,7 +84,7 @@ const config = {
   ],
   projectName: 'kibisis-website',
   staticDirectories: [STATIC_DIR],
-  tagline: 'Not just for DeFi',
+  tagline: TAGLINE,
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -107,15 +108,15 @@ const config = {
             items: [
               {
                 label: 'Features',
-                to: '/#features',
+                href: '/#features',
               },
               {
                 label: 'Concepts',
-                to: '/#concepts',
+                href: '/#concepts',
               },
               {
                 label: 'Download',
-                to: '/#download',
+                href: '/#download',
               },
             ],
             label: 'Overview',
@@ -154,15 +155,15 @@ const config = {
             items: [
               {
                 label: 'Concepts',
-                to: '/#concepts',
+                href: '/#concepts',
               },
               {
                 label: 'Features',
-                to: '/#features',
+                href: '/#features',
               },
               {
                 label: 'Download',
-                to: '/#download',
+                href: '/#download',
               },
             ],
           },
