@@ -19,11 +19,11 @@ const ConceptItem: FC<IProps> = ({
 }: IProps) => {
   return (
     <div className={styles.item}>
-      <div className={styles['image-container']}>
+      <div className={styles.container__image}>
         <SvgComponent className={styles.image} role="img" />
       </div>
 
-      <div className={styles['text-container']}>
+      <div className={styles.container__text}>
         <Heading level="h2">{title}</Heading>
         <Text>{description}</Text>
       </div>

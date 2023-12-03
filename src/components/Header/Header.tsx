@@ -9,10 +9,10 @@ import styles from './styles.module.scss';
 
 const Header: FC = () => {
   return (
-    <header className={styles.wrapper}>
-      <div className={styles['content-container']}>
+    <header className={styles.container__outer}>
+      <div className={styles.container__content}>
         {/*title*/}
-        <div className={clsx(styles.container, styles['text-container'])}>
+        <div className={clsx(styles.container, styles.container__text)}>
           <h1 className={clsx(styles.text, styles['text--title'])}>
             The AVM utility wallet
           </h1>
@@ -23,7 +23,7 @@ const Header: FC = () => {
         </div>
 
         {/*image*/}
-        <div className={clsx(styles.container, styles['image-container'])}>
+        <div className={clsx(styles.container, styles.container__image)}>
           <ThemedImage
             alt="Wallet home screen"
             className={styles.image}
@@ -36,7 +36,7 @@ const Header: FC = () => {
       </div>
 
       {/*attribution*/}
-      <div className={styles['attribution-container']}>
+      <div className={styles.container__attribution}>
         <p className={clsx(styles.text, styles['text--attribution'])}>
           Image by{` `}
           <a

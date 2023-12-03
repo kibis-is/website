@@ -2,30 +2,53 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-.attribution-container {
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem;
-  @include mobile-only {
-    display: none;
-  }
-}
-
 .container {
   display: flex;
   flex: 1;
   padding: 2rem 0;
-}
 
-.content-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 0 2rem;
-  @include tablet-and-up {
-    flex-direction: row;
+  &__attribution {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 2rem;
+    @include tablet-and-up {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__outer {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--ifm-navbar-height));
+    justify-content: space-between;
+    @include tablet-and-up {
+      background-image: url("/static/images/header_background.jpeg");
+      background-size: cover;
+    }
+  }
+
+  &__text {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -34,11 +57,6 @@
   @include tablet-and-up {
     max-height: 600px;
   }
-}
-
-.image-container {
-  align-items: center;
-  justify-content: center;
 }
 
 .text {
@@ -53,7 +71,7 @@
     margin: 0;
 
     a {
-      color: primary-color("light");
+      color: primary-color("dark");
     }
   }
 
@@ -70,23 +88,5 @@
     @include tablet-and-up {
       font-size: 4.5rem;
     }
-  }
-}
-
-.text-container {
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.wrapper {
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - var(--ifm-navbar-height));
-  justify-content: space-between;
-  @include tablet-and-up {
-    background-image: url("/static/images/header_background.jpeg");
-    background-size: cover;
   }
 }
