@@ -47,7 +47,16 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [
+            [
+              require('@docusaurus/remark-plugin-npm2yarn'),
+              {
+                sync: true,
+              },
+            ],
+          ],
+          routeBasePath: '/',
+          sidebarPath: require.resolve(path.resolve(__dirname, 'sidebars.js')),
         },
         blog: {
           showReadingTime: true,
@@ -127,12 +136,12 @@ const config = {
           //   position: 'right',
           //   to: '/blog',
           // },
-          // {
-          //   label: 'Docs',
-          //   position: 'right',
-          //   sidebarId: 'docsSidebar',
-          //   type: 'docSidebar',
-          // },
+          {
+            label: 'Learn',
+            position: 'right',
+            sidebarId: 'docsSidebar',
+            type: 'docSidebar',
+          },
         ],
         title: TITLE,
       },
@@ -167,19 +176,19 @@ const config = {
               },
             ],
           },
-          // {
-          //   title: 'Learn More',
-          //   items: [
-          //     {
-          //       label: 'Docs',
-          //       to: '/docs/intro',
-          //     },
-          //     {
-          //       label: 'Blog',
-          //       to: '/blog',
-          //     },
-          //   ],
-          // },
+          {
+            title: 'Learn More',
+            items: [
+              {
+                label: 'Docs',
+                to: '/docs/overview',
+              },
+              //     {
+              //       label: 'Blog',
+              //       to: '/blog',
+              //     },
+            ],
+          },
           {
             title: 'Social',
             items: [
