@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.7.0...v1.8.0) (2023-12-08)
+
+
+### Features
+
+* write documentation on how to install self hosted chrome extension ([#13](https://github.com/agoralabs-sh/kibisis-website/issues/13)) ([40e7769](https://github.com/agoralabs-sh/kibisis-website/commit/40e7769603e36e2a4e870fbad141740dbf6f794d))
+
 # [1.7.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.6.0...v1.7.0) (2023-12-03)
 
 
