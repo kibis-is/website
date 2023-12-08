@@ -180,7 +180,7 @@ const config = {
             title: 'Learn More',
             items: [
               {
-                label: 'Docs',
+                label: 'Documentation',
                 to: '/docs/overview',
               },
               //     {
