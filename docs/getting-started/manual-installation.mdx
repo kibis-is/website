@@ -1,0 +1,115 @@
+# Manual Installation
+
+import TOCInline from '@theme/TOCInline';
+
+<!-- components -->
+import CenteredImage from '@site/src/components/CenteredImage'
+
+<!-- images -->
+import chromeManualInstallation001 from './images/chrome_manual_installation_001.png';
+import chromeManualInstallation002 from './images/chrome_manual_installation_002.png';
+import chromeManualInstallation003 from './images/chrome_manual_installation_003.png';
+import firefoxManualInstallation001 from './images/firefox_manual_installation_001.png';
+import firefoxManualInstallation002 from './images/firefox_manual_installation_002.png';
+import manualInstallation001 from './images/manual_installation_001.png';
+
+<TOCInline
+  maxHeadingLevel={4}
+  toc={toc}
+/>
+
+## Overview
+
+If you want to avoid the browser store, or you want to get the latest release, you can install Kibisis via a zip file.
+
+## For Chrome/Chromium
+
+1. Go to https://github.com/agoralabs-sh/kibisis-web-extension/releases/latest and download the latest release and select the zip file for Chrome: `kibisis-chrome-x.x.x.zip`.
+
+<CenteredImage
+  label="Download latest packed version"
+  maxWidth="500px"
+  src={manualInstallation001}
+/>
+
+:::caution
+
+Make sure you download the version relevant for your browser, for Chrome/Chromium, this will be `kibisis-chrome-x.x.x.zip`.
+
+:::
+
+:::note
+
+If you would like to try a pre-release version, the cutting edge version, go to https://github.com/agoralabs-sh/kibisis-web-extension/releases and selected the first one. Please air on the side of caution as this is early access, it may have bugs and breaking changes.
+
+:::
+
+2. Unpack the downloaded zip file to a directory (make a note of this directory, you will need to point to it later).
+
+3. Click on the overflow menu, and select **Extensions** > **Manage Extensions**.
+
+<CenteredImage
+  label="Select Manage Extensions settings"
+  maxWidth="500px"
+  src={chromeManualInstallation001}
+/>
+
+4. Ensure the **Developer mode** is switched on.
+
+<CenteredImage
+  label="Ensure Developer mode is switched on"
+  maxWidth="800px"
+  src={chromeManualInstallation002}
+/>
+
+5. From the Extensions settings, press **Load unpacked** and select the directory where you unpacked the zip file you previously downloaded.
+
+<CenteredImage
+  label="Image load unpacked button"
+  maxWidth="400px"
+  src={chromeManualInstallation003}
+/>
+
+6. After loading the Kibisis extension, you should be good to go. Click on the extension icon to get started!
+
+## For Firefox
+
+1. Go to https://github.com/agoralabs-sh/kibisis-web-extension/releases/latest and download the latest release and select the zip file for Chrome: `kibisis-firefox-x.x.x.zip`.
+
+<CenteredImage
+  label="Download latest packed version"
+  maxWidth="500px"
+  src={manualInstallation001}
+/>
+
+:::caution
+
+Make sure you download the version relevant for your browser, for Firefox, this will be `kibisis-firefix-x.x.x.zip`.
+
+:::
+
+:::note
+
+If you would like to try a pre-release version, the cutting edge version, go to https://github.com/agoralabs-sh/kibisis-web-extension/releases and selected the first one. Please air on the side of caution as this is early access, it may have bugs and breaking changes.
+
+:::
+
+2. Click on the hamburger menu icon, and select **Add-ons and themes**.
+
+<CenteredImage
+  label="Select Add-ons and themes"
+  maxWidth="500px"
+  src={firefoxManualInstallation001}
+/>
+
+3. When an Add-ons manager page opens, press the gear icon and select **Install Add-on From File...**.
+
+<CenteredImage
+  label="Install Add-on from file option"
+  maxWidth="800px"
+  src={firefoxManualInstallation002}
+/>
+
+4. Select the zip file you downloaded previously.
+
+5. After loading the Kibisis extension, you should be good to go. Click on the extension icon to get started!
