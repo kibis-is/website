@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.9.0...v1.10.0) (2023-12-21)
+
+
+### Features
+
+* add download link to the chrome web store ([#18](https://github.com/agoralabs-sh/kibisis-website/issues/18)) ([5a4168d](https://github.com/agoralabs-sh/kibisis-website/commit/5a4168d64961aa5b27342619408e5a3fa930ffa3))
+
 # [1.9.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.8.0...v1.9.0) (2023-12-21)
 
 
