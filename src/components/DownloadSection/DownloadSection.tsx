@@ -4,6 +4,9 @@ import React, { FC } from 'react';
 import Section from '@site/src/components/Section';
 import DownloadItem from './DownloadItem';
 
+// constants
+import { CHROME_STORE_LINK } from '@site/src/constants';
+
 // images
 import chromeSvg from '@site/static/images/chrome.svg';
 import firefoxSvg from '@site/static/images/firefox.svg';
@@ -21,6 +24,7 @@ const DownloadSection: FC<IProps> = ({ variant }: IProps) => {
   const items: IDownloadItemProps[] = [
     {
       buttonLabel: 'Install',
+      downloadUri: CHROME_STORE_LINK,
       name: 'Chrome',
       SvgComponent: chromeSvg,
     },
