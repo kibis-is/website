@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.8.0...v1.9.0) (2023-12-21)
+
+
+### Features
+
+* write blog post for chrome extension release ([#17](https://github.com/agoralabs-sh/kibisis-website/issues/17)) ([49326b8](https://github.com/agoralabs-sh/kibisis-website/commit/49326b8cace80347b7ae9f0f9bcd95d3ecb50411))
+
 # [1.8.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.7.0...v1.8.0) (2023-12-08)
 
 
