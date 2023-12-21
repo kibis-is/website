@@ -131,11 +131,11 @@ const config = {
             label: 'Overview',
             position: 'right',
           },
-          // {
-          //   label: 'Blog',
-          //   position: 'right',
-          //   to: '/blog',
-          // },
+          {
+            label: 'Blog',
+            position: 'right',
+            to: '/blog',
+          },
           {
             label: 'Learn',
             position: 'right',
@@ -183,10 +183,10 @@ const config = {
                 label: 'Documentation',
                 to: '/docs/overview',
               },
-              //     {
-              //       label: 'Blog',
-              //       to: '/blog',
-              //     },
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
             ],
           },
           {
