@@ -2,11 +2,14 @@
 
 .container {
   display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-  width: 100%;
+
+  &__outer {
+    padding: 2rem 1rem;
+    justify-content: center;
+  }
 }
 
 .image {
   box-shadow: $screen-box-shadow;
+  width: 100%;
 }
