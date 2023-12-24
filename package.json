@@ -1,6 +1,6 @@
 {
   "name": "@agoralabs-sh/kibisis-website",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "description": "The front facing website for the Kibisis wallet.",
   "repository": {
     "type": "git",

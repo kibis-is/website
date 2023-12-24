@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.10.0...v1.11.0) (2023-12-24)
+
+
+### Features
+
+* add brave install link ([#21](https://github.com/agoralabs-sh/kibisis-website/issues/21)) ([d76b2a4](https://github.com/agoralabs-sh/kibisis-website/commit/d76b2a49255ce63bcb9a4e67aca432820a3f44d0))
+
 # [1.10.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.9.0...v1.10.0) (2023-12-21)
 
 
