@@ -1,0 +1,86 @@
+---
+title: Version 1.8.0 Release
+description: Version 1.8.0 brings ARC-200 support as well as many quality of life fixes.
+slug: version-1-8-0-release
+authors: [kieran]
+tags: [algorand, blockchain, voi, release]
+image: /static/images/new_release_logo_in_space.png
+---
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import addArc200AssetDarkImage from './add_arc200_asset-dark.png';
+import addArc200AssetLightImage from './add_arc200_asset-light.png';
+import arc200SupportDarkImage from './arc200_support-dark.png';
+import arc200SupportLightImage from './arc200_support-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.8.0!
+
+<!-- re-write this paragraph for all new versions -->
+First and foremost, a Merry Christmas 🎄 from the team here at <a href={AGORA_LABS_LINK} target="_blank">Agora Labs</a>! The new version of Kibisis, version 1.8.0, is all about supporting ARC-200 tokens, the sexy new type of AVM assets. But that's not all, we have also brought in Standard Asset opt-ins as well as various fixes that squash some annoying bugs.
+
+Below you will find more details about what is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### ARC-200 Support
+
+The new ARC-200 token standard represents a major upgrade for assets on the AVM (Algorand Virtual Machine). They allow assets to utilize the power of smart contracts, by actually _being_ a smart contract!
+
+ARC-200 tokens have been inspired by the equivalent [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) on EVM chains. ERC-20 tokens underpin almost all tokens on EVM and so it is only fitting that AVM also has an asset of similar standard.
+
+The team here at Agora Labs have been working hard over Christmas to get ARC-200 support ready. With version 1.8.0, you can not add an ARC-200 asset, if you know the application ID:
+
+<BlogScreenshotImage
+  label="Add ARC-200 asset"
+  maxWidth="400px"
+  imageSources={{
+    dark: addArc200AssetDarkImage,
+    light: addArc200AssetLightImage,
+  }}
+/>
+
+The beauty of ARC-200 is that it is _free_ to opt-in, yes that is right, ARC-200 does not require a fee to opt-in!
+
+Once the ARC-200 asset has been added, it will appear in your asset holdings, and you will be able to check your balance, send and receive!
+
+<BlogScreenshotImage
+  label="ARC-200 support"
+  maxWidth="400px"
+  imageSources={{
+    dark: arc200SupportDarkImage,
+    light: arc200SupportLightImage,
+  }}
+/>
+
+To learn more about ARC-200, make sure you check out the specification [here](https://arc.algorand.foundation/ARCs/arc-0200).
+
+### Standard Asset Opt-in
+
+Although there is a lot of talk about ARC-200, let us not forget one of the most powerful features of AVM: Standard Assets. These assets are baked into the very heart of the AVM protocol and are feature that make AVM chains some of the best in class.
+
+The new version of Kibisis allow you to opt-in to standard assets, using an opt-in transaction, which, at the time of writing will cost you 0.01; the standard fee amount.
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+* The amount field on the sending asset screen now correctly handles decimals.
+* The send asset screen no longer shows a blank screen when coming from the settings page.
+* Minor fixes.
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} target="_blank">here</a>.
