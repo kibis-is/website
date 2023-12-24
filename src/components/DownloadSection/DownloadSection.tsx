@@ -8,6 +8,7 @@ import DownloadItem from './DownloadItem';
 import { CHROME_STORE_LINK } from '@site/src/constants';
 
 // images
+import braveSvg from '@site/static/images/brave.svg';
 import chromeSvg from '@site/static/images/chrome.svg';
 import firefoxSvg from '@site/static/images/firefox.svg';
 
@@ -32,6 +33,12 @@ const DownloadSection: FC<IProps> = ({ variant }: IProps) => {
       buttonLabel: 'Install',
       name: 'Firefox',
       SvgComponent: firefoxSvg,
+    },
+    {
+      buttonLabel: 'Install',
+      downloadUri: CHROME_STORE_LINK,
+      name: 'Brave',
+      SvgComponent: braveSvg,
     },
   ];
 
