@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, { FC } from 'react';
 
 // components
@@ -21,16 +22,20 @@ const BlogScreenshotImage: FC<IProps> = ({
   imageSources,
 }: IProps) => {
   return (
-    <div className={styles.container}>
-      <ThemedImage
-        alt={label}
-        aria-label={label}
-        className={styles.image}
-        sources={imageSources}
+    <div className={clsx(styles.container, styles.container__outer)}>
+      <div
+        className={styles.container}
         style={{
           maxWidth,
         }}
-      />
+      >
+        <ThemedImage
+          alt={label}
+          aria-label={label}
+          className={styles.image}
+          sources={imageSources}
+        />
+      </div>
     </div>
   );
 };
