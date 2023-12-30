@@ -1,6 +1,16 @@
+@import "../../styles/variables";
+
 .container {
   display: flex;
-  justify-content: center;
-  padding: 1rem 0;
+
+  &__outer {
+    padding: 2rem 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.image {
+  box-shadow: $screen-box-shadow;
   width: 100%;
 }
