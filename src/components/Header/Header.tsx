@@ -14,11 +14,11 @@ const Header: FC = () => {
         {/*title*/}
         <div className={clsx(styles.container, styles.container__text)}>
           <h1 className={clsx(styles.text, styles['text--title'])}>
-            The AVM utility wallet
+            Your Ultimate AVM Utility Wallet
           </h1>
 
           <p className={clsx(styles.text, styles['text--subtitle'])}>
-            A wallet that is not just for DeFi, but also focuses on utility.
+            An AVM wallet in your browser that goes beyond just DeFi.
           </p>
         </div>
 
