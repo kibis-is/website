@@ -30,10 +30,20 @@ const FeaturesSection: FC<IProps> = ({ variant }: IProps) => {
       alt: 'Asset transfer screen',
       description: 'Seamlessly transfer any asset to another address.',
       imageSources: {
-        dark: '/images/asset_transfer_screen-dark.png',
-        light: '/images/asset_transfer_screen-light.png',
+        dark: '/images/send_assets_screen-dark.png',
+        light: '/images/send_assets_screen-light.png',
       },
       title: 'Asset Transfer',
+    },
+    {
+      alt: 'Add ARC-200 screen',
+      description:
+        'Kibisis not only supports the sending and receiving of AVM standard assets, it also supports ARC-200.',
+      imageSources: {
+        dark: '/images/add_arc200_asset_screen-dark.png',
+        light: '/images/add_arc200_asset_screen-light.png',
+      },
+      title: 'ARC-200 Support',
     },
     {
       alt: 'Atomic transaction screen',
