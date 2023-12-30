@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.12.0...v1.13.0) (2023-12-30)
+
+
+### Features
+
+* add arc 200 support as a new features item ([#24](https://github.com/agoralabs-sh/kibisis-website/issues/24)) ([4b8267e](https://github.com/agoralabs-sh/kibisis-website/commit/4b8267e2ecb8db144280263f5cb220a27b684279))
+
 # [1.12.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.11.0...v1.12.0) (2023-12-27)
 
 
