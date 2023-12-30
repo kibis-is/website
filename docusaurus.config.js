@@ -116,12 +116,12 @@ const config = {
           {
             items: [
               {
-                label: 'Features',
-                href: '/#features',
-              },
-              {
                 label: 'Concepts',
                 href: '/#concepts',
+              },
+              {
+                label: 'Features',
+                href: '/#features',
               },
               {
                 label: 'Download',

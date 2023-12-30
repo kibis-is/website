@@ -38,7 +38,7 @@ const FeaturesSection: FC<IProps> = ({ variant }: IProps) => {
     {
       alt: 'Add ARC-200 screen',
       description:
-        'Kibisis not only supports the sending and receiving of AVM standard assets, it also supports ARC-200.',
+        'Kibisis not only supports AVM standard assets, it also supports ARC-200. From Kibisis, you can check your balance, transfer and add any ARC-200 asset.',
       imageSources: {
         dark: '/images/add_arc200_asset_screen-dark.png',
         light: '/images/add_arc200_asset_screen-light.png',
