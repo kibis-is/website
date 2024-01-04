@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.13.0...v1.14.0) (2024-01-04)
+
+
+### Features
+
+* add strong password policy ([#29](https://github.com/agoralabs-sh/kibisis-website/issues/29)) ([4c268dc](https://github.com/agoralabs-sh/kibisis-website/commit/4c268dc4aa85523ece26a3e4361d9d428d2f7957))
+
 # [1.13.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.12.0...v1.13.0) (2023-12-30)
 
 
