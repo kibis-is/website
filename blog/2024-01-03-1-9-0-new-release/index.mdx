@@ -1,0 +1,100 @@
+---
+title: Version 1.9.0 Release
+description: Version 1.9.0 brings some quality of life features that may not be big or bold, but do pack a punch!
+slug: version-1-9-0-release
+authors: [kieran]
+tags: [account, asa, debug, release, settings]
+image: /static/images/new_release_logo_in_space.png
+---
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import accountNameEditableDarkImage from './account_name_editable-dark.png';
+import accountNameEditableLightImage from './account_name_editable-light.png';
+import editAccountNameDarkImage from './edit_account_name_button-dark.png';
+import editAccountNameLightImage from './edit_account_name_button-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.9.0!
+
+<!-- re-write this paragraph for all new versions -->
+ A Happy New Year from the team here at <a href={AGORA_LABS_LINK} target="_blank">Agora Labs</a>!
+
+As we enter the new year, we have but a humble update as version 1.9.0 is all about the little things. We have been working on improving some quality of life features that may not be big or bold, but do pack a punch; because we all know it is the little things that count 😉
+
+Below you will find more details about what is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### Rename Your Account
+
+A feature that has been requested a few times is the ability to rename your account, and so, we are happy to announce this is now possible!
+
+On the account page, you will now notice an edit button next to the account address:
+
+<BlogScreenshotImage
+  label="Edit account"
+  maxWidth="400px"
+  imageSources={{
+    dark: editAccountNameDarkImage,
+    light: editAccountNameLightImage,
+  }}
+/>
+
+Pressing this will allow you to edit your account name until your heart is content. Give it a go!
+
+<BlogScreenshotImage
+  label="Account name editable state"
+  maxWidth="400px"
+  imageSources={{
+    dark: accountNameEditableDarkImage,
+    light: accountNameEditableLightImage,
+  }}
+/>
+
+### About Settings
+
+A new option is now available on the settings page: About.
+
+This page will provide information about the Kibisis extension, such as the extension ID and the version. The About page will be updated from time to time with new information that maybe helpful for you throughout your use of Kibisis.
+
+> ⚠️ *NOTE:* the version was previous at the bottom of the main settings page, this is no longer the case and has been moved to the "About" settings page.
+
+### Debug Logging
+
+For the tech savvy, there is now an option in the "Advanced" settings that allows you to turn on debug logging. This will output a lot of useful information to the browser console.
+
+This is also quite useful for us in terms of support, as the log is a breadcrumb trail of what happened before an error occurred and will help us identity an issue.
+
+### Re-focus Extension Window
+
+A small but nifty feature is the ability to re-focus the extension when the Kibisis button is pressed again.
+
+### Pressing Enter On Password Submission
+
+Us humans have made the keyboard ubiquitous to our lives, as such we are now compelled to press the Enter/Return when we finish typing input, especially when inputting our password.
+
+To embrace this new natural human function, in Kibisis, pressing the Enter/Return key after you have typed out your password will now submit it!
+
+As we said, the little things.
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+* Native currency will no longer show as a "ASA" type on the send asset summary screen.
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} target="_blank">here</a>.

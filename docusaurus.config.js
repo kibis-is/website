@@ -181,7 +181,7 @@ const config = {
             items: [
               {
                 label: 'Documentation',
-                to: '/docs/overview',
+                to: '/overview',
               },
               {
                 label: 'Blog',
