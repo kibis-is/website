@@ -5,11 +5,12 @@ import Section from '@site/src/components/Section';
 import DownloadItem from './DownloadItem';
 
 // constants
-import { CHROME_STORE_LINK } from '@site/src/constants';
+import { CHROME_STORE_LINK, EDGE_STORE_LINK } from '@site/src/constants';
 
 // images
 import braveSvg from '@site/static/images/brave.svg';
 import chromeSvg from '@site/static/images/chrome.svg';
+import edgeSvg from '@site/static/images/edge.svg';
 import firefoxSvg from '@site/static/images/firefox.svg';
 
 // styles
@@ -33,6 +34,12 @@ const DownloadSection: FC<IProps> = ({ variant }: IProps) => {
       buttonLabel: 'Install',
       name: 'Firefox',
       SvgComponent: firefoxSvg,
+    },
+    {
+      buttonLabel: 'Install',
+      downloadUri: EDGE_STORE_LINK,
+      name: 'Edge',
+      SvgComponent: edgeSvg,
     },
     {
       buttonLabel: 'Install',

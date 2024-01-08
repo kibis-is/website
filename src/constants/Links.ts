@@ -1,6 +1,8 @@
 export const AGORA_LABS_LINK: string = 'https://agoralabs.sh';
 export const CHROME_STORE_LINK: string =
   'https://chromewebstore.google.com/detail/kibisis/hcgejekffjilpgbommjoklpneekbkajb';
+export const EDGE_STORE_LINK: string =
+  'https://microsoftedge.microsoft.com/addons/detail/kibisis/bajncpocmkioafbijldokfbjajelkbmc';
 export const GITHUB_LINK: string =
   'https://github.com/agoralabs-sh/kibisis-web-extension';
 export const KIBISIS_LINK: string = 'https://kibis.is';
