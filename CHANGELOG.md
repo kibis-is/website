@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.15.0...v1.16.0) (2024-01-08)
+
+
+### Features
+
+* add edge browser download link ([#31](https://github.com/agoralabs-sh/kibisis-website/issues/31)) ([c347e43](https://github.com/agoralabs-sh/kibisis-website/commit/c347e4332e54d8a5426a6c4a0971e13d1badc16c))
+
 # [1.15.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.14.0...v1.15.0) (2024-01-05)
 
 
