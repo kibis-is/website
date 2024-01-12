@@ -1,0 +1,141 @@
+---
+title: Version 1.10.0 Release
+description: Version 1.10.0 provides Kibisis with some updates to allow for more robust connecting to dapps
+slug: version-1-10-0-release
+authors: [kieran]
+tags: [arc200, arc0027, dapp, explorer, permissions, release, use-wallet]
+image: /static/images/new_release_logo_in_space.png
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import removeArc200AssetDarkImage from './remove_arc200_asset-dark.png';
+import removeArc200AssetLightImage from './remove_arc200_asset-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.10.0!
+
+<!-- re-write this paragraph for all new versions -->
+This new update mainly focuses on some underlying infrastructure work that allows Kibisis to more robustly connect with dapps.
+
+Below you will find more details about what is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### UseWallet Support
+
+The star feature in this release is support for the popular provider connector [UseWallet](https://github.com/TxnLab/use-wallet), produced by the excellent team over at [TxnLab](https://www.txnlab.dev/).
+
+Kibisis will now be integrated as a provider with UseWallet, which means a lot of existing dapps will be able to support Kibisis as a wallet to sign your transactions.
+
+For the dapp developers out there, all that is needed to allow Kibisis is specifying the Kibisis provider ID:
+
+<Tabs
+  defaultValue="javascript"
+  values={[
+    { label: 'JavaScript', value: 'javascript' },
+    { label: 'TypeScript', value: 'typescript' },
+  ]}>
+  <TabItem value="javascript">
+
+```javascript
+import React from 'react';
+import { PROVIDER_ID, WalletProvider, useInitializeProviders } from '@txnlab/use-wallet';
+
+export const App = () => {
+  const providers = useInitializeProviders({
+    providers: [
+      // ... other providers
+      { id: PROVIDER_ID.KIBISIS },
+    ],
+  });
+
+  return (
+    <WalletProvider value={providers}>
+      <div className="App">{/* ... */}</div>
+    </WalletProvider>
+  );
+};
+
+```
+
+  </TabItem>
+  <TabItem value="typescript">
+
+```typescript
+import React, { FC } from 'react';
+import { PROVIDER_ID, SupportedProviders, WalletProvider, useInitializeProviders } from '@txnlab/use-wallet';
+
+export const App: FC = () => {
+  const providers: SupportedProviders | null = useInitializeProviders({
+    providers: [
+      // ... other providers
+      { id: PROVIDER_ID.KIBISIS },
+    ],
+  });
+
+  return (
+    <WalletProvider value={providers}>
+      <div className="App">{/* ... */}</div>
+    </WalletProvider>
+  );
+};
+```
+
+  </TabItem>
+</Tabs>
+
+### Remove ARC-200 Asset
+
+A new button is now available on the asset page that allows you to "remove" an ARC-200 asset. This will not remove any funds, but simply removes the asset from the asset holdings list.
+
+<BlogScreenshotImage
+  label="Remove ARC-200 asset"
+  maxWidth="400px"
+  imageSources={{
+    dark: removeArc200AssetDarkImage,
+    light: removeArc200AssetLightImage,
+  }}
+/>
+
+You can re-add the ARC-200 asset at any time without any impact to your funds.
+
+### Pera Explorer Integration
+
+With the release of Pera Explorer for Algorand MainNet and TestNets, it will now appear as an option in preferred block explorer list, and, in the case of Algorand TestNet, the default block explorer.
+
+### Remove Downloads Permission
+
+We have moved the Strong Password Policy (the policy that sets out guidelines for passwords) to the external Kibisis website here: [https://kibis.is/strong-password-policy](https://kibis.is/strong-password-policy).
+
+This means that we have removed the feature that allowed you to download the document locally, which, in-turn also removes the downloads permission.
+
+### Implementation Of The Proposed ARC-0027
+
+A new ARC has been proposed: [ARC-0027](https://github.com/algorandfoundation/ARCs/pull/272). This ARC proposes the use of [BroadcastChannel](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) to securely handle communications between a browser extension and a webpage.
+
+Version 1.10.0 has revamped its underlying infrastructure to move away from script injecting and to use the proposed ARC-0027.
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+* When importing an account on registration, the registration app should close and open the main app.
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} target="_blank">here</a>.
