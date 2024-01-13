@@ -3,6 +3,8 @@ export const CHROME_STORE_LINK: string =
   'https://chromewebstore.google.com/detail/kibisis/hcgejekffjilpgbommjoklpneekbkajb';
 export const EDGE_STORE_LINK: string =
   'https://microsoftedge.microsoft.com/addons/detail/kibisis/bajncpocmkioafbijldokfbjajelkbmc';
+export const FIREFOX_ADD_ON_LINK: string =
+  'https://addons.mozilla.org/addon/kibisis/';
 export const GITHUB_LINK: string =
   'https://github.com/agoralabs-sh/kibisis-web-extension';
 export const KIBISIS_LINK: string = 'https://kibis.is';
