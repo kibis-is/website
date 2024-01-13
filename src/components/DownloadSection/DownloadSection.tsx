@@ -5,7 +5,11 @@ import Section from '@site/src/components/Section';
 import DownloadItem from './DownloadItem';
 
 // constants
-import { CHROME_STORE_LINK, EDGE_STORE_LINK } from '@site/src/constants';
+import {
+  CHROME_STORE_LINK,
+  EDGE_STORE_LINK,
+  FIREFOX_ADD_ON_LINK,
+} from '@site/src/constants';
 
 // images
 import braveSvg from '@site/static/images/brave.svg';
@@ -32,6 +36,7 @@ const DownloadSection: FC<IProps> = ({ variant }: IProps) => {
     },
     {
       buttonLabel: 'Install',
+      downloadUri: FIREFOX_ADD_ON_LINK,
       name: 'Firefox',
       SvgComponent: firefoxSvg,
     },
