@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.17.0...v1.18.0) (2024-01-13)
+
+
+### Features
+
+* add firefox add-on link ([#37](https://github.com/agoralabs-sh/kibisis-website/issues/37)) ([08279d1](https://github.com/agoralabs-sh/kibisis-website/commit/08279d1e5a7768a7ad5662b09be655b172d627a6))
+
 # [1.17.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.16.0...v1.17.0) (2024-01-13)
 
 
