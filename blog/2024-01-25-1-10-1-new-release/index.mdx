@@ -1,7 +1,7 @@
 ---
-title: Version 1.10.0 Release
-description: Version 1.10.0 provides Kibisis with some updates to allow for more robust connecting to dapps
-slug: version-1-10-0-release
+title: Version 1.10.1 Release
+description: Version 1.10.1 provides Kibisis with some updates to allow for more robust connecting to dapps
+slug: version-1-10-1-release
 authors: [kieran]
 tags: [arc200, arc0027, dapp, explorer, permissions, release, use-wallet]
 image: /static/images/new_release_logo_in_space.png
@@ -16,15 +16,15 @@ import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
 import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
 
 <!-- images -->
-import removeArc200AssetDarkImage from './remove_arc200_asset-dark.png';
-import removeArc200AssetLightImage from './remove_arc200_asset-light.png';
+import hideArc200AssetDarkImage from './hide_arc200_asset-dark.png';
+import hideArc200AssetLightImage from './hide_arc200_asset-light.png';
 
 ![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
 
 ## Overview
 
 <!-- change just the version for new posts -->
-We are proud to present a new milestone in the development of Kibisis: v1.10.0!
+We are proud to present a new milestone in the development of Kibisis: v1.10.1!
 
 <!-- re-write this paragraph for all new versions -->
 This new update mainly focuses on some underlying infrastructure work that allows Kibisis to more robustly connect with dapps.
@@ -97,20 +97,24 @@ export const App: FC = () => {
   </TabItem>
 </Tabs>
 
-### Remove ARC-200 Asset
+A MASSIVE thank you to <a href="https://github.com/drichar" rel="noreferrer" target="_blank">Doug Richar</a> for their invaluable support in getting such an important milestone for Kibisis over line.
 
-A new button is now available on the asset page that allows you to "remove" an ARC-200 asset. This will not remove any funds, but simply removes the asset from the asset holdings list.
+### Hide ARC-200 Asset
+
+A new button is now available on the asset page that allows you to "hide" an ARC-200 asset. This simply hides the asset from the asset holdings list.
 
 <BlogScreenshotImage
-  label="Remove ARC-200 asset"
+  label="Hide ARC-200 asset"
   maxWidth="400px"
   imageSources={{
-    dark: removeArc200AssetDarkImage,
-    light: removeArc200AssetLightImage,
+    dark: hideArc200AssetDarkImage,
+    light: hideArc200AssetLightImage,
   }}
 />
 
 You can re-add the ARC-200 asset at any time without any impact to your funds.
+
+Credit goes to the ever awesome <a href="https://github.com/d13co" rel="noreferrer"  target="_blank">D13</a> for their work in suggesting and implementing this feature.
 
 ### Pera Explorer Integration
 
@@ -126,16 +130,17 @@ This means that we have removed the feature that allowed you to download the doc
 
 A new ARC has been proposed: [ARC-0027](https://github.com/algorandfoundation/ARCs/pull/272). This ARC proposes the use of [BroadcastChannel](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) to securely handle communications between a browser extension and a webpage.
 
-Version 1.10.0 has revamped its underlying infrastructure to move away from script injecting and to use the proposed ARC-0027.
+Version 1.10.1 has revamped its underlying infrastructure to move away from script injecting and to use the proposed ARC-0027.
 
 <!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
 ## Fixes
 
 * When importing an account on registration, the registration app should close and open the main app.
+* Allow MainNet for Algorand correctly enables when confirming.
 
 ## Closing Words
 
 <!-- leave this paragraph as standard sign off -->
 Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
 
-Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} target="_blank">here</a>.
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} rel="noreferrer" target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} rel="noreferrer" target="_blank">here</a>.
