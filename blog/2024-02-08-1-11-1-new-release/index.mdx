@@ -1,0 +1,121 @@
+---
+title: Version 1.11.0 Release
+description: Version 1.11.0 provides Kibisis with some features that may not be immediately apparent, but have been implemented due to popular demand
+slug: version-1-11-1-release
+authors: [kieran]
+tags: [password, release]
+image: /static/images/new_release_logo_in_space.png
+---
+
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import passwordLock1DarkImage from './password_lock-1-dark.png';
+import passwordLock1LightImage from './password_lock-1-light.png';
+import passwordLock2DarkImage from './password_lock-2-dark.png';
+import passwordLock2LightImage from './password_lock-2-light.png';
+import passwordLock3DarkImage from './password_lock-3-dark.png';
+import passwordLock3LightImage from './password_lock-3-light.png';
+import selectAddressDarkImage from './select_to_address-dark.png';
+import selectAddressLightImage from './select_to_address-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.11.0!
+
+<!-- re-write this paragraph for all new versions -->
+The latest features of v1.11.0 has been shaped based heavily of user feedback. As has been requested, you can now choose to enable a password lock, so you do not have to keep entering your password on sensitive operations. Also, by popular demand, is the ability to select one of your wallet accounts when sending an asset.
+
+Below you will find more details about what is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### Password Lock
+
+This feature has been added due to popular request. By default, Kibisis asks you to enter your password whenever you do a sensitive operation; operations that require access to the encrypted private key. However, you can now enable this in the settings:
+
+1. Open the Settings by click the "⚙️" button:
+
+<BlogScreenshotImage
+  label="Go to settings"
+  maxWidth="400px"
+  imageSources={{
+    dark: passwordLock1DarkImage,
+    light: passwordLock1LightImage,
+  }}
+/>
+
+2. Select the "Security" settings:
+
+<BlogScreenshotImage
+  label="Go to security settings"
+  maxWidth="400px"
+  imageSources={{
+    dark: passwordLock2DarkImage,
+    light: passwordLock2LightImage,
+  }}
+/>
+
+3. Enable the password lock (you will first be prompted to enter you password):
+
+<BlogScreenshotImage
+  label="Enable password lock"
+  maxWidth="400px"
+  imageSources={{
+    dark: passwordLock3DarkImage,
+    light: passwordLock3LightImage,
+  }}
+/>
+
+You can set the timeout to lock the extension in 1 minute, 2 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes or "Never".
+
+> ⚠️ **NOTE:** The password lock timeout starts when the extension window loses focus, however, a password will always be needed if you close the extension window, regardless of timeout duration.
+
+### Select A Known Account When Sending Assets
+
+Another feature that has been a popular request, is the ability to quickly select an account for the "To" address when sending assets.
+
+<BlogScreenshotImage
+  label="Select known address when sending assets"
+  maxWidth="400px"
+  imageSources={{
+    dark: selectAddressDarkImage,
+    light: selectAddressLightImage,
+  }}
+/>
+
+### Clear The Seed Phrase Input
+
+When importing a new account, you can quickly clear the whole input with a new "Reset" button.
+
+### Import An Account Via A QR Code
+
+Starting with v1.11.0, Kibisis will slowly develop, in close collaboration with <a href="https://github.com/LeslieOA" rel="noreferrer" target="_blank">LeslieOA</a>, a new way to connect and interact with Kibisis: URIs and QR Codes.
+
+A new <a href="https://github.com/LeslieOA/ARCs/tree/arc-0300" rel="noreferrer" target="_blank">ARC-0300</a> is underway to develop this specification further and Kibisis is one of the testing grounds for the proposal. To start, you can import a wallet via a QR code.
+
+> ⚠️ **NOTE:** This feature is still in development and please use at your own risk as the QR code, in its current form, holds an unencrypted private key. While Kibisis does not display the QR code, it currently only reads the code, we must remember to keep our keys safe.
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+* Copy and pasting comma separated seed phrases should fill all inputs correctly.
+* Fix issue with a stuck screen when importing an account on registration.
+* Background requests from dApps should correctly open Kibisis on first prompt.
+* A zero is no longer padded to the amount of the send asset input.
+* Fix an issue that caused a crash when attempting to sign a transaction with zero amount and zero fee.
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} rel="noreferrer" target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} rel="noreferrer" target="_blank">here</a>.
