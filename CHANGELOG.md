@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.19.0...v1.20.0) (2024-02-08)
+
+
+### Features
+
+* add blog post for v1.11.0 release ([#42](https://github.com/agoralabs-sh/kibisis-website/issues/42)) ([bb9b46e](https://github.com/agoralabs-sh/kibisis-website/commit/bb9b46e4a8c06c65e8de26ead9ce28adc00e18de))
+
 # [1.19.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.18.0...v1.19.0) (2024-01-26)
 
 
