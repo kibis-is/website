@@ -12,14 +12,26 @@
   The front facing website for the Kibisis wallet.
 </p>
 
-<p p align="center">
-  The website is built using <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> and fills the role of landing page, tutorial and blog.
+<p align="center">
+  <a href="https://github.com/agoralabs-sh/kibisis-website/releases/latest">
+    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/agoralabs-sh/kibisis-website?&logo=github">
+  </a>
+  <a href="https://github.com/agoralabs-sh/kibisis-website/releases/latest">
+    <img alt="GitHub Release Date - Published At" src="https://img.shields.io/github/release-date/agoralabs-sh/kibisis-website?logo=github">
+  </a>
+  <a href="https://github.com/agoralabs-sh/kibisis-website/actions/workflows/deploy.yml">
+    <img alt="GitHub Actions Deploy Workflow Status" src="https://img.shields.io/github/actions/workflow/status/agoralabs-sh/kibisis-website/deploy.yml?label=deploy" />
+  </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/agoralabs-sh/kibisis-website/actions/workflows/deploy.yml">
-    <img src="https://github.com/agoralabs-sh/kibisis-website/actions/workflows/deploy.yml/badge.svg?branch=main" alt="Deploy" />
+  <a href="https://github.com/agoralabs-sh/kibisis-website/blob/main/LICENSE">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/agoralabs-sh/kibisis-website">
   </a>
+</p>
+
+<p p align="center">
+  The website is built using <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> and fills the role of landing page, tutorial and blog for Kibisis.
 </p>
 
 ### Table of contents
@@ -47,7 +59,7 @@ TBA...
 
 ## 📋 2. Requirements
 
-* Install [Node v16.14.0][node]
+* Install [Node v20.9.0][node]
 * Install [Yarn v1.22.5+][yarn]
 
 <sup>[Back to top ^][table-of-contents]</sup>
@@ -92,6 +104,18 @@ Although the deployment is handled through the CI (GitHub Actions), it is necess
 <sup>[Back to top ^][table-of-contents]</sup>
 
 ###  5.3. Deploy to `gh-pages` branch
+
+1. If this is a new repo, first create a new orphaned branch with no history and no files:
+```shell
+git checkout --orphan gh-pages
+```
+
+2. Add an initial empty commit:
+```shell
+git commit --allow-empty -m "chore: initial commit" && git push -u origin/gh-pages
+```
+
+3. TBC...
 
 <sup>[Back to top ^][table-of-contents]</sup>
 
