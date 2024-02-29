@@ -1,0 +1,105 @@
+---
+title: Version 1.12.0 Release
+description: Version 1.12.0 extends the use of QR codes to import accounts and ARC-0200 assets
+slug: version-1-12-0-release
+authors: [kieran]
+tags: [account, arc0200, release]
+image: /static/images/new_release_logo_in_space.png
+---
+
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import addAssetViaQRCodeDarkImage from './add_asset_via_qr_code-dark.png';
+import addAssetViaQRCodeLightImage from './add_asset_via_qr_code-light.png';
+import scanViaCameraDarkImage from './scan_via_camera-dark.png';
+import scanViaCameraLightImage from './scan_via_camera-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.12.0!
+
+<!-- re-write this paragraph for all new versions -->
+The latest features of v1.12.0 mostly center around the extended use of the QR code. Kibisis can now utilize your device's camera and scan a QR code! But that is not all, you can also add ARC-0200 assets via a QR code.
+
+Below you will find more details about what is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### Scan A QR Code Via Your Device's Camera
+
+Currently, to scan a QR code, a code would need to be displayed on the active tab of your browser. However, Kibisis can now utilize your device's camera and scan a QR code from any that maybe displayed by the camera.
+
+As shown below, you will be presented with the option to scan using your camera, or the browser window.
+
+<BlogScreenshotImage
+  label="Scan QR code selection"
+  maxWidth="400px"
+  imageSources={{
+    dark: scanViaCameraDarkImage,
+    light: scanViaCameraLightImage,
+  }}
+/>
+
+> ⚠️ **NOTE:** You will need to allow access for Kibisis to use your camera. You can change this permission at anytime by removing it from your browser settings.
+
+### Scan QR Code To Add Assets
+
+Adding assets can sometimes be cumbersome, however, assets can now be added using a QR code! Once you scan a compatible code you will be presented with a modal to confirm you want to add the asset.
+
+<BlogScreenshotImage
+  label="Add asset via QR code confirmation modal"
+  maxWidth="400px"
+  imageSources={{
+    dark: addAssetViaQRCodeDarkImage,
+    light: addAssetViaQRCodeLightImage,
+  }}
+/>
+
+Here is an example of adding VIA to Voi testnet:
+
+```
+avm://asset/add/6779767?genesishash=IXnoWtviVVJW5LGivNFc0Dq14V3kqaXuK2u5OQrdVZo=&type=arc0200
+```
+
+What's more, you can visit [https://avm-asset-list.agoralabs.sh](https://avm-asset-list.agoralabs.sh) to easily search and add from a curated list of popular ARC-0200 assets, across all networks (even testnet!).
+
+### ARC-0200 Assets Automatically Added Via QR Code Account Import
+
+When importing an account via a QR code, a new query param can be added to the URI that allows you to automatically add ARC-0200 assets.
+
+Here is an example of importing an account with multiple ARC-0200 assets
+
+```
+avm://account/import?privatekey=...&encoding=hex&asset=6779767,6795477
+```
+
+> ⚠️ **NOTE:** The new asset param is a comma separated list of ARC-0200 IDs.
+
+### Account Selection Persists Through Restarts
+
+A small, but nice, feature is that whenever you switch account, this choice persists whenever Kibisis is closed and re-opened. This persistence also extends to the account's tabs.
+
+### First Account Is Selected On Enable Session
+
+When connecting an account, the first choice in the account list is automatically selected.
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+* Account tabs no longer need to be double clicked.
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} rel="noreferrer" target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} rel="noreferrer" target="_blank">here</a>.
