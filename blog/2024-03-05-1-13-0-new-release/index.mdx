@@ -1,0 +1,66 @@
+---
+title: Version 1.13.0 Release
+description: Forgotten to write down that seed phrase? Version 1.13.0 now allows you to view once more!
+slug: version-1-13-0-release
+authors: [kieran]
+tags: [account, release]
+image: /static/images/new_release_logo_in_space.png
+---
+
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import importAccountViaQRCodeDarkImage from './import_account_via_qr_code-dark.png';
+import importAccountViaQRCodeLightImage from './import_account_via_qr_code-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.13.0!
+
+<!-- re-write this paragraph for all new versions -->
+By popular demand, version 1.13.0 now allows you to re-view your seed phrase for any imported or created accounts. Furthermore, as the previous versions brought the ability to import and account via a QR code, now version 1.13.0 allows you to export an account via a QR code.
+
+Below you will find more details about what else is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### View Your Seed Phrase
+
+When you create or import account an account, Kibisis uses the seed phrase to get the private key. This private key is encrypted and stored securely in the Kibisis' on-browser storage. Now you can decrypt the private key and convert it back to your original seed phrase, allowing for you to view or copy it.
+
+### Export Account Via QR Code
+
+With the advent of Kibisis supporting importing an account using a QR code, there is now an option to export an account via a QR code.
+
+### Import An Account Via A QR Code As An Add Account Option
+
+When adding a new account, importing an account via a QR code is now and option  in the list.
+
+<BlogScreenshotImage
+  label="Import account via QR code at the add account modal"
+  maxWidth="400px"
+  imageSources={{
+    dark: importAccountViaQRCodeDarkImage,
+    light: importAccountViaQRCodeLightImage,
+  }}
+/>
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+* When sending assets, the correct error is shown if you incorrectly type a password.
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} rel="noreferrer" target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} rel="noreferrer" target="_blank">here</a>.
