@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.23.0...v1.24.0) (2024-05-01)
+
+
+### Features
+
+* add blog post to introduce quests ([#48](https://github.com/agoralabs-sh/kibisis-website/issues/48)) ([ff62fe3](https://github.com/agoralabs-sh/kibisis-website/commit/ff62fe3ac6d18f601a1e9655d4f76540fd6c7d41))
+
 # [1.23.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.22.0...v1.23.0) (2024-03-12)
 
 
