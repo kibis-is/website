@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # Privacy Policy
 
-Last updated: 22/11/2023
+Last updated: 30/04/2024
 
 Thank you for using Kibisis! This Privacy Policy outlines how we handle user information and ensures transparency about the data practices associated with our browser extension.
 
@@ -18,9 +18,11 @@ We want to make it clear that Kibisis does not collect any personal information 
 
 Our browser extension is designed to provide a seamless and secure experience for managing your AVM wallet. It operates locally on your device and does not send any information to external servers. All sensitive data related to your wallet, such as private keys, remains securely stored on your device and is not shared with us or any third parties.
 
-## Usage Analytics
+## Usage Analytics with Opt-in Option
 
-We do not use any analytics tools or tracking mechanisms to monitor user behavior. We have deliberately chosen not to implement such features to ensure that your interactions with Kibisis are private and free from any form of surveillance.
+By default, Kibisis does not use tracking mechanisms, and we ensure that your interactions with Kibisis are private and free from any form of surveillance.
+
+However, Kibisis does offer the option for you to opt-in to action-based analytics. By opting in, you can earn rewards for certain actions performed while using Kibisis, but rest assured, participation is entirely voluntary and all data collected is compliant with GDPR and CCPA regulations.
 
 ## Security Measures
 
