@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.24.0...v1.25.0) (2024-05-01)
+
+
+### Features
+
+* update license of kibisis to gnu apgl v3 ([#49](https://github.com/agoralabs-sh/kibisis-website/issues/49)) ([fa4389c](https://github.com/agoralabs-sh/kibisis-website/commit/fa4389c9eeaf7e1901aba941beb38e3f8ac75605))
+
 # [1.24.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.23.0...v1.24.0) (2024-05-01)
 
 
