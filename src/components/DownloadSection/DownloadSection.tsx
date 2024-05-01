@@ -34,12 +34,12 @@ const DownloadSection: FC<IProps> = ({ variant }: IProps) => {
       name: 'Chrome',
       SvgComponent: chromeSvg,
     },
-    {
-      buttonLabel: 'Install',
-      downloadUri: FIREFOX_ADD_ON_LINK,
-      name: 'Firefox',
-      SvgComponent: firefoxSvg,
-    },
+    // {
+    //   buttonLabel: 'Install',
+    //   downloadUri: FIREFOX_ADD_ON_LINK,
+    //   name: 'Firefox',
+    //   SvgComponent: firefoxSvg,
+    // },
     {
       buttonLabel: 'Install',
       downloadUri: EDGE_STORE_LINK,
