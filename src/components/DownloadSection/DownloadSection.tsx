@@ -8,14 +8,14 @@ import DownloadItem from './DownloadItem';
 import {
   CHROME_STORE_LINK,
   EDGE_STORE_LINK,
-  FIREFOX_ADD_ON_LINK,
+  // FIREFOX_ADD_ON_LINK,
 } from '@site/src/constants';
 
 // images
 import braveSvg from '@site/static/images/brave.svg';
 import chromeSvg from '@site/static/images/chrome.svg';
 import edgeSvg from '@site/static/images/edge.svg';
-import firefoxSvg from '@site/static/images/firefox.svg';
+// import firefoxSvg from '@site/static/images/firefox.svg';
 
 // styles
 import styles from './styles.module.scss';
@@ -34,12 +34,12 @@ const DownloadSection: FC<IProps> = ({ variant }: IProps) => {
       name: 'Chrome',
       SvgComponent: chromeSvg,
     },
-    {
-      buttonLabel: 'Install',
-      downloadUri: FIREFOX_ADD_ON_LINK,
-      name: 'Firefox',
-      SvgComponent: firefoxSvg,
-    },
+    // {
+    //   buttonLabel: 'Install',
+    //   downloadUri: FIREFOX_ADD_ON_LINK,
+    //   name: 'Firefox',
+    //   SvgComponent: firefoxSvg,
+    // },
     {
       buttonLabel: 'Install',
       downloadUri: EDGE_STORE_LINK,
