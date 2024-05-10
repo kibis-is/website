@@ -68,7 +68,6 @@ const config = {
             require.resolve(path.resolve(STYLES_DIR, 'global.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'functions.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'mixins.scss')),
-            require.resolve(path.resolve(STYLES_DIR, 'navbar.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'variables.scss')),
             // vendor
             require.resolve(
@@ -116,16 +115,16 @@ const config = {
           {
             items: [
               {
+                label: 'Download',
+                href: '/#download',
+              },
+              {
                 label: 'Concepts',
                 href: '/#concepts',
               },
               {
                 label: 'Features',
                 href: '/#features',
-              },
-              {
-                label: 'Download',
-                href: '/#download',
               },
             ],
             label: 'Overview',
@@ -163,16 +162,16 @@ const config = {
             title: TITLE,
             items: [
               {
+                label: 'Download',
+                href: '/#download',
+              },
+              {
                 label: 'Concepts',
                 href: '/#concepts',
               },
               {
                 label: 'Features',
                 href: '/#features',
-              },
-              {
-                label: 'Download',
-                href: '/#download',
               },
             ],
           },

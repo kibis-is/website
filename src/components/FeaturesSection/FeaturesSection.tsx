@@ -38,31 +38,22 @@ const FeaturesSection: FC<IProps> = ({ variant }: IProps) => {
     {
       alt: 'Add ARC-200 screen',
       description:
-        'Kibisis not only supports AVM standard assets, it also supports ARC-200. From Kibisis, you can check your balance, transfer and add any ARC-200 asset.',
+        'Kibisis not only supports AVM standard assets, it also supports ARC-0200. From Kibisis, you can check your balance, transfer and add any ARC-0200 asset.',
       imageSources: {
-        dark: '/images/add_arc200_asset_screen-dark.png',
-        light: '/images/add_arc200_asset_screen-light.png',
+        dark: '/images/arc0200_support_screen-dark.png',
+        light: '/images/arc0200_support_screen-light.png',
       },
-      title: 'ARC-200 Support',
+      title: 'ARC-0200 Support',
     },
     {
       alt: 'Atomic transaction screen',
       description:
         'With AVM chains allowing up to 16 transactions to be grouped as an atomic transfer, Kibisis can sign all or multiple transactions within the atomic group.',
       imageSources: {
-        dark: '/images/atomic_transaction_screen-dark.png',
-        light: '/images/atomic_transaction_screen-light.png',
+        dark: '/images/atomic_transactions_screen-dark.png',
+        light: '/images/atomic_transactions_screen-light.png',
       },
       title: 'Atomic Transactions',
-    },
-    {
-      alt: 'Sign JWT screen',
-      description: `Kibisis allows you to sign arbitrary data, using your account's private key, but Kibisis can also recognise standardized formats, such as JWTs, which is presented into a more intuitive interface.`,
-      imageSources: {
-        dark: '/images/jwt_support_screen-dark.png',
-        light: '/images/jwt_support_screen-light.png',
-      },
-      title: 'JWT (JSON Web Token) Support',
     },
   ];
 
