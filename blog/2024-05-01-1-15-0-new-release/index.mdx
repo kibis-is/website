@@ -1,0 +1,72 @@
+---
+title: Version 1.15.0 Release
+description: The Voiage to mainnet
+slug: version-1-15-0-release
+authors: [kieran]
+tags: [avm-web-provider, release, voi]
+image: /static/images/new_release_logo_in_space.png
+---
+
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import allowActionTrackingDarkImage from './allow_action_tracking-dark.png';
+import allowActionTrackingLightImage from './allow_action_tracking-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.15.0!
+
+<!-- re-write this paragraph for all new versions -->
+The latest release of Kibisis lays the groundwork for the [Voiage To Mainnet](the-voiage-to-mainnet).
+
+Below you will find more details about what else is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### Earn Rewards With Voi
+
+As we move from Voi's testnet to mainnet, Kibisis will give users the option to earn rewards through quests performed while using Kibisis. These quests will relate to earning rewards that will be distributed once Voi has launched mainnet in the coming months.
+
+You will be shown a notification when you start up version 1.15.0 for the first time. You can choose to opt into quests, in the form of tracked actions, which is transmitted to a remote server.
+
+> ⚠️ **NOTE:** the data being transmitted will contain the account address, for certain actions, the asset ID. This data will be stored until the transition into Voi's mainnet and used exclusively for determining rewards.
+
+Opt-in to quest tracking is completely voluntary, and you can turn it off at any time by going switching off **Settings** > **Privacy** > **Allow certain actions to be tracked?**.
+
+<BlogScreenshotImage
+  label="Allow action tracking from privacy settings"
+  maxWidth="400px"
+  imageSources={{
+    dark: allowActionTrackingDarkImage,
+    light: allowActionTrackingLightImage,
+  }}
+/>
+
+For more information, see [this](the-voiage-to-mainnet) blog post.
+
+### AVM Web Provider Support
+
+<a href={AGORA_LABS_LINK} rel="noreferrer" target="_blank">Agora Labs</a> has released a new provider, the <a href="https://avm-web-provider.agoralabs.sh" rel="noreferrer" target="_blank">AVM Web Provider</a>. This new provider allows seamless communication between web-based providers (i.e. wallets) and clients (i.e. dApps).
+
+It strictly adheres to the ARC-0027 standard that lays out the schema structure for the transport layer, but, more importantly, it allows for communication between multiple wallets and multiple AVM chains.
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+* Only one background app window opens when attempting to connect to a dApp that is open in multiple browser tabs (<a href="https://avm-web-provider.agoralabs.sh" rel="noreferrer" target="_blank">AVM Web Provider</a> and <a href="https://algorand-provider.agoralabs.sh" rel="noreferrer" target="_blank">Algorand provider</a> implementations only).
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} rel="noreferrer" target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} rel="noreferrer" target="_blank">here</a>.
