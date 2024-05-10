@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React, { FC } from 'react';
 
 // components
+import LinkButton from '@site/src/components/LinkButton';
 import ThemedImage from '@theme/ThemedImage';
 
 // styles
@@ -17,9 +18,17 @@ const Header: FC = () => {
             Your Ultimate AVM Utility Wallet
           </h1>
 
+          {/*subtitle*/}
           <p className={clsx(styles.text, styles['text--subtitle'])}>
             An AVM wallet in your browser that goes beyond just DeFi.
           </p>
+
+          {/*button*/}
+          <div className={styles['button-container']}>
+            <LinkButton fullWidth={true} href="/#download">
+              Download Now
+            </LinkButton>
+          </div>
         </div>
 
         {/*image*/}

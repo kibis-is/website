@@ -19,11 +19,11 @@ const IndexPage: FC = () => {
       <Header />
 
       <Main>
+        <DownloadSection variant="primary" />
+
         <ConceptsSection variant="primary" />
 
         <FeaturesSection variant="accent" />
-
-        <DownloadSection variant="primary" />
       </Main>
     </Layout>
   );
