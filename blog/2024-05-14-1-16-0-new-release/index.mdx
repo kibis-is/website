@@ -1,0 +1,84 @@
+---
+title: Version 1.16.0 Release
+description: Rich outgoing ARC-0200 transactions and more!
+slug: version-1-16-0-release
+authors: [kieran]
+tags: [arc0200, release]
+image: /static/images/new_release_logo_in_space.png
+---
+
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import alreadyAddedAssetDarkImage from './already_added_asset-dark.png';
+import alreadyAddedAssetLightImage from './already_added_asset-light.png';
+import customARC0200TransactionDarkImage from './custom_arc0200_transaction-dark.png';
+import customARC0200TransactionLightImage from './custom_arc0200_transaction-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.16.0!
+
+<!-- re-write this paragraph for all new versions -->
+On the journey to fully embrace ARC-0200 assets, the latest version of Kibisis now displays a richer appearance for outgoing ARC-0200 transactions. Not only that, we have also added a few nuggets such as already added assets appearing in the add asset list.
+
+Below you will find more details about what else is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### Richer Outgoing ARC-0200 Transactions
+
+Abstractly speaking, ARC-0200 are assets, however, their underlying implementation is using a smart contract (application). Therefore, they would appear like any other application in the activity list.
+
+With the latest update, outgoing ARC-0200 assets appear as asset transfers, with the amount debited from the holdings.
+
+<BlogScreenshotImage
+  label="Custom ARC-0200 transaction"
+  maxWidth="400px"
+  imageSources={{
+    dark: customARC0200TransactionDarkImage,
+    light: customARC0200TransactionLightImage,
+  }}
+/>
+
+### Already Added Assets
+
+For assets that have already been added, they will now appear in the asset list when searching for assets to add.
+
+<BlogScreenshotImage
+  label="Already added assets in the add asset list"
+  maxWidth="400px"
+  imageSources={{
+    dark: alreadyAddedAssetDarkImage,
+    light: alreadyAddedAssetLightImage,
+  }}
+/>
+
+### Key Registration Transaction Via QR Code
+
+Key registration transactions can be parsed and posted by the Kibisis' QR scanner. This enables Kibisis to be used as potential method to register a key without having to store a key on a node.
+
+Furthermore, the QR scanner can now be used to scan other windows on the screen, not just the browser.
+
+> ⚠️ **NOTE:** This is still a work in-progress. Stay tuned for more updates on this work as the team is also working on recognizing the URI in the browser address.
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+* Seed phrase input gaps decreased to fit a full mnemonic (English BIP-39 compatible) word.
+* ARC-0200 assets with a large total supply should now appear in the "Add Asset" search.
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} rel="noreferrer" target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} rel="noreferrer" target="_blank">here</a>.
