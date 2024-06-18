@@ -1,0 +1,133 @@
+---
+title: Version 1.17.0 Release
+description: Kibisis just got more secure, re-keying is here!
+slug: version-1-17-0-release
+authors: [kieran]
+tags: [account, quests, release, voi]
+image: /static/images/new_release_logo_in_space.png
+---
+
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import reKeyAccountViewDarkImage from './re_key_account_view-dark.png';
+import reKeyAccountViewLightImage from './re_key_account_view-light.png';
+import reKeyWatchAccountViewDarkImage from './re_key_watch_account_view-dark.png';
+import reKeyWatchAccountViewLightImage from './re_key_watch_account_view-light.png';
+import watchAccountViewDarkImage from './watch_account_view-dark.png';
+import watchAccountViewLightImage from './watch_account_view-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.17.0!
+
+<!-- re-write this paragraph for all new versions -->
+The latest release from Kibisis brings one of the stand-out & staple features of the AVM: re-keyed accounts. This release also packs an extra feature-punch with watch accounts and quest completion notifications.
+
+Below you will find more details about what else is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### Re-keyed Account Support
+
+Re-keyed accounts are a core foundation of AVM and one of our favourite features here at Kibisis, therefore, we are proud of the work that has gone into getting this feature implemented.
+
+When you have a re-keyed account, you will now see the re-keyed badges being displayed on the account screen and in the sidebar.
+
+<BlogScreenshotImage
+  label="Account screen displaying the re-key badges"
+  maxWidth="400px"
+  imageSources={{
+    dark: reKeyAccountViewDarkImage,
+    light: reKeyAccountViewLightImage,
+  }}
+/>
+
+:::note
+
+In order to use a re-keyed account, you will also need the authorized account present in the wallet.
+
+:::
+
+For accounts that don't have the authorized account present in the wallet, they will also contain a [watch](#watch-accounts) account badge.
+
+<BlogScreenshotImage
+  label="Account screen displaying the re-key badge and the watch account"
+  maxWidth="400px"
+  imageSources={{
+    dark: reKeyWatchAccountViewDarkImage,
+    light: reKeyWatchAccountViewLightImage,
+  }}
+/>
+
+For a more detailed overview of what re-keying is, checkout Algorand's excellent [article](https://developer.algorand.org/docs/get-details/accounts/rekey/) on its ins and outs.
+
+### Watch Accounts
+
+A happy side effect of re-keying was the need for a watch account. Watch accounts are accounts that can be added without the need of a seed phrase (private key), all that is required is the public address of the account.
+
+Watch accounts will appear alongside normal accounts, but will be displayed with a watch account badge and will have limited functionality (essentially anything that requires signing, i.e. sending assets, adding standard assets).
+
+<BlogScreenshotImage
+  label="Account screen displaying the watch account badge"
+  maxWidth="400px"
+  imageSources={{
+    dark: watchAccountViewDarkImage,
+    light: watchAccountViewLightImage,
+  }}
+/>
+
+### Quest Completion Notification
+
+Quests have been tracked since their implementation in the last [release](/blog/version-1-16-0-release), however, there was no indication that quests were completed.
+
+The latest release displays a notification (and some confetti for those that love a tada!) when a quest has been completed.
+
+:::note
+
+For an overview of your Voi completed quests, check out the awesome [Voi Rewards Calculator](https://voirewards.com/phase2).
+
+:::
+
+### Kibisis-specific Key Registration URI
+
+Kibisis already parses a QR encoded key registration transaction URI, but you can now parse a URI from the browser's address bar. Simply prefix the URI with the word "kibisis" and Kibisis will attempt to parse the key registration. For example:
+
+```
+kibisis avm://transaction/send?genesishash=IXnoWtviVVJW5LGivNFc0Dq14V3kqaXuK2u5OQrdVZo%3D&selectionkey=LrpLhvzr-QpN_bivh6IPpOaKGbGzTTB5lJtVfixmmgk%3D&stateproofkey=RpUpNWfZMjZ1zOOjv3MF2tjO714jsBt0GKnNsw0ihJ4HSZwci-d9zvUi3i67LwFUJgjQ5Dz4zZgHgGduElnmSA%3D%3D&sender=TESTKHUQJXXNSDSTCIY35GL3XMLFWNFEYH3HNATVGBURZR7XJP7C6EYM6Y&type=keyreg&votefirst=1&votekey=G_lqTV6MKspW6J8wH2d8ZliZ5XZVZsruqSBJMwLwlmo%3D&votekeydilution=316&votelast=100000
+```
+
+:::warning
+
+The above URI is an example and will fail when posted to the network.
+
+:::
+
+:::note
+
+This feature is part of the larger body of work to integrating generating participation keys for nodes. See [generating participation keys](https://developer.algorand.org/docs/run-a-node/participate/generate_keys/) for more information.
+
+:::
+
+Although a plethora of Kibisis' features are not for the casual user, we have been working hard on these little known features and will continue to push the the boundaries of what blockchain and a wallet can unlock.
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+* The quest threshold for sending assets has been lowered from greater or equal to 1, to greater than 0.
+* Node URLs are used for network pings to avoid false positive network connectivity issues.
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} rel="noreferrer" target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} rel="noreferrer" target="_blank">here</a>.
