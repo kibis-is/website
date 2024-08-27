@@ -1,0 +1,127 @@
+---
+title: Version 1.18.0 Release
+description: A big update, Kibisis gets a bit of a face-lit with some new UI and custom nodes.
+slug: version-1-18-0-release
+authors: [kieran]
+tags: [release, security, ui, voi]
+image: /static/images/new_release_logo_in_space.png
+---
+
+<!-- components -->
+import BlogScreenshotImage from '@site/src/components/BlogScreenshotImage';
+
+<!-- constants -->
+import { AGORA_LABS_LINK, REPORT_A_BUG_LINK, SUGGEST_A_FEATURE_LINK } from '@site/src/constants';
+
+<!-- images -->
+import addPasskeyDarkImage from './add_passkey-dark.png';
+import addPasskeyLightImage from './add_passkey-light.png';
+import customNodeListDarkImage from './custom_node_list-dark.png';
+import customNodeListLightImage from './custom_node_list-light.png';
+import authenticateWithPasskeyDarkImage from './authenticate_with_passkey-dark.png';
+import authenticateWithPasskeyLightImage from './authenticate_with_passkey-light.png';
+
+![Kibisis release 3D pixel icon in space](/images/new_release_logo_in_space.png)
+
+## Overview
+
+<!-- change just the version for new posts -->
+We are proud to present a new milestone in the development of Kibisis: v1.18.0!
+
+<!-- re-write this paragraph for all new versions -->
+This version of Kibisis comes with a lot of updates. First and foremost, we have re-skinned a lot of UI elements and with this come a fair few fixes for a lot of old bugs (reported and unreported ones). Furthermore, we have also added the ability to add your own custom nodes so you no longer have to rely on public nodes for your interactions with the network.
+
+As an added bonus (and for us a very exciting feature), we have added support for passkeys for authentication!
+
+Below you will find more details about what else is new in this release.
+
+<!-- go into detail about the new versions, or omit if no new features with in the release -->
+## Features
+
+### New UI
+
+Kibisis has had some UI love ❤️.
+
+In a bid to make a lot of the elements more cohesive and to improve elements that are buggy under certain conditions. Wallet-wide, there have been UI enhancements and we hope you enjoy these, and, as always, please feel free to send us some feedback.
+
+### Custom Nodes
+
+Kibisis' default node service it uses to communicate with the network is the free node that is provided by the very awesome and fantastic folks over at [Nodely](https://nodely.io/). However, you may want to you use your own node.
+
+By going to Settings > Advanced > "Custom Nodes", you can add nodes for each network. You can decide which one to activate or deactivate and all interactions with the network will go through your activated node.
+
+<BlogScreenshotImage
+  label="List of custom nodes"
+  maxWidth="465px"
+  imageSources={{
+    dark: customNodeListDarkImage,
+    light: customNodeListLightImage,
+  }}
+/>
+
+### Note Fields Have A 1kb Limit
+
+Transaction notes are limited to 1024 bytes or 1024 characters. Note fields now have a limit and a transaction will not be able to be sent if this limit is exceeded.
+
+With the aforementioned UI enhancements, there is a handy "characters remaining" indicator as you type to let you know how many characters are remaining.
+
+### Passkey Authentication
+
+A pain point for most users are passwords. While strong passwords are a necessary evil to ensure strong private key encryption, they are not the only form of authentication.
+
+[Passkeys](https://www.passkeys.com/) allow for password-less authentication and Kibisis now supports using passkeys in lieu of a password. Your account's private keys are encrypted/decrypted using a passkey making for a far more seamless experience, without compromising on security.
+
+Try it now by going to Settings > Security > Passkey.
+
+<BlogScreenshotImage
+  label="Adding a passkey"
+  maxWidth="465px"
+  imageSources={{
+    dark: addPasskeyDarkImage,
+    light: addPasskeyLightImage,
+  }}
+/>
+
+<BlogScreenshotImage
+  label="Authenticating with a passkey"
+  maxWidth="465px"
+  imageSources={{
+    dark: authenticateWithPasskeyDarkImage,
+    light: authenticateWithPasskeyLightImage,
+  }}
+/>
+
+:::note
+
+As the passkeys are being used for encryption, they require a certain type of extension (PRF - see BitWarden's excellent blog [post](https://bitwarden.com/blog/prf-webauthn-and-its-role-in-passkeys/) for a brief explanation). Currently, only certain passkeys support this type extension, so not all passkeys will work.
+
+:::
+
+:::caution
+
+This is currently an experimental feature and is still a work in progress.
+
+:::
+
+### Minor Features
+
+* The password timeout now persists when the app is closed.
+* A 32-character limit has been set on account names.
+* Export multiple or all or your accounts via QR codes.
+* When the seed phrase is being displayed, numbers have been added to each word to indicate its positioning in the 25-word seed.
+
+<!-- just give a bulleted list of fixes, or omit if no fixes with in the release -->
+## Fixes
+
+
+* Removed scroll bars.
+* Added more padding to account items in the sidebar.
+* NFT indexer requests are no longer sent twice.
+* Account details update when an NFT metadata is empty.
+
+## Closing Words
+
+<!-- leave this paragraph as standard sign off -->
+Thank you for your continued interest in Kibisis! We hope you are enjoying using it.
+
+Remember, if you see any bugs, please report the issue <a href={REPORT_A_BUG_LINK} rel="noreferrer" target="_blank">here</a>. If you would like to make any suggestions on new features, you can fill out a feature request <a href={SUGGEST_A_FEATURE_LINK} rel="noreferrer" target="_blank">here</a>.
