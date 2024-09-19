@@ -66,9 +66,6 @@ const config = {
             require.resolve(path.resolve(STYLES_DIR, 'button.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'footer.scss')),
             require.resolve(path.resolve(STYLES_DIR, 'global.scss')),
-            require.resolve(path.resolve(STYLES_DIR, 'functions.scss')),
-            require.resolve(path.resolve(STYLES_DIR, 'mixins.scss')),
-            require.resolve(path.resolve(STYLES_DIR, 'variables.scss')),
             // vendor
             require.resolve(
               path.resolve(
