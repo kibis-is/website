@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { FC } from 'react';
+import React, { type FC } from 'react';
 import { PiCaretLeftBold, PiCaretRightBold } from 'react-icons/pi';
 import { Carousel as ReactResponsiveCarousel } from 'react-responsive-carousel';
 
@@ -10,13 +10,9 @@ import CarouselButton from './CarouselButton';
 import styles from './styles.module.scss';
 
 // types
-import { ICarouselItemProps } from './types';
+import type { IProps } from './types';
 
-interface IProps {
-  items: ICarouselItemProps[];
-}
-
-const Carousel: FC<IProps> = ({ items }: IProps) => {
+const Carousel: FC<IProps> = ({ items }) => {
   return (
     <ReactResponsiveCarousel
       renderArrowNext={(

@@ -1,14 +1,12 @@
-import React, { FC, ReactElement } from 'react';
+import React, { type FC, type PropsWithChildren } from 'react';
 
 // styles
-import styles from './index.module.scss';
+import styles from './styles.module.scss';
 
-interface IProps {
-  children: ReactElement | string;
-  level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-}
+// types
+import type { IProps } from './types';
 
-const Heading: FC<IProps> = ({ children, level }: IProps) => {
+const Heading: FC<IProps & PropsWithChildren> = ({ children, level }) => {
   switch (level) {
     case 'h1':
       return <h1 className={styles.heading}>{children}</h1>;

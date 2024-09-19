@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { FC, ReactElement } from 'react';
+import React, { type FC, type PropsWithChildren } from 'react';
 
 // components
 import SectionTitle from '@site/src/components/SectionTitle';
@@ -7,20 +7,16 @@ import SectionTitle from '@site/src/components/SectionTitle';
 // styles
 import styles from './styles.module.scss';
 
-interface IProps {
-  children: ReactElement;
-  id: string;
-  title: string;
-  variant?: 'accent' | 'primary';
-}
+// types
+import type { IProps } from './types';
 
-const Section: FC<IProps> = ({
+const Section: FC<IProps & PropsWithChildren> = ({
   children,
   id,
   title,
   variant = 'primary',
-}: IProps) => {
-  let containerClass: string = styles.container;
+}) => {
+  let containerClass = styles.container;
 
   if (variant === 'accent') {
     containerClass = clsx(styles.container, styles['container--accent']);

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { type FC } from 'react';
 
 // components
 import Section from '@site/src/components/Section';
@@ -21,12 +21,10 @@ import edgeSvg from '@site/static/images/edge.svg';
 import styles from './styles.module.scss';
 
 // types
-import { IDefaultSectionProps } from '@site/src/types';
-import { IDownloadItemProps } from './types';
+import type { IDefaultSectionProps } from '@site/src/types';
+import type { IDownloadItemProps } from './types';
 
-type IProps = IDefaultSectionProps;
-
-const DownloadSection: FC<IProps> = ({ variant }: IProps) => {
+const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
   const items: IDownloadItemProps[] = [
     {
       buttonLabel: 'Install',

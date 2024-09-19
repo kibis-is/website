@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { type FC } from 'react';
 
 // components
 import Section from '@site/src/components/Section';
@@ -13,12 +13,10 @@ import concept003Svg from '@site/static/images/concept_003.svg';
 import styles from './styles.module.scss';
 
 // types
-import { IDefaultSectionProps } from '@site/src/types';
-import { IConceptItemProps } from './types';
+import type { IDefaultSectionProps } from '@site/src/types';
+import type { IConceptItemProps } from './types';
 
-type IProps = IDefaultSectionProps;
-
-const ConceptsSection: FC<IProps> = ({ variant }: IProps) => {
+const ConceptsSection: FC<IDefaultSectionProps> = ({ variant }) => {
   const items: IConceptItemProps[] = [
     {
       title: 'Not Just For DeFi',

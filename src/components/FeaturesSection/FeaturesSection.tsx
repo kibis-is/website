@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { type FC } from 'react';
 
 // components
 import Carousel from '@site/src/components/Carousel';
@@ -9,12 +9,10 @@ import FeatureItem from './FeatureItem';
 import styles from './styles.module.scss';
 
 // types
-import { IDefaultSectionProps } from '@site/src/types';
-import { IFeatureItemProps } from './types';
+import type { IDefaultSectionProps } from '@site/src/types';
+import type { IFeatureItemProps } from './types';
 
-type IProps = IDefaultSectionProps;
-
-const FeaturesSection: FC<IProps> = ({ variant }: IProps) => {
+const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
   const items: IFeatureItemProps[] = [
     {
       alt: 'Home screen',

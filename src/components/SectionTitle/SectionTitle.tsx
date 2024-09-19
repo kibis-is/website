@@ -1,13 +1,9 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 
 // styles
 import styles from './styles.module.scss';
 
-interface IProps {
-  children: ReactElement | string;
-}
-
-const SectionTitle: FC<IProps> = ({ children }: IProps) => {
+const SectionTitle: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>

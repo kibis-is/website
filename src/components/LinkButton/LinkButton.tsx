@@ -1,15 +1,13 @@
 import clsx from 'clsx';
-import React, { FC, AnchorHTMLAttributes } from 'react';
+import React, { type FC, type AnchorHTMLAttributes } from 'react';
 
 // styles
 import styles from './styles.module.scss';
 
-interface IProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  disabled?: boolean;
-  fullWidth?: boolean;
-}
+// types
+import type { IProps } from './types';
 
-const LinkButton: FC<IProps> = ({
+const LinkButton: FC<IProps & AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   disabled = false,
   fullWidth = false,
   ...anchorProps

@@ -1,14 +1,12 @@
-import React, { FC, ReactElement } from 'react';
+import React, { type FC, type PropsWithChildren } from 'react';
 
 // styles
 import styles from './styles.module.scss';
 
-interface IProps {
-  bold?: boolean;
-  children: ReactElement | string;
-}
+// types
+import type { IProps } from './types';
 
-const Text: FC<IProps> = ({ children, bold = false }: IProps) => {
+const Text: FC<IProps & PropsWithChildren> = ({ children, bold = false }) => {
   let className: string = styles.text;
 
   if (bold) {
