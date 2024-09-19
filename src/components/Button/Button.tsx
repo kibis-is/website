@@ -9,12 +9,17 @@ import type { IProps } from './types';
 
 const Button: FC<IProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
   fullWidth = false,
+  shadow = false,
   ...buttonProps
 }) => {
   const classNames: string[] = [styles.button];
 
   if (fullWidth) {
-    classNames.push(styles['link-button--full-width']);
+    classNames.push(styles['button--full-width']);
+  }
+
+  if (shadow) {
+    classNames.push(styles['button--shadow']);
   }
 
   return <button {...buttonProps} className={clsx(classNames)} />;

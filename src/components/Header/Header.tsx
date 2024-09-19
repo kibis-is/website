@@ -10,49 +10,35 @@ import styles from './styles.module.scss';
 
 const Header: FC = () => {
   return (
-    <header className={styles.container__outer}>
-      <div className={styles.container__content}>
+    <header className={styles.header__outer}>
+      <div className={styles.header__content}>
         {/*title*/}
-        <div className={clsx(styles.container, styles.container__text)}>
-          <h1 className={clsx(styles.text, styles['text--title'])}>
-            Your Ultimate AVM Utility Wallet
-          </h1>
+        <h1 className={clsx(styles.text, styles['text--title'])}>
+          Your Ultimate AVM Utility Wallet
+        </h1>
 
-          {/*subtitle*/}
-          <p className={clsx(styles.text, styles['text--subtitle'])}>
-            An AVM wallet in your browser that goes beyond just DeFi.
-          </p>
+        {/*subtitle*/}
+        <p className={clsx(styles.text, styles['text--subtitle'])}>
+          An AVM wallet that goes beyond just DeFi.
+        </p>
 
-          {/*button*/}
-          <div className={styles['button-container']}>
-            <LinkButton fullWidth={true} href="/#download">
-              Download Now
-            </LinkButton>
-          </div>
-        </div>
-
-        {/*image*/}
-        <div className={clsx(styles.container, styles.container__image)}>
-          <ThemedImage
-            alt="Wallet home screen"
-            className={styles.image}
-            sources={{
-              dark: '/images/home_screen-dark.png',
-              light: '/images/home_screen-light.png',
-            }}
-          />
+        {/*button*/}
+        <div className={styles['button-container']}>
+          <LinkButton fullWidth={true} href="/#download">
+            Download Now
+          </LinkButton>
         </div>
       </div>
 
       {/*attribution*/}
-      <div className={styles.container__attribution}>
+      <div className={styles.header__attribution}>
         <p className={clsx(styles.text, styles['text--attribution'])}>
           Image by{` `}
           <a
-            href="https://www.freepik.com/free-vector/gradient-geometric-background_12283006.htm"
+            href="https://www.freepik.com/free-ai-image/abstract-fantasy-landscape-with-color-year-purple-tones_169082662.htm#fromView=search&page=2&position=1&uuid=d339e0f1-37a4-4fda-a7b9-f9f4a8a65172"
             target="_blank"
           >
-            Freepik
+            freepik
           </a>
         </p>
       </div>

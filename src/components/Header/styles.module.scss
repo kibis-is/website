@@ -1,14 +1,7 @@
 @import "../../styles/functions";
 @import "../../styles/mixins";
-@import "../../styles/variables";
 
-.button-container {
-  align-self: center;
-  padding: 1rem;
-  width: 50%;
-}
-
-.container {
+.header {
   display: flex;
   flex: 1;
   padding: 2rem 0;
@@ -18,6 +11,7 @@
     display: flex;
     justify-content: flex-end;
     padding: 0.5rem;
+    width: 100%;
     @include mobile-only {
       display: none;
     }
@@ -28,10 +22,9 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    justify-content: center;
+    max-width: 700px;
     padding: 0 2rem;
-    @include tablet-and-up {
-      flex-direction: row;
-    }
   }
 
   &__image {
@@ -40,28 +33,16 @@
   }
 
   &__outer {
+    align-items: center;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     height: calc(100vh - var(--ifm-navbar-height));
     justify-content: space-between;
     @include tablet-and-up {
-      background-image: url("/static/images/header_background.jpeg");
+      background-image: url("/static/images/header_background.jpg");
       background-size: cover;
     }
-  }
-
-  &__text {
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.image {
-  box-shadow: $screen-box-shadow;
-  @include tablet-and-up {
-    max-height: 600px;
   }
 }
 
@@ -82,17 +63,21 @@
   }
 
   &--subtitle {
+    color: text-color("dark");
     font-size: 1rem;
+    text-align: center;
     @include tablet-and-up {
       font-size: 1.5rem;
     }
   }
 
   &--title {
+    color: text-color("dark");
     font-size: 2rem;
     font-weight: 600;
+    text-align: center;
     @include tablet-and-up {
-      font-size: 4.5rem;
+      font-size: 3.8rem;
     }
   }
 }
