@@ -1,28 +1,52 @@
-import clsx from 'clsx';
-import React, { type FC, type AnchorHTMLAttributes } from 'react';
+import React, {
+  type PropsWithoutRef,
+  type ForwardRefExoticComponent,
+  forwardRef,
+  type LegacyRef,
+  type RefAttributes,
+} from 'react';
+import {
+  ButtonProps,
+  Link as ChakraLink,
+  type LinkProps,
+} from '@chakra-ui/react';
+import { IoOpenOutline } from 'react-icons/io5';
 
-// styles
-import styles from './styles.module.scss';
+// components
+import Button from '@site/src/components/Button';
 
-// types
-import type { IProps } from './types';
+// hooks
+import usePrimaryButtonTextColor from '@site/src/hooks/usePrimaryButtonTextColor';
 
-const LinkButton: FC<IProps & AnchorHTMLAttributes<HTMLAnchorElement>> = ({
-  disabled = false,
-  fullWidth = false,
-  ...anchorProps
-}: IProps) => {
-  const classNames: string[] = [styles['link-button']];
+const Link: ForwardRefExoticComponent<
+  PropsWithoutRef<LinkProps> &
+    PropsWithoutRef<ButtonProps> &
+    RefAttributes<HTMLButtonElement>
+> = forwardRef<HTMLButtonElement, ButtonProps & LinkProps>((props, ref) => {
+  // hooks
+  const primaryButtonTextColor = usePrimaryButtonTextColor();
 
-  if (disabled) {
-    classNames.push(styles['link-button--disabled']);
-  }
+  return (
+    <Button
+      {...props}
+      _hover={{
+        color:
+          props.variant !== 'outline' ? primaryButtonTextColor : props.color,
+        textDecoration: 'none',
+      }}
+      as={ChakraLink}
+      ref={ref}
+      sx={{
+        textDecoration: 'none',
+      }}
+      {...(props.isExternal && {
+        rightIcon: <IoOpenOutline />,
+        target: '_blank',
+      })}
+    />
+  );
+});
 
-  if (fullWidth) {
-    classNames.push(styles['link-button--full-width']);
-  }
+Link.displayName = 'Link';
 
-  return <a {...anchorProps} className={clsx(classNames)} />;
-};
-
-export default LinkButton;
+export default Link;

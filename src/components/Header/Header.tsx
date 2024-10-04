@@ -1,9 +1,8 @@
 import clsx from 'clsx';
-import React, { FC } from 'react';
+import type { FC } from 'react';
 
 // components
 import LinkButton from '@site/src/components/LinkButton';
-import ThemedImage from '@theme/ThemedImage';
 
 // styles
 import styles from './styles.module.scss';
@@ -24,7 +23,7 @@ const Header: FC = () => {
 
         {/*button*/}
         <div className={styles['button-container']}>
-          <LinkButton fullWidth={true} href="/#download">
+          <LinkButton href="/#download" size="lg">
             Download Now
           </LinkButton>
         </div>
