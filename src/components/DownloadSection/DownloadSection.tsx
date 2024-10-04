@@ -1,4 +1,4 @@
-import { HStack, Image, VStack, Wrap, WrapItem } from '@chakra-ui/react';
+import { HStack, Image, Stack, Wrap, WrapItem } from '@chakra-ui/react';
 import { useColorMode } from '@docusaurus/theme-common';
 import { type FC } from 'react';
 
@@ -15,15 +15,22 @@ import WebDownloadItem from '@site/src/components/WebDownloadItem';
 // constants
 import { CHROME_STORE_LINK, DEFAULT_GAP } from '@site/src/constants';
 
+// enums
+import { PlatformEnum } from '@site/src/enums';
+
+// hooks
+import useDesktopAndUp from '@site/src/hooks/useDesktopAndUp';
+
 // types
 import type { IDefaultSectionProps } from '@site/src/types';
 
 // utils
 import checkPlatform from '@site/src/utils/checkPlatform';
-import { PlatformEnum } from '@site/src/enums';
 
 const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
   const { colorMode } = useColorMode();
+  // hooks
+  const desktopAndUp = useDesktopAndUp();
   // misc
   const determineIndex = () => {
     const platform = checkPlatform();
@@ -57,11 +64,13 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                 w="full"
               >
                 {/*screenshot*/}
-                <Image
-                  alt="Home screen of the web extension"
-                  maxW="380px"
-                  src={`/images/screens/web_screen-${colorMode}.png`}
-                />
+                {desktopAndUp && (
+                  <Image
+                    alt="Home screen of the web extension"
+                    maxW="380px"
+                    src={`/images/screens/web_screen-${colorMode}.png`}
+                  />
+                )}
 
                 <Wrap
                   align="center"
@@ -104,7 +113,18 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
           },
           {
             content: (
-              <VStack spacing={DEFAULT_GAP} w="full">
+              <HStack justify="center" spacing={DEFAULT_GAP} w="full">
+                {/*screenshot*/}
+                {desktopAndUp && (
+                  <Stack align="center" justify="center" w="full">
+                    <Image
+                      alt="Home screen of the Android app"
+                      maxW="400px"
+                      src={`/images/screens/ios_screen-${colorMode}.png`}
+                    />
+                  </Stack>
+                )}
+
                 {/*badges*/}
                 <Wrap
                   align="center"
@@ -139,7 +159,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                     />
                   </WrapItem>
                 </Wrap>
-              </VStack>
+              </HStack>
             ),
             title: 'Android',
           },
@@ -147,16 +167,19 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
             content: (
               <HStack justify="center" spacing={DEFAULT_GAP} w="full">
                 {/*screenshot*/}
-                <Image
-                  alt="Home screen of the iOS app"
-                  maxW="400px"
-                  src={`/images/screens/ios_screen-${colorMode}.png`}
-                />
+                {desktopAndUp && (
+                  <Stack align="center" justify="center" w="full">
+                    <Image
+                      alt="Home screen of the iOS app"
+                      maxW="400px"
+                      src={`/images/screens/ios_screen-${colorMode}.png`}
+                    />
+                  </Stack>
+                )}
 
                 {/*badge*/}
                 <Wrap
                   align="center"
-                  flexGrow={1}
                   justify="center"
                   spacing={DEFAULT_GAP - 2}
                   w="full"

@@ -101,22 +101,14 @@ const config: Config = {
       items: [
         // right
         {
-          items: [
-            {
-              label: 'Download',
-              href: '/#download',
-            },
-            {
-              label: 'Concepts',
-              href: '/#concepts',
-            },
-            {
-              label: 'Features',
-              href: '/#features',
-            },
-          ],
-          label: 'Overview',
+          label: 'Download',
           position: 'right',
+          to: '/#download',
+        },
+        {
+          label: 'Features',
+          position: 'right',
+          to: '/#features',
         },
         {
           label: 'Blog',
@@ -135,16 +127,17 @@ const config: Config = {
     footer: {
       copyright: `
 <div class="footer__copyright-container">
-    <p class="footer__text">Licensed under <a class="footer__text--link" href="${GITHUB_LINK}/blob/main/LICENSE" target="_blank">GNU AGPL-3.0</a>. Icons provided by <a class="footer__text--link" href="https://www.flaticon.com/" target="_blank">flaticon</a>.</p>
+    <p class="footer__text">
+        Kibisis is owned and operated by Kibisis OÜ. Registry code 17034397.
+    </p>
+    <p class="footer__text">
+        Kibisis is committed to open source and all applications are licensed under <a class="footer__text--link" href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">GNU AGPL-3.0</a>.
+    </p>
+    <p class="footer__text">
+        Icons provided by <a class="footer__text--link" href="https://www.flaticon.com/" target="_blank">flaticon</a>.
+    </p>
 </div>
         `,
-      logo: {
-        alt: 'Agora Labs logo',
-        height: '50px',
-        href: AGORA_LABS_LINK,
-        src: '/images/developed_by_agora_labs_banner.svg',
-        target: '_blank',
-      },
       links: [
         {
           title: title,
@@ -152,10 +145,6 @@ const config: Config = {
             {
               label: 'Download',
               href: '/#download',
-            },
-            {
-              label: 'Concepts',
-              href: '/#concepts',
             },
             {
               label: 'Features',
