@@ -19,10 +19,9 @@ const staticDir = resolve(__dirname, 'static');
 const stylesDir = resolve(srcDir, 'styles');
 
 // application
-const tagline = 'Not just for DeFi';
+const tagline = 'Your Ultimate AVM Utility Wallet';
 const title = 'Kibisis';
 
-/** @type {import('@docusaurus/types').Config} */
 const config: Config = {
   baseUrl: '/',
   deploymentBranch: 'gh-pages',
