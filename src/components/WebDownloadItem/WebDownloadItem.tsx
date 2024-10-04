@@ -1,5 +1,5 @@
 import { Heading, VStack } from '@chakra-ui/react';
-import type { FC } from 'react';
+import { cloneElement, FC } from 'react';
 
 // components
 import LinkButton from '@site/src/components/LinkButton';
@@ -19,18 +19,19 @@ import type { IProps } from './types';
 const WebDownloadItem: FC<IProps> = ({
   buttonLabel,
   downloadUri,
+  icon,
   name,
-  SvgComponent,
 }) => {
   // hooks
   const defaultTextColor = useDefaultTextColor();
 
   return (
-    <VStack gap={DEFAULT_GAP / 3} w="full">
+    <VStack gap={DEFAULT_GAP / 3} w={60}>
       {/*image*/}
-      <div className={styles['image-container']}>
-        <SvgComponent className={styles.image} role="img" />
-      </div>
+      {cloneElement(icon, {
+        height: '80px',
+        width: '80px',
+      })}
 
       {/*name*/}
       <Heading fontSize="lg" color={defaultTextColor} w="full">

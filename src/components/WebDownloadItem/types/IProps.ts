@@ -1,10 +1,10 @@
-import type { ComponentProps, ComponentType } from 'react';
+import type { ReactElement } from 'react';
 
 interface IProps {
   buttonLabel?: string;
   downloadUri?: string;
+  icon: ReactElement;
   name: string;
-  SvgComponent: ComponentType<ComponentProps<'svg'>>;
 }
 
 export default IProps;

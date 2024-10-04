@@ -4,7 +4,6 @@ import DocusaurusThemeLayout from '@theme/Layout';
 import type { FC } from 'react';
 
 // components
-import ConceptsSection from '@site/src/components/ConceptsSection';
 import DownloadSection from '@site/src/components/DownloadSection';
 import FeaturesSection from '@site/src/components/FeaturesSection';
 import Header from '@site/src/components/Header';
@@ -28,9 +27,7 @@ const IndexPage: FC = () => {
           <Header />
 
           <Main>
-            <DownloadSection variant="primary" />
-
-            <ConceptsSection variant="accent" />
+            <DownloadSection variant="accent" />
 
             <FeaturesSection variant="primary" />
           </Main>

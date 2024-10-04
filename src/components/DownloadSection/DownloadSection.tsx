@@ -1,126 +1,156 @@
-import {
-  HStack,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-} from '@chakra-ui/react';
-import React, { type FC } from 'react';
+import { HStack, Image, VStack, Wrap, WrapItem } from '@chakra-ui/react';
+import { useColorMode } from '@docusaurus/theme-common';
+import { type FC } from 'react';
 
 // components
+import BraveIcon from '@site/src/components/BraveIcon';
+import ChromeIcon from '@site/src/components/ChromeIcon';
+import EdgeIcon from '@site/src/components/EdgeIcon';
+import FirefoxIcon from '@site/src/components/FirefoxIcon';
+import PillTabs from '@site/src/components/PillTabs';
 import Section from '@site/src/components/Section';
+import StoreBadge from '@site/src/components/StoreBadge';
 import WebDownloadItem from '@site/src/components/WebDownloadItem';
 
 // constants
 import { CHROME_STORE_LINK, DEFAULT_GAP } from '@site/src/constants';
 
-// hooks
-import usePrimaryButtonTextColor from '@site/src/hooks/usePrimaryButtonTextColor';
-import usePrimaryColor from '@site/src/hooks/usePrimaryColor';
-import usePrimaryColorScheme from '@site/src/hooks/usePrimaryColorScheme';
-
-// images
-import braveSvg from '@site/static/images/brave.svg';
-import chromeSvg from '@site/static/images/chrome.svg';
-import edgeSvg from '@site/static/images/edge.svg';
-import firefoxSvg from '@site/static/images/firefox.svg';
-
 // types
 import type { IDefaultSectionProps } from '@site/src/types';
 
 const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
-  // hooks
-  const primaryButtonTextColor = usePrimaryButtonTextColor();
-  const primaryColor = usePrimaryColor();
-  const primaryColorScheme = usePrimaryColorScheme();
+  const { colorMode } = useColorMode();
 
   return (
     <Section id="download" title="Download" variant={variant}>
-      <Tabs
-        align="center"
-        colorScheme={primaryColorScheme}
-        isLazy={true}
-        variant="unstyled"
-        w="full"
-      >
-        <TabList>
-          <Tab
-            _selected={{
-              bg: primaryColor,
-              color: primaryButtonTextColor,
-            }}
-            borderBottomWidth={1}
-            borderColor={primaryColor}
-            borderStartRadius="full"
-            borderLeftWidth={1}
-            borderRightWidth={0}
-            borderTopWidth={1}
-          >
-            Web
-          </Tab>
+      <PillTabs
+        tabs={[
+          {
+            content: (
+              <HStack
+                justify="space-between"
+                spacing={DEFAULT_GAP * 2}
+                w="full"
+              >
+                {/*screenshot*/}
+                <Image
+                  alt="Home screen of the web extension"
+                  maxW="380px"
+                  src={`/images/screens/web_screen-${colorMode}.png`}
+                />
 
-          <Tab
-            _selected={{
-              bg: primaryColor,
-              color: primaryButtonTextColor,
-            }}
-            borderColor={primaryColor}
-            borderWidth={1}
-          >
-            Android
-          </Tab>
+                <Wrap
+                  align="center"
+                  flexGrow={1}
+                  justify="center"
+                  spacing={DEFAULT_GAP - 2}
+                  w="full"
+                >
+                  {/*brave*/}
+                  <WrapItem>
+                    <WebDownloadItem
+                      downloadUri={CHROME_STORE_LINK}
+                      icon={<BraveIcon />}
+                      name="Brave"
+                    />
+                  </WrapItem>
 
-          <Tab
-            _selected={{
-              bg: primaryColor,
-              color: primaryButtonTextColor,
-            }}
-            borderBottomWidth={1}
-            borderColor={primaryColor}
-            borderEndRadius="full"
-            borderLeftWidth={0}
-            borderRightWidth={1}
-            borderTopWidth={1}
-          >
-            iOS
-          </Tab>
-        </TabList>
+                  {/*chrome*/}
+                  <WrapItem>
+                    <WebDownloadItem
+                      downloadUri={CHROME_STORE_LINK}
+                      icon={<ChromeIcon />}
+                      name="Chrome"
+                    />
+                  </WrapItem>
 
-        <TabPanels>
-          <TabPanel mt={DEFAULT_GAP * 2}>
-            <HStack justify="space-evenly" spacing={DEFAULT_GAP} w="full">
-              {/*brave*/}
-              <WebDownloadItem
-                downloadUri={CHROME_STORE_LINK}
-                name="Brave"
-                SvgComponent={braveSvg}
-              />
+                  {/*edge*/}
+                  <WrapItem>
+                    <WebDownloadItem icon={<EdgeIcon />} name="Edge" />
+                  </WrapItem>
 
-              {/*chrome*/}
-              <WebDownloadItem
-                downloadUri={CHROME_STORE_LINK}
-                name="Chrome"
-                SvgComponent={chromeSvg}
-              />
+                  {/*firefox*/}
+                  <WrapItem>
+                    <WebDownloadItem icon={<FirefoxIcon />} name="Firefox" />
+                  </WrapItem>
+                </Wrap>
+              </HStack>
+            ),
+            title: 'Web',
+          },
+          {
+            content: (
+              <VStack spacing={DEFAULT_GAP} w="full">
+                {/*badges*/}
+                <Wrap
+                  align="center"
+                  justify="center"
+                  spacing={DEFAULT_GAP - 2}
+                  w="full"
+                >
+                  {/*play store*/}
+                  <WrapItem>
+                    <StoreBadge
+                      airaLabel="Play Store badge"
+                      href=""
+                      src="/images/store_badges/play_store_badge.png"
+                    />
+                  </WrapItem>
 
-              {/*edge*/}
-              <WebDownloadItem name="Edge" SvgComponent={edgeSvg} />
+                  {/*f-droid*/}
+                  <WrapItem>
+                    <StoreBadge
+                      airaLabel="F-Droid badge"
+                      href=""
+                      src="/images/store_badges/fdroid_badge.png"
+                    />
+                  </WrapItem>
 
-              {/*firefox*/}
-              <WebDownloadItem name="Firefox" SvgComponent={firefoxSvg} />
-            </HStack>
-          </TabPanel>
+                  {/*direct download*/}
+                  <WrapItem>
+                    <StoreBadge
+                      airaLabel="Direct download badge"
+                      href=""
+                      src="/images/store_badges/apk_badge.png"
+                    />
+                  </WrapItem>
+                </Wrap>
+              </VStack>
+            ),
+            title: 'Android',
+          },
+          {
+            content: (
+              <HStack justify="space-between" spacing={DEFAULT_GAP} w="full">
+                {/*screenshot*/}
+                <Image
+                  alt="Home screen of the iOS app"
+                  maxW="400px"
+                  src={`/images/screens/ios_screen-${colorMode}.png`}
+                />
 
-          <TabPanel>
-            <p>Android</p>
-          </TabPanel>
-
-          <TabPanel>
-            <p>iOS</p>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
+                {/*badge*/}
+                <Wrap
+                  align="center"
+                  flexGrow={1}
+                  justify="center"
+                  spacing={DEFAULT_GAP - 2}
+                  w="full"
+                >
+                  <WrapItem>
+                    <StoreBadge
+                      airaLabel="App Store badge"
+                      href=""
+                      src={`/images/store_badges/app_store_badge-${colorMode}.svg`}
+                    />
+                  </WrapItem>
+                </Wrap>
+              </HStack>
+            ),
+            title: 'iOS',
+          },
+        ]}
+      />
     </Section>
   );
 };
