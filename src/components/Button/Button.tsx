@@ -1,10 +1,10 @@
-import React, {
-  PropsWithoutRef,
-  ForwardRefExoticComponent,
+import {
+  type PropsWithoutRef,
+  type ForwardRefExoticComponent,
   forwardRef,
-  RefAttributes,
+  type RefAttributes,
 } from 'react';
-import { Button as ChakraButton, ButtonProps } from '@chakra-ui/react';
+import { Button as ChakraButton, type ButtonProps } from '@chakra-ui/react';
 
 // hooks
 import usePrimaryButtonTextColor from '@site/src/hooks/usePrimaryButtonTextColor';

@@ -1,12 +1,11 @@
-import React, {
+import {
   type PropsWithoutRef,
   type ForwardRefExoticComponent,
   forwardRef,
-  type LegacyRef,
   type RefAttributes,
 } from 'react';
 import {
-  ButtonProps,
+  type ButtonProps,
   Link as ChakraLink,
   type LinkProps,
 } from '@chakra-ui/react';
@@ -18,7 +17,7 @@ import Button from '@site/src/components/Button';
 // hooks
 import usePrimaryButtonTextColor from '@site/src/hooks/usePrimaryButtonTextColor';
 
-const Link: ForwardRefExoticComponent<
+const LinkButton: ForwardRefExoticComponent<
   PropsWithoutRef<LinkProps> &
     PropsWithoutRef<ButtonProps> &
     RefAttributes<HTMLButtonElement>
@@ -47,6 +46,6 @@ const Link: ForwardRefExoticComponent<
   );
 });
 
-Link.displayName = 'Link';
+LinkButton.displayName = 'LinkButton';
 
-export default Link;
+export default LinkButton;
