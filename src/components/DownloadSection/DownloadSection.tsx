@@ -18,12 +18,36 @@ import { CHROME_STORE_LINK, DEFAULT_GAP } from '@site/src/constants';
 // types
 import type { IDefaultSectionProps } from '@site/src/types';
 
+// utils
+import checkPlatform from '@site/src/utils/checkPlatform';
+import { PlatformEnum } from '@site/src/enums';
+
 const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
   const { colorMode } = useColorMode();
+  // misc
+  const determineIndex = () => {
+    const platform = checkPlatform();
+    let index = 0;
+
+    switch (platform) {
+      case PlatformEnum.Android:
+        index = 1;
+        break;
+      case PlatformEnum.IOS:
+        index = 2;
+        break;
+      case PlatformEnum.Web:
+      default:
+        break;
+    }
+
+    return index;
+  };
 
   return (
     <Section id="download" title="Download" variant={variant}>
       <PillTabs
+        defaultIndex={determineIndex()}
         tabs={[
           {
             content: (
@@ -121,7 +145,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
           },
           {
             content: (
-              <HStack justify="space-between" spacing={DEFAULT_GAP} w="full">
+              <HStack justify="center" spacing={DEFAULT_GAP} w="full">
                 {/*screenshot*/}
                 <Image
                   alt="Home screen of the iOS app"

@@ -19,7 +19,7 @@ import usePrimaryColorScheme from '@site/src/hooks/usePrimaryColorScheme';
 // types
 import type { IProps } from './types';
 
-const PillTabs: FC<IProps> = ({ tabs }) => {
+const PillTabs: FC<IProps> = ({ defaultIndex = 0, tabs }) => {
   // hooks
   const primaryButtonTextColor = usePrimaryButtonTextColor();
   const primaryColor = usePrimaryColor();
@@ -32,6 +32,7 @@ const PillTabs: FC<IProps> = ({ tabs }) => {
     <Tabs
       align="center"
       colorScheme={primaryColorScheme}
+      defaultIndex={defaultIndex}
       isLazy={true}
       variant="unstyled"
       w="full"
