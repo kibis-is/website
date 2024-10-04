@@ -1,7 +1,12 @@
 import { extendTheme } from '@chakra-ui/react';
-import type { Dict } from '@chakra-ui/utils';
 
-const theme: Dict = extendTheme({
+const config = extendTheme({
+  breakpoints: {
+    sm: '40em',
+    md: '52em',
+    lg: '64em',
+    xl: '80em',
+  },
   colors: {
     algorand: {
       50: '#000000',
@@ -61,4 +66,4 @@ const theme: Dict = extendTheme({
   },
 });
 
-export default theme;
+export default config;

@@ -1,6 +1,7 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import DocusaurusThemeLayout from '@theme/Layout';
-import React, { type FC } from 'react';
+import type { FC } from 'react';
 
 // components
 import ConceptsSection from '@site/src/components/ConceptsSection';
@@ -10,7 +11,10 @@ import Header from '@site/src/components/Header';
 import Main from '@site/src/components/Main';
 
 // containers
-import ChakraThemeProvider from '@site/src/containers/ChakraThemeProvider';
+import ColorModeProvider from '@site/src/containers/ColorModeProvider';
+
+// theme
+import { config as themeConfig } from '@site/src/themes';
 
 const IndexPage: FC = () => {
   const { siteConfig } = useDocusaurusContext();
@@ -19,17 +23,19 @@ const IndexPage: FC = () => {
 
   return (
     <DocusaurusThemeLayout title={siteConfig.tagline} description={description}>
-      <ChakraThemeProvider>
-        <Header />
+      <ChakraProvider theme={themeConfig}>
+        <ColorModeProvider>
+          <Header />
 
-        <Main>
-          <DownloadSection variant="primary" />
+          <Main>
+            <DownloadSection variant="primary" />
 
-          <ConceptsSection variant="accent" />
+            <ConceptsSection variant="accent" />
 
-          <FeaturesSection variant="primary" />
-        </Main>
-      </ChakraThemeProvider>
+            <FeaturesSection variant="primary" />
+          </Main>
+        </ColorModeProvider>
+      </ChakraProvider>
     </DocusaurusThemeLayout>
   );
 };
