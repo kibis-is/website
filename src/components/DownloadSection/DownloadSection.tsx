@@ -67,6 +67,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                 {desktopAndUp && (
                   <Image
                     alt="Home screen of the web extension"
+                    boxShadow="xl"
                     maxW="380px"
                     src={`/images/screens/web_screen-${colorMode}.png`}
                   />

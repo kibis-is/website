@@ -9,7 +9,7 @@ const Attribution: FC<IProps> = ({ children }) => {
     <Box bg="black" p={1}>
       {cloneElement(children, {
         color: 'whiteAlpha.800',
-        fontSize: 'sm',
+        fontSize: 'xs',
         lineHeight: '1rem',
         m: 0,
         p: 0,

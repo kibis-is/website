@@ -36,12 +36,12 @@ const FeatureItem: FC<IProps> = ({
       spacing={DEFAULT_GAP}
       w="full"
     >
-      <Stack position="relative">
+      <VStack spacing={DEFAULT_GAP / 3}>
         {/*image*/}
         <Image
           alt={alt}
           src={src}
-          w={96}
+          boxSize={96}
           {...(desktopAndUp && {
             mr: DEFAULT_GAP * 4,
           })}
@@ -49,18 +49,11 @@ const FeatureItem: FC<IProps> = ({
 
         {/*attribution*/}
         {attribution && (
-          <Stack
-            align="flex-end"
-            bottom={0}
-            justify="center"
-            position="absolute"
-            right={0}
-            w="full"
-          >
+          <Stack align="flex-end" justify="center" w="full">
             <Attribution>{attribution}</Attribution>
           </Stack>
         )}
-      </Stack>
+      </VStack>
 
       {/*title/description*/}
       <VStack spacing={1} w={desktopAndUp ? '55%' : 'full'}>
