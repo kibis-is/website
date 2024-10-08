@@ -1,70 +1,62 @@
+import { Stack } from '@chakra-ui/react';
 import React, { type FC } from 'react';
 
 // components
 import Carousel from '@site/src/components/Carousel';
+import FeatureItem from '@site/src/components/FeatureItem';
 import Section from '@site/src/components/Section';
-import FeatureItem from './FeatureItem';
-
-// styles
-import styles from './styles.module.scss';
 
 // types
 import type { IDefaultSectionProps } from '@site/src/types';
-import type { IFeatureItemProps } from './types';
+import type { IProps as IFeatureItemProps } from '@site/src/components/FeatureItem';
 
 const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
   const items: IFeatureItemProps[] = [
     {
-      alt: 'Home screen',
+      alt: 'A man using a password to on a giant cell phone to highlight security',
       description:
-        'Kibisis treats assets more as a utility rather than just a fungible currency.',
-      imageSources: {
-        dark: '/images/home_screen-dark.png',
-        light: '/images/home_screen-light.png',
-      },
-      title: 'Assets Are Not Just Fungible Currency',
+        'Kibisis using cutting edge security to secure your accounts.',
+      src: '/images/features/security_feature.jpg',
+      title: 'Security Is Important',
     },
     {
-      alt: 'Asset transfer screen',
-      description: 'Seamlessly transfer any asset to another address.',
-      imageSources: {
-        dark: '/images/send_assets_screen-dark.png',
-        light: '/images/send_assets_screen-light.png',
-      },
-      title: 'Asset Transfer',
+      alt: 'A woman entering putting a puzzle piece on a giant computer screen.',
+      description:
+        'A wallet is a place where you can view all your assets in one place.',
+      src: '/images/features/assets_feature.jpg',
+      title: 'All Your Assets In One Place',
     },
     {
-      alt: 'Add ARC-200 screen',
+      alt: 'A man sitting down shopping online using his phone.',
       description:
-        'Kibisis not only supports AVM standard assets, it also supports ARC-0200. From Kibisis, you can check your balance, transfer and add any ARC-0200 asset.',
-      imageSources: {
-        dark: '/images/arc0200_support_screen-dark.png',
-        light: '/images/arc0200_support_screen-light.png',
-      },
-      title: 'ARC-0200 Support',
+        'Whether you are on your phone or on your laptop, Kibisis will always be there so you can make payments seamlessly.',
+      src: '/images/features/payments_feature.jpg',
+      title: 'Payments Made Easy',
     },
     {
-      alt: 'Atomic transaction screen',
+      alt: 'A man sitting down filling out a form online using his tablet.',
       description:
-        'With AVM chains allowing up to 16 transactions to be grouped as an atomic transfer, Kibisis can sign all or multiple transactions within the atomic group.',
-      imageSources: {
-        dark: '/images/atomic_transactions_screen-dark.png',
-        light: '/images/atomic_transactions_screen-light.png',
-      },
-      title: 'Atomic Transactions',
+        'A wallet is more than just a place to keep your assets: Kibisis is also your identity. You can use Kibisis to authenticate and prove your identity without having store your credentials in the cloud. You own your identity.',
+      src: '/images/features/identity_feature.jpg',
+      title: 'Your Online Identity',
     },
   ];
 
   return (
     <Section id="features" title="Features" variant={variant}>
-      <div className={styles['carousel-container']}>
+      <Stack align="center" justify="center" w="full">
         <Carousel
           items={items.map((props, index) => ({
-            children: <FeatureItem key={`feature-item-${index}`} {...props} />,
+            children: (
+              <FeatureItem
+                key={`${FeaturesSection.name}-feature-item-${index}`}
+                {...props}
+              />
+            ),
             label: props.title,
           }))}
         />
-      </div>
+      </Stack>
     </Section>
   );
 };

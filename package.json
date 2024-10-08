@@ -28,7 +28,7 @@
     "prepare": "husky install",
     "prettier": "prettier --config .prettierrc --write \"**/*.{js,json,ts,tsx}\"",
     "serve": "docusaurus serve",
-    "start": "docusaurus start",
+    "start": "docusaurus start --port 8080 --no-open",
     "swizzle": "docusaurus swizzle",
     "test": "exit 0",
     "write-translations": "docusaurus write-translations",
