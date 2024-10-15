@@ -1,21 +1,33 @@
-import clsx from 'clsx';
-import React, { FC, ButtonHTMLAttributes } from 'react';
+import {
+  type PropsWithoutRef,
+  type ForwardRefExoticComponent,
+  forwardRef,
+  type RefAttributes,
+} from 'react';
+import { Button as ChakraButton, type ButtonProps } from '@chakra-ui/react';
 
-// styles
-import styles from './styles.module.scss';
+// hooks
+import usePrimaryButtonTextColor from '@site/src/hooks/usePrimaryButtonTextColor';
+import usePrimaryColorScheme from '@site/src/hooks/usePrimaryColorScheme';
 
-interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  fullWidth?: boolean;
-}
+const Button: ForwardRefExoticComponent<
+  PropsWithoutRef<ButtonProps> & RefAttributes<HTMLButtonElement>
+> = forwardRef<HTMLButtonElement, ButtonProps>((props: ButtonProps, ref) => {
+  // hooks
+  const primaryButtonTextColor = usePrimaryButtonTextColor();
+  const primaryColorScheme = usePrimaryColorScheme();
 
-const Button: FC<IProps> = ({ fullWidth = false, ...buttonProps }: IProps) => {
-  const classNames: string[] = [styles.button];
+  return (
+    <ChakraButton
+      color={props.variant !== 'outline' ? primaryButtonTextColor : props.color}
+      colorScheme={primaryColorScheme}
+      {...props}
+      borderRadius="full"
+      ref={ref}
+    />
+  );
+});
 
-  if (fullWidth) {
-    classNames.push(styles['link-button--full-width']);
-  }
-
-  return <button {...buttonProps} className={clsx(classNames)} />;
-};
+Button.displayName = 'Button';
 
 export default Button;

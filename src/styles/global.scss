@@ -1,25 +1,47 @@
 @import "./functions";
 
 @font-face {
-  font-family: 'AnonymousPro';
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 600 700;
   font-display: swap;
-  src: url('/static/fonts/AnonymousPro/AnonymousPro-Bold.ttf') format('truetype'),
-  url('/static/fonts/AnonymousPro/AnonymousPro-Bold.woff2') format('woff2'),
-  url('/static/fonts/AnonymousPro/AnonymousPro-Bold.woff') format('woff'),
-  url('/static/fonts/AnonymousPro/AnonymousPro-Bold.svg#AnonymousPro-Bold') format('svg');
-  }
+  src: url('/static/fonts/Nunito/Nunito-Bold.ttf') format('truetype'),
+    url('/static/fonts/Nunito/Nunito-Bold.woff2') format('woff2'),
+    url('/static/fonts/Nunito/Nunito-Bold.woff') format('woff'),
+    url('/static/fonts/Nunito/Nunito-Bold.svg#Nunito-Bold') format('svg');
+}
 
 @font-face {
-  font-family: 'AnonymousPro';
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/static/fonts/AnonymousPro/AnonymousPro-Regular.ttf') format('truetype'),
-  url('/static/fonts/AnonymousPro/AnonymousPro-Regular.woff2') format('woff2'),
-  url('/static/fonts/AnonymousPro/AnonymousPro-Regular.woff') format('woff'),
-  url('/static/fonts/AnonymousPro/AnonymousPro-Regular.svg#AnonymousPro-Regular') format('svg');
+  src: url('/static/fonts/Nunito/Nunito-Regular.ttf') format('truetype'),
+  url('/static/fonts/Nunito/Nunito-Regular.woff2') format('woff2'),
+  url('/static/fonts/Nunito/Nunito-Regular.woff') format('woff'),
+  url('/static/fonts/Nunito/Nunito-Regular.svg#Nunito-Regular') format('svg');
+}
+
+@font-face {
+  font-family: 'SourceCodePro';
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url('/static/fonts/SourceCodePro/SourceCodePro-Bold.ttf') format('truetype'),
+  url('/static/fonts/SourceCodePro/SourceCodePro-Bold.woff2') format('woff2'),
+  url('/static/fonts/SourceCodePro/SourceCodePro-Bold.woff') format('woff'),
+  url('/static/fonts/SourceCodePro/SourceCodePro-Bold.svg#SourceCodePro-Bold') format('svg');
+}
+
+@font-face {
+  font-family: 'SourceCodePro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/static/fonts/SourceCodePro/SourceCodePro-Regular.ttf') format('truetype'),
+  url('/static/fonts/SourceCodePro/SourceCodePro-Regular.woff2') format('woff2'),
+  url('/static/fonts/SourceCodePro/SourceCodePro-Regular.woff') format('woff'),
+  url('/static/fonts/SourceCodePro/SourceCodePro-Regular.svg#SourceCodePro-Regular') format('svg');
 }
 
 :root {
@@ -63,8 +85,8 @@
   --ifm-color-primary-lighter: var(--kb-primary-color-light-300);
   --ifm-color-primary-lightest: var(--kb-primary-color-light-200);
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'AnonymousPro';
-  --ifm-heading-font-family: 'AnonymousPro';
+  --ifm-font-family-base: 'Nunito';
+  --ifm-heading-font-family: 'Nunito';
   --ifm-navbar-background-color: var(--kb-background-primary-color);
   --ifm-navbar-link-color: var(--kb-text-color);
   --kb-background-accent-color: var(--kb-background-accent-color-light);
@@ -90,6 +112,8 @@
 
 /* overrides */
 .footer {
+  padding-top: 5rem;
+
   &__link-item {
     &:hover {
       color: primary-color("dark");

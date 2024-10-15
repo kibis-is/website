@@ -1,72 +1,159 @@
-import React, { FC } from 'react';
+import { Link, Text, VStack } from '@chakra-ui/react';
+import { useColorMode } from '@docusaurus/theme-common';
+import { translate } from '@docusaurus/Translate';
+import { type FC } from 'react';
 
 // components
-import Carousel from '@site/src/components/Carousel';
+import FeatureItem from '@site/src/components/FeatureItem';
 import Section from '@site/src/components/Section';
-import FeatureItem from './FeatureItem';
-
-// styles
-import styles from './styles.module.scss';
 
 // types
-import { IDefaultSectionProps } from '@site/src/types';
-import { IFeatureItemProps } from './types';
+import type { IDefaultSectionProps } from '@site/src/types';
+import type { IProps as IFeatureItemProps } from '@site/src/components/FeatureItem';
+import { DEFAULT_GAP } from '@site/src/constants';
 
-type IProps = IDefaultSectionProps;
-
-const FeaturesSection: FC<IProps> = ({ variant }: IProps) => {
+const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
+  const { colorMode } = useColorMode();
+  // misc
   const items: IFeatureItemProps[] = [
     {
-      alt: 'Home screen',
-      description:
-        'Kibisis treats assets more as a utility rather than just a fungible currency.',
-      imageSources: {
-        dark: '/images/home_screen-dark.png',
-        light: '/images/home_screen-light.png',
-      },
-      title: 'Assets Are Not Just Fungible Currency',
+      altID: 'feature.security.imageAlt',
+      attribution: (
+        <Text>
+          <Link
+            _hover={{
+              color: 'primaryDark.300',
+            }}
+            color="primaryDark.500"
+            href="https://storyset.com/data"
+            isExternal={true}
+          >
+            {translate(
+              {
+                id: 'caption.storysetAttribution',
+              },
+              {
+                type: 'Data',
+              }
+            )}
+          </Link>
+        </Text>
+      ),
+      descriptionIDs: [
+        'feature.security.description1',
+        'feature.security.description2',
+      ],
+      index: 0,
+      src: `/images/features/security_feature-${colorMode}.svg`,
+      titleID: 'feature.security.title',
     },
     {
-      alt: 'Asset transfer screen',
-      description: 'Seamlessly transfer any asset to another address.',
-      imageSources: {
-        dark: '/images/send_assets_screen-dark.png',
-        light: '/images/send_assets_screen-light.png',
-      },
-      title: 'Asset Transfer',
+      altID: 'feature.assets.imageAlt',
+      attribution: (
+        <Text>
+          <Link
+            _hover={{
+              color: 'primaryDark.300',
+            }}
+            color="primaryDark.500"
+            href="https://storyset.com/work"
+            isExternal={true}
+          >
+            {translate(
+              {
+                id: 'caption.storysetAttribution',
+              },
+              {
+                type: 'Work',
+              }
+            )}
+          </Link>
+        </Text>
+      ),
+      descriptionIDs: [
+        'feature.assets.description1',
+        'feature.assets.description2',
+      ],
+      index: 1,
+      src: `/images/features/assets_feature-${colorMode}.svg`,
+      titleID: 'feature.assets.title',
     },
     {
-      alt: 'Add ARC-200 screen',
-      description:
-        'Kibisis not only supports AVM standard assets, it also supports ARC-0200. From Kibisis, you can check your balance, transfer and add any ARC-0200 asset.',
-      imageSources: {
-        dark: '/images/arc0200_support_screen-dark.png',
-        light: '/images/arc0200_support_screen-light.png',
-      },
-      title: 'ARC-0200 Support',
+      altID: 'feature.payment.imageAlt',
+      attribution: (
+        <Text>
+          <Link
+            _hover={{
+              color: 'primaryDark.300',
+            }}
+            color="primaryDark.500"
+            href="https://storyset.com/business"
+            isExternal={true}
+          >
+            {translate(
+              {
+                id: 'caption.storysetAttribution',
+              },
+              {
+                type: 'Business',
+              }
+            )}
+          </Link>
+        </Text>
+      ),
+      descriptionIDs: ['feature.payment.description'],
+      index: 2,
+      src: `/images/features/payments_feature-${colorMode}.svg`,
+      titleID: 'feature.payment.title',
     },
     {
-      alt: 'Atomic transaction screen',
-      description:
-        'With AVM chains allowing up to 16 transactions to be grouped as an atomic transfer, Kibisis can sign all or multiple transactions within the atomic group.',
-      imageSources: {
-        dark: '/images/atomic_transactions_screen-dark.png',
-        light: '/images/atomic_transactions_screen-light.png',
-      },
-      title: 'Atomic Transactions',
+      altID: 'feature.identity.imageAlt',
+      attribution: (
+        <Text>
+          <Link
+            _hover={{
+              color: 'primaryDark.300',
+            }}
+            color="primaryDark.500"
+            href="https://storyset.com/online"
+            isExternal={true}
+          >
+            {translate(
+              {
+                id: 'caption.storysetAttribution',
+              },
+              {
+                type: 'Online',
+              }
+            )}
+          </Link>
+        </Text>
+      ),
+      descriptionIDs: [
+        'feature.identity.description1',
+        'feature.identity.description2',
+        'feature.identity.description3',
+      ],
+      index: 3,
+      src: `/images/features/identity_feature-${colorMode}.svg`,
+      titleID: 'feature.identity.title',
     },
   ];
 
   return (
-    <Section id="features" title="Features" variant={variant}>
-      <div className={styles['carousel-container']}>
-        <Carousel
-          items={items.map((props, index) => ({
-            children: <FeatureItem key={`feature-item-${index}`} {...props} />,
-            label: props.title,
-          }))}
-        />
-      </div>
+    <Section
+      id="features"
+      title={translate({ id: 'title.features' })}
+      variant={variant}
+    >
+      <VStack spacing={DEFAULT_GAP * 2} w="full">
+        {items.map((props, index) => (
+          <FeatureItem
+            key={`${FeaturesSection.name}-feature-item-${index}`}
+            {...props}
+          />
+        ))}
+      </VStack>
     </Section>
   );
 };

@@ -4,17 +4,10 @@ import React, { FC } from 'react';
 import styles from './styles.module.scss';
 import clsx from 'clsx';
 
-interface IProps {
-  label: string;
-  maxWidth?: string;
-  src: string;
-}
+// types
+import type { IProps } from './types';
 
-const CenteredImage: FC<IProps> = ({
-  label,
-  maxWidth = '400px',
-  src,
-}: IProps) => {
+const CenteredImage: FC<IProps> = ({ label, maxWidth = '400px', src }) => {
   return (
     <div className={clsx(styles.container, styles.container__outer)}>
       <div

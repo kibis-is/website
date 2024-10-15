@@ -1,62 +1,155 @@
-import clsx from 'clsx';
-import React, { FC } from 'react';
+import {
+  Box,
+  Heading,
+  Link,
+  List,
+  ListItem,
+  Stack,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
+import { keyframes } from '@emotion/react';
+import { translate } from '@docusaurus/Translate';
+import type { FC } from 'react';
+import { IoArrowDownOutline } from 'react-icons/io5';
 
 // components
+import Attribution from '@site/src/components/Attribution';
 import LinkButton from '@site/src/components/LinkButton';
-import ThemedImage from '@theme/ThemedImage';
 
-// styles
-import styles from './styles.module.scss';
+// constants
+import { DEFAULT_GAP } from '@site/src/constants';
+
+// hooks
+import useDesktopAndUp from '@site/src/hooks/useDesktopAndUp';
+import usePrimaryColor from '@site/src/hooks/usePrimaryColor';
 
 const Header: FC = () => {
+  // hooks
+  const desktopAndUp = useDesktopAndUp();
+  const primaryColor = usePrimaryColor();
+  // misc
+  const itemHeightInRem = 3.6;
+  const headerItems = [
+    translate({ id: 'heading.identity' }),
+    translate({ id: 'heading.payments' }),
+    translate({ id: 'heading.lifestyle' }),
+  ];
+  const scrollingAnimation = keyframes`
+    0% { margin-top: -${itemHeightInRem * 6}rem; }
+    5% { margin-top: -${itemHeightInRem * 4}rem; }
+    33% { margin-top: -${itemHeightInRem * 4}rem; }
+    38% { margin-top: -${itemHeightInRem * 2}rem; }
+    66% { margin-top: -${itemHeightInRem * 2}rem; }
+    71% { margin-top: 0; }
+    99.99% { margin-top: 0; }
+    100% { margin-top: -${itemHeightInRem * 6}rem; }
+  `;
+  const defaultHeadingColor = 'whiteAlpha.900';
+
   return (
-    <header className={styles.container__outer}>
-      <div className={styles.container__content}>
+    <VStack
+      align="center"
+      as="header"
+      bgColor="whiteAlpha.800"
+      bgImage="/images/header_background.jpg"
+      bgSize="cover"
+      h="calc(100vh - var(--ifm-navbar-height))"
+      justify="space-between"
+    >
+      <VStack
+        justify="center"
+        flexGrow={1}
+        px={DEFAULT_GAP}
+        spacing={DEFAULT_GAP - 2}
+        w="full"
+      >
         {/*title*/}
-        <div className={clsx(styles.container, styles.container__text)}>
-          <h1 className={clsx(styles.text, styles['text--title'])}>
-            Your Ultimate AVM Utility Wallet
-          </h1>
+        <Stack
+          align="center"
+          direction={desktopAndUp ? 'row' : 'column'}
+          justify="center"
+          spacing={DEFAULT_GAP - 2}
+          w="full"
+        >
+          <Heading
+            color={defaultHeadingColor}
+            fontSize="5xl"
+            m={0}
+            p={0}
+            wordBreak="keep-all"
+          >
+            {translate({ id: 'heading.headerPrefix' })}
+          </Heading>
 
-          {/*subtitle*/}
-          <p className={clsx(styles.text, styles['text--subtitle'])}>
-            An AVM wallet in your browser that goes beyond just DeFi.
-          </p>
+          <Box h={`${itemHeightInRem}rem`} overflow="hidden">
+            <List
+              animation={`${scrollingAnimation} 5s linear infinite`}
+              m={0}
+              p={0}
+            >
+              {headerItems.map((value, index) => (
+                <ListItem
+                  h={`${itemHeightInRem}rem`}
+                  key={`${value.toLowerCase().replace(' ', '_')}-${index}`}
+                  mb={`${itemHeightInRem}rem`}
+                  listStyleType="none"
+                >
+                  <Heading
+                    color={primaryColor}
+                    fontSize="5xl"
+                    m={0}
+                    p={0}
+                    textAlign={desktopAndUp ? 'left' : 'center'}
+                    w="full"
+                  >
+                    {value}
+                  </Heading>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        </Stack>
 
-          {/*button*/}
-          <div className={styles['button-container']}>
-            <LinkButton fullWidth={true} href="/#download">
-              Download Now
-            </LinkButton>
-          </div>
-        </div>
+        {/*subtitle*/}
+        <Text
+          color="white"
+          fontSize="2xl"
+          textAlign="center"
+          w={desktopAndUp ? '50%' : 'full'}
+        >
+          {translate({ id: 'caption.header' })}
+        </Text>
 
-        {/*image*/}
-        <div className={clsx(styles.container, styles.container__image)}>
-          <ThemedImage
-            alt="Wallet home screen"
-            className={styles.image}
-            sources={{
-              dark: '/images/home_screen-dark.png',
-              light: '/images/home_screen-light.png',
-            }}
-          />
-        </div>
-      </div>
+        {/*button*/}
+        <LinkButton
+          href="/#download"
+          rightIcon={<IoArrowDownOutline />}
+          size="lg"
+        >
+          {translate({ id: 'button.downloadNow' })}
+        </LinkButton>
+      </VStack>
 
       {/*attribution*/}
-      <div className={styles.container__attribution}>
-        <p className={clsx(styles.text, styles['text--attribution'])}>
-          Image by{` `}
-          <a
-            href="https://www.freepik.com/free-vector/gradient-geometric-background_12283006.htm"
-            target="_blank"
-          >
-            Freepik
-          </a>
-        </p>
-      </div>
-    </header>
+      <Stack align="flex-end" justify="center" w="full">
+        <Attribution>
+          <Text>
+            {`${translate({ id: 'caption.imageBy' })} `}
+            <Link
+              _hover={{
+                color: 'primaryDark.300',
+              }}
+              color="primaryDark.500"
+              href="https://www.freepik.com/free-ai-image/abstract-fantasy-landscape-with-color-year-purple-tones_169082662.htm#fromView=search&page=2&position=1&uuid=d339e0f1-37a4-4fda-a7b9-f9f4a8a65172"
+              isExternal={true}
+            >
+              freepik
+            </Link>
+          </Text>
+        </Attribution>
+      </Stack>
+    </VStack>
   );
 };
 

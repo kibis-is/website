@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { FC } from 'react';
+import React, { type FC } from 'react';
 
 // components
 import ThemedImage from '@theme/ThemedImage';
@@ -8,19 +8,13 @@ import ThemedImage from '@theme/ThemedImage';
 import styles from './styles.module.scss';
 
 // types
-import { IThemedImageSources } from '@site/src/types';
-
-interface IProps {
-  label: string;
-  maxWidth?: string;
-  imageSources: IThemedImageSources;
-}
+import type { IProps } from './types';
 
 const BlogScreenshotImage: FC<IProps> = ({
   label,
   maxWidth = '400px',
   imageSources,
-}: IProps) => {
+}) => {
   return (
     <div className={clsx(styles.container, styles.container__outer)}>
       <div

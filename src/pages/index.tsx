@@ -1,31 +1,39 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import React, { FC } from 'react';
-
-import Layout from '@theme/Layout';
+import DocusaurusThemeLayout from '@theme/Layout';
+import type { FC } from 'react';
 
 // components
-import ConceptsSection from '@site/src/components/ConceptsSection';
 import DownloadSection from '@site/src/components/DownloadSection';
 import FeaturesSection from '@site/src/components/FeaturesSection';
 import Header from '@site/src/components/Header';
 import Main from '@site/src/components/Main';
 
+// containers
+import ColorModeProvider from '@site/src/containers/ColorModeProvider';
+
+// theme
+import { config as themeConfig } from '@site/src/themes';
+
 const IndexPage: FC = () => {
   const { siteConfig } = useDocusaurusContext();
-  const description: string = `Step into a world where your digital assets become more than just holdings - Welcome to Kibisis, your ultimate utility wallet tailored to harness the true potential of your AVM assets. Beyond just a wallet, Kibisis is your passport to a world where digital assets become powerful tools.`;
+  // misc
+  const description = `Step into a world where your digital assets become more than just holdings - Welcome to Kibisis, your ultimate utility wallet tailored to harness the true potential of your AVM assets. Beyond just a wallet, Kibisis is your passport to a world where digital assets become powerful tools.`;
 
   return (
-    <Layout title={siteConfig.tagline} description={description}>
-      <Header />
+    <DocusaurusThemeLayout title={siteConfig.tagline} description={description}>
+      <ChakraProvider theme={themeConfig}>
+        <ColorModeProvider>
+          <Header />
 
-      <Main>
-        <DownloadSection variant="primary" />
+          <Main>
+            <DownloadSection variant="accent" />
 
-        <ConceptsSection variant="accent" />
-
-        <FeaturesSection variant="primary" />
-      </Main>
-    </Layout>
+            <FeaturesSection variant="primary" />
+          </Main>
+        </ColorModeProvider>
+      </ChakraProvider>
+    </DocusaurusThemeLayout>
   );
 };
 

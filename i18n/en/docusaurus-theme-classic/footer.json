@@ -1,0 +1,54 @@
+{
+  "link.title.Kibisis": {
+    "message": "Kibisis",
+    "description": "The title of the footer links column with title=Kibisis in the footer"
+  },
+  "link.title.Learn More": {
+    "message": "Learn More",
+    "description": "The title of the footer links column with title=Learn More in the footer"
+  },
+  "link.title.Social": {
+    "message": "Social",
+    "description": "The title of the footer links column with title=Social in the footer"
+  },
+  "link.title.Get Involved": {
+    "message": "Get Involved",
+    "description": "The title of the footer links column with title=Get Involved in the footer"
+  },
+  "link.title.Legal": {
+    "message": "Legal",
+    "description": "The title of the footer links column with title=Legal in the footer"
+  },
+  "link.item.label.Download": {
+    "message": "Download",
+    "description": "The label of footer link with label=Download linking to /#download"
+  },
+  "link.item.label.Features": {
+    "message": "Features",
+    "description": "The label of footer link with label=Features linking to /#features"
+  },
+  "link.item.label.Documentation": {
+    "message": "Documentation",
+    "description": "The label of footer link with label=Documentation linking to /overview"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "link.item.label.Report a bug": {
+    "message": "Report a bug",
+    "description": "The label of footer link with label=Report a bug linking to https://github.com/agoralabs-sh/kibisis-web-extension/issues/new?assignees=kieranroneill&labels=%F0%9F%90%9B+bug&projects=&template=bug_report_template.yml&title=%5BBug%5D%3A+"
+  },
+  "link.item.label.Suggest a feature": {
+    "message": "Suggest a feature",
+    "description": "The label of footer link with label=Suggest a feature linking to https://github.com/agoralabs-sh/kibisis-web-extension/issues/new?assignees=&labels=%E2%9C%A8+feature&projects=&template=feature_request_template.yml&title=%5BFeature%5D%3A+"
+  },
+  "link.item.label.Privacy": {
+    "message": "Privacy",
+    "description": "The label of footer link with label=Privacy linking to /privacy-policy"
+  },
+  "copyright": {
+    "message": "\n<div class=\"footer__copyright-container\">\n    <p class=\"footer__text\">\n        Kibisis is owned and operated by Kibisis OÜ. Registry code 17034397.\n    </p>\n    <p class=\"footer__text\">\n        Kibisis is committed to open source and all applications are licensed under <a class=\"footer__text--link\" href=\"https://www.gnu.org/licenses/agpl-3.0.en.html\" target=\"_blank\">GNU AGPL-3.0</a>.\n    </p>\n    <p class=\"footer__text\">\n        Icons provided by <a class=\"footer__text--link\" href=\"https://www.flaticon.com/\" target=\"_blank\">flaticon</a>.\n    </p>\n</div>\n        ",
+    "description": "The footer copyright"
+  }
+}

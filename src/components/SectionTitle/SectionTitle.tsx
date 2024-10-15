@@ -1,20 +1,33 @@
-import React, { FC, ReactElement } from 'react';
+import { Box, Heading, HStack } from '@chakra-ui/react';
+import { type FC, type PropsWithChildren } from 'react';
 
-// styles
-import styles from './styles.module.scss';
+// constants
+import { DEFAULT_GAP } from '@site/src/constants';
 
-interface IProps {
-  children: ReactElement | string;
-}
+// hooks
+import useDefaultTextColor from '@site/src/hooks/useDefaultTextColor';
+import usePrimaryColor from '@site/src/hooks/usePrimaryColor';
 
-const SectionTitle: FC<IProps> = ({ children }: IProps) => {
+const SectionTitle: FC<PropsWithChildren> = ({ children }) => {
+  // hooks
+  const defaultTextColor = useDefaultTextColor();
+  const primaryColor = usePrimaryColor();
+
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.container}>
-        <div className={styles.line} />
-        <h1 className={styles.text}>{children}</h1>
-      </div>
-    </div>
+    <HStack
+      align="center"
+      h={DEFAULT_GAP * 2}
+      spacing={DEFAULT_GAP - 2}
+      w="full"
+    >
+      {/*line*/}
+      <Box bgColor={primaryColor} borderRadius="full" h="full" w={1.5} />
+
+      {/*title*/}
+      <Heading color={defaultTextColor} fontSize="3xl" m={0} p={0}>
+        {children}
+      </Heading>
+    </HStack>
   );
 };
 
