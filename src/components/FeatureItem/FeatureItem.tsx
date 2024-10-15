@@ -33,7 +33,6 @@ const FeatureItem: FC<IProps> = ({
       align="center"
       direction={desktopAndUp ? 'row' : 'column'}
       justify={desktopAndUp ? 'space-evenly' : 'center'}
-      spacing={DEFAULT_GAP - 2}
       w="full"
     >
       <VStack maxW="400px" spacing={DEFAULT_GAP / 3} w="full">

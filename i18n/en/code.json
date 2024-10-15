@@ -391,13 +391,29 @@
     "message": "Install on Android",
     "description": "The heading that appears on the Android download section."
   },
+  "heading.identity": {
+    "message": "Identity"
+  },
   "heading.iOSDownload": {
     "message": "Install on iOS",
     "description": "The heading that appears on the iOS download section."
   },
+  "heading.lifestyle": {
+    "message": "Lifestyle"
+  },
+  "heading.payments": {
+    "message": "Payments"
+  },
+  "heading.security": {
+    "message": "Security"
+  },
   "heading.webDownload": {
-    "message": "Install for your preferred browser",
+    "message": "Install on your preferred browser",
     "description": "The heading that appears on the web download section."
+  },
+  "heading.yourAppFor": {
+    "message": "Your App For",
+    "description": "The prefix that appears on in the header before the rolling text."
   },
 
   "title.download": {

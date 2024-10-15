@@ -48,13 +48,13 @@ const PillTabs: FC<IProps> = ({ defaultIndex = 0, tabs }) => {
             borderColor: primaryColor,
             borderLeftWidth: 1,
             borderTopWidth: 1,
-            key: `pill-switch-tab-${index}`,
           };
+          const key = `pill-switch-tab-${index}`;
 
           // the first item
           if (index <= 0) {
             return (
-              <Tab {...defaultProps} borderStartRadius="full">
+              <Tab {...defaultProps} borderStartRadius="full" key={key}>
                 {value}
               </Tab>
             );
@@ -67,6 +67,7 @@ const PillTabs: FC<IProps> = ({ defaultIndex = 0, tabs }) => {
                 {...defaultProps}
                 borderEndRadius="full"
                 borderRightWidth={1}
+                key={key}
               >
                 {value}
               </Tab>
@@ -74,7 +75,11 @@ const PillTabs: FC<IProps> = ({ defaultIndex = 0, tabs }) => {
           }
 
           //
-          return <Tab {...defaultProps}>{value}</Tab>;
+          return (
+            <Tab {...defaultProps} key={key}>
+              {value}
+            </Tab>
+          );
         })}
       </TabList>
 
