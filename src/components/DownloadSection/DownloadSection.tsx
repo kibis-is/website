@@ -95,7 +95,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                     align="center"
                     flexGrow={1}
                     justify="center"
-                    spacing={DEFAULT_GAP - 2}
+                    spacing={DEFAULT_GAP}
                     w="full"
                   >
                     {/*brave*/}
