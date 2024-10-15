@@ -18,7 +18,6 @@ const staticDir = resolve(__dirname, 'static');
 const stylesDir = resolve(srcDir, 'styles');
 
 // application
-const tagline = 'Your Lifestyle App';
 const title = 'Kibisis';
 
 const config: Config = {

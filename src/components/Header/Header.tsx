@@ -1,5 +1,5 @@
 import { Heading, Link, Stack, Text, VStack } from '@chakra-ui/react';
-import Translate from '@docusaurus/Translate';
+import { translate } from '@docusaurus/Translate';
 import type { FC } from 'react';
 import { IoArrowDownOutline } from 'react-icons/io5';
 
@@ -11,6 +11,7 @@ import LinkButton from '@site/src/components/LinkButton';
 import { DEFAULT_GAP } from '@site/src/constants';
 
 const Header: FC = () => {
+  // misc
   const fontColor = 'whiteAlpha.800';
 
   return (
@@ -38,7 +39,7 @@ const Header: FC = () => {
 
         {/*subtitle*/}
         <Text color="white" fontSize="2xl" textAlign="center" w="full">
-          <Translate id="caption.header" />
+          {translate({ id: 'caption.header' })}
         </Text>
 
         {/*button*/}
@@ -47,7 +48,7 @@ const Header: FC = () => {
           rightIcon={<IoArrowDownOutline />}
           size="lg"
         >
-          Download Now
+          {translate({ id: 'button.downloadNow' })}
         </LinkButton>
       </VStack>
 
@@ -55,7 +56,7 @@ const Header: FC = () => {
       <Stack align="flex-end" justify="center" w="full">
         <Attribution>
           <Text>
-            Image by{` `}
+            {`${translate({ id: 'caption.imageBy' })} `}
             <Link
               _hover={{
                 color: 'primaryDark.300',

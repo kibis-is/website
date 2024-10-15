@@ -1,5 +1,6 @@
 import { Heading, Image, Stack, Text, VStack } from '@chakra-ui/react';
-import React, { type FC } from 'react';
+import { translate } from '@docusaurus/Translate';
+import { type FC } from 'react';
 
 // components
 import Attribution from '@site/src/components/Attribution';
@@ -16,10 +17,10 @@ import type { IProps } from './types';
 
 const FeatureItem: FC<IProps> = ({
   attribution,
-  alt,
-  description,
+  altID,
+  descriptionIDs,
   src,
-  title,
+  titleID,
 }) => {
   // hooks
   const defaultTextColor = useDefaultTextColor();
@@ -37,7 +38,7 @@ const FeatureItem: FC<IProps> = ({
     >
       <VStack maxW="400px" spacing={DEFAULT_GAP / 3} w="full">
         {/*image*/}
-        <Image alt={alt} src={src} w="full" />
+        <Image alt={translate({ id: altID })} src={src} w="full" />
 
         {/*attribution*/}
         {attribution && (
@@ -49,25 +50,19 @@ const FeatureItem: FC<IProps> = ({
 
       <VStack spacing={1} w={desktopAndUp ? '45%' : '75%'}>
         {/*title*/}
-        <Heading
-          color={defaultTextColor}
-          fontSize="2xl"
-          textAlign={textAlign}
-          w="full"
-        >
-          {title}
+        <Heading color={defaultTextColor} textAlign={textAlign} w="full">
+          {translate({ id: titleID })}
         </Heading>
 
         {/*descriptions*/}
-        {description.map((value) => (
+        {descriptionIDs.map((value) => (
           <Text
             color={defaultTextColor}
-            fontSize="lg"
             key={value.replace(' ', '_')}
             textAlign={textAlign}
             w="full"
           >
-            {value}
+            {translate({ id: value })}
           </Text>
         ))}
       </VStack>

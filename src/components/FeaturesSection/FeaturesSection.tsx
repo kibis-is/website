@@ -1,7 +1,7 @@
 import { Link, Text } from '@chakra-ui/react';
 import { useColorMode } from '@docusaurus/theme-common';
 import { translate } from '@docusaurus/Translate';
-import React, { type FC } from 'react';
+import { type FC } from 'react';
 
 // components
 import Carousel from '@site/src/components/Carousel';
@@ -17,7 +17,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
   // misc
   const items: IFeatureItemProps[] = [
     {
-      alt: 'A man using a password to on a giant cell phone to highlight security',
+      altID: 'feature.security.imageAlt',
       attribution: (
         <Text>
           <Link
@@ -28,19 +28,26 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
             href="https://storyset.com/data"
             isExternal={true}
           >
-            Data illustrations by Storyset
+            {translate(
+              {
+                id: 'storysetAttribution',
+              },
+              {
+                type: 'Data',
+              }
+            )}
           </Link>
         </Text>
       ),
-      description: [
-        'Kibisis uses the best-in-class security techniques to insure your accounts are secure. Kibisis will never transfer your private keys from your device and is a fully self-custodial wallet.',
-        'We are firmly committed to in empowering the individual.',
+      descriptionIDs: [
+        'feature.security.description1',
+        'feature.security.description2',
       ],
       src: `/images/features/security_feature-${colorMode}.svg`,
-      title: 'Security Is Important',
+      titleID: 'feature.security.title',
     },
     {
-      alt: 'A woman entering putting a puzzle piece on a giant computer screen.',
+      altID: 'feature.assets.imageAlt',
       attribution: (
         <Text>
           <Link
@@ -51,19 +58,26 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
             href="https://storyset.com/work"
             isExternal={true}
           >
-            Work illustrations by Storyset
+            {translate(
+              {
+                id: 'storysetAttribution',
+              },
+              {
+                type: 'Work',
+              }
+            )}
           </Link>
         </Text>
       ),
-      description: [
-        'Kibisis supports a wide range of asset types and we believe accessing your assets should not be difficult. That is why Kibisis endeavors to make this process a rich and rewarding experience.',
-        'We always strive to work with the latest dApps to achieve this rich experience.',
+      descriptionIDs: [
+        'feature.assets.description1',
+        'feature.assets.description2',
       ],
       src: `/images/features/assets_feature-${colorMode}.svg`,
-      title: 'All Your Assets In One Place',
+      titleID: 'feature.assets.title',
     },
     {
-      alt: 'A man sitting down shopping online using his phone.',
+      altID: 'feature.payment.imageAlt',
       attribution: (
         <Text>
           <Link
@@ -74,18 +88,23 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
             href="https://storyset.com/business"
             isExternal={true}
           >
-            Business illustrations by Storyset
+            {translate(
+              {
+                id: 'storysetAttribution',
+              },
+              {
+                type: 'Business',
+              }
+            )}
           </Link>
         </Text>
       ),
-      description: [
-        'Whether you are on your phone, your tablet or your desktop, Kibisis will always be there so you can make, or take, payments seamlessly.',
-      ],
+      descriptionIDs: ['feature.payment.description'],
       src: `/images/features/payments_feature-${colorMode}.svg`,
-      title: 'Payments Made Easy',
+      titleID: 'feature.payment.title',
     },
     {
-      alt: 'A man sitting down filling out a form online using his tablet.',
+      altID: 'feature.identity.imageAlt',
       attribution: (
         <Text>
           <Link
@@ -96,22 +115,33 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
             href="https://storyset.com/online"
             isExternal={true}
           >
-            Online illustrations by Storyset
+            {translate(
+              {
+                id: 'storysetAttribution',
+              },
+              {
+                type: 'Online',
+              }
+            )}
           </Link>
         </Text>
       ),
-      description: [
-        'A wallet is more than just a place to keep your assets; it is your identity.',
-        'We see your wallet as away to prove your identity without having store your credentials in the cloud.',
-        'You should own your identity.',
+      descriptionIDs: [
+        'feature.identity.description1',
+        'feature.identity.description2',
+        'feature.identity.description3',
       ],
       src: `/images/features/identity_feature-${colorMode}.svg`,
-      title: 'Your Online Identity',
+      titleID: 'feature.identity.title',
     },
   ];
 
   return (
-    <Section id="features" title="Features" variant={variant}>
+    <Section
+      id="features"
+      title={translate({ id: 'title.features' })}
+      variant={variant}
+    >
       <Carousel
         items={items.map((props, index) => ({
           children: (
@@ -120,7 +150,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
               {...props}
             />
           ),
-          label: props.title,
+          label: translate({ id: props.titleID }),
         }))}
       />
     </Section>

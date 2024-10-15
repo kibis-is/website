@@ -2,11 +2,11 @@ import type { TextProps } from '@chakra-ui/react';
 import type { ReactElement } from 'react';
 
 interface IProps {
-  alt: string;
+  altID: string;
   attribution?: ReactElement<TextProps>;
-  description: string[];
+  descriptionIDs: string[];
   src: string;
-  title: string;
+  titleID: string;
 }
 
 export default IProps;

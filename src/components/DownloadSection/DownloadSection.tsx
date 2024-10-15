@@ -1,5 +1,14 @@
-import { HStack, Image, Stack, VStack, Wrap, WrapItem } from '@chakra-ui/react';
+import {
+  Heading,
+  HStack,
+  Image,
+  Stack,
+  VStack,
+  Wrap,
+  WrapItem,
+} from '@chakra-ui/react';
 import { useColorMode } from '@docusaurus/theme-common';
+import { translate } from '@docusaurus/Translate';
 import { type FC } from 'react';
 
 // components
@@ -19,6 +28,7 @@ import { CHROME_STORE_LINK, DEFAULT_GAP } from '@site/src/constants';
 import { PlatformEnum } from '@site/src/enums';
 
 // hooks
+import useDefaultTextColor from '@site/src/hooks/useDefaultTextColor';
 import useDesktopAndUp from '@site/src/hooks/useDesktopAndUp';
 
 // types
@@ -30,6 +40,7 @@ import checkPlatform from '@site/src/utils/checkPlatform';
 const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
   const { colorMode } = useColorMode();
   // hooks
+  const defaultTextColor = useDefaultTextColor();
   const desktopAndUp = useDesktopAndUp();
   // misc
   const determineIndex = () => {
@@ -52,7 +63,11 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
   };
 
   return (
-    <Section id="download" title="Download" variant={variant}>
+    <Section
+      id="download"
+      title={translate({ id: 'title.download' })}
+      variant={variant}
+    >
       <PillTabs
         defaultIndex={determineIndex()}
         tabs={[
@@ -69,41 +84,47 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                   />
                 )}
 
-                <Wrap
-                  align="center"
-                  flexGrow={1}
-                  justify="center"
-                  spacing={DEFAULT_GAP - 2}
-                  w="full"
-                >
-                  {/*brave*/}
-                  <WrapItem>
-                    <WebDownloadItem
-                      downloadUri={CHROME_STORE_LINK}
-                      icon={<BraveIcon />}
-                      name="Brave"
-                    />
-                  </WrapItem>
+                <VStack spacing={DEFAULT_GAP * 2} w="full">
+                  <Heading color={defaultTextColor} textAlign="center" w="full">
+                    {translate({ id: 'heading.webDownload' })}
+                  </Heading>
 
-                  {/*chrome*/}
-                  <WrapItem>
-                    <WebDownloadItem
-                      downloadUri={CHROME_STORE_LINK}
-                      icon={<ChromeIcon />}
-                      name="Chrome"
-                    />
-                  </WrapItem>
+                  <Wrap
+                    align="center"
+                    flexGrow={1}
+                    justify="center"
+                    spacing={DEFAULT_GAP - 2}
+                    w="full"
+                  >
+                    {/*brave*/}
+                    <WrapItem>
+                      <WebDownloadItem
+                        downloadUri={CHROME_STORE_LINK}
+                        icon={<BraveIcon />}
+                        name="Brave"
+                      />
+                    </WrapItem>
 
-                  {/*edge*/}
-                  <WrapItem>
-                    <WebDownloadItem icon={<EdgeIcon />} name="Edge" />
-                  </WrapItem>
+                    {/*chrome*/}
+                    <WrapItem>
+                      <WebDownloadItem
+                        downloadUri={CHROME_STORE_LINK}
+                        icon={<ChromeIcon />}
+                        name="Chrome"
+                      />
+                    </WrapItem>
 
-                  {/*firefox*/}
-                  <WrapItem>
-                    <WebDownloadItem icon={<FirefoxIcon />} name="Firefox" />
-                  </WrapItem>
-                </Wrap>
+                    {/*edge*/}
+                    <WrapItem>
+                      <WebDownloadItem icon={<EdgeIcon />} name="Edge" />
+                    </WrapItem>
+
+                    {/*firefox*/}
+                    <WrapItem>
+                      <WebDownloadItem icon={<FirefoxIcon />} name="Firefox" />
+                    </WrapItem>
+                  </Wrap>
+                </VStack>
               </HStack>
             ),
             title: 'Web',
@@ -122,40 +143,46 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                   </Stack>
                 )}
 
-                {/*badges*/}
-                <Wrap
-                  align="center"
-                  justify="center"
-                  spacing={DEFAULT_GAP}
-                  w="full"
-                >
-                  {/*play store*/}
-                  <WrapItem>
-                    <StoreBadge
-                      airaLabel="Play Store badge"
-                      href=""
-                      src="/images/store_badges/play_store_badge.png"
-                    />
-                  </WrapItem>
+                <VStack spacing={DEFAULT_GAP * 2} w="full">
+                  <Heading color={defaultTextColor} textAlign="center" w="full">
+                    {translate({ id: 'heading.androidDownload' })}
+                  </Heading>
 
-                  {/*f-droid*/}
-                  <WrapItem>
-                    <StoreBadge
-                      airaLabel="F-Droid badge"
-                      href=""
-                      src="/images/store_badges/fdroid_badge.png"
-                    />
-                  </WrapItem>
+                  {/*badges*/}
+                  <Wrap
+                    align="center"
+                    justify="center"
+                    spacing={DEFAULT_GAP}
+                    w="full"
+                  >
+                    {/*play store*/}
+                    <WrapItem>
+                      <StoreBadge
+                        airaLabel="Play Store badge"
+                        href=""
+                        src="/images/store_badges/play_store_badge.png"
+                      />
+                    </WrapItem>
 
-                  {/*direct download*/}
-                  <WrapItem>
-                    <StoreBadge
-                      airaLabel="Direct download badge"
-                      href=""
-                      src="/images/store_badges/apk_badge.png"
-                    />
-                  </WrapItem>
-                </Wrap>
+                    {/*f-droid*/}
+                    <WrapItem>
+                      <StoreBadge
+                        airaLabel="F-Droid badge"
+                        href=""
+                        src="/images/store_badges/fdroid_badge.png"
+                      />
+                    </WrapItem>
+
+                    {/*direct download*/}
+                    <WrapItem>
+                      <StoreBadge
+                        airaLabel="Direct download badge"
+                        href=""
+                        src="/images/store_badges/apk_badge.png"
+                      />
+                    </WrapItem>
+                  </Wrap>
+                </VStack>
               </HStack>
             ),
             title: 'Android',
@@ -174,21 +201,27 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                   </Stack>
                 )}
 
-                {/*badge*/}
-                <Wrap
-                  align="center"
-                  justify="center"
-                  spacing={DEFAULT_GAP - 2}
-                  w="full"
-                >
-                  <WrapItem>
-                    <StoreBadge
-                      airaLabel="App Store badge"
-                      href=""
-                      src={`/images/store_badges/app_store_badge-${colorMode}.svg`}
-                    />
-                  </WrapItem>
-                </Wrap>
+                <VStack spacing={DEFAULT_GAP * 2} w="full">
+                  <Heading color={defaultTextColor} textAlign="center" w="full">
+                    {translate({ id: 'heading.iOSDownload' })}
+                  </Heading>
+
+                  {/*badge*/}
+                  <Wrap
+                    align="center"
+                    justify="center"
+                    spacing={DEFAULT_GAP - 2}
+                    w="full"
+                  >
+                    <WrapItem>
+                      <StoreBadge
+                        airaLabel="App Store badge"
+                        href=""
+                        src={`/images/store_badges/app_store_badge-${colorMode}.svg`}
+                      />
+                    </WrapItem>
+                  </Wrap>
+                </VStack>
               </HStack>
             ),
             title: 'iOS',
