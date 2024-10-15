@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/agoralabs-sh/kibisis-website/compare/v2.0.0...v2.0.1) (2024-10-15)
+
+
+### Bug Fixes
+
+* align header text for mobile ([#60](https://github.com/agoralabs-sh/kibisis-website/issues/60)) ([5831a76](https://github.com/agoralabs-sh/kibisis-website/commit/5831a761e86b1cc5e0cfddf1092eb5141d8c9277))
+
 # [2.0.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.29.0...v2.0.0) (2024-10-15)
 
 
