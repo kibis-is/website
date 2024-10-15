@@ -5,6 +5,7 @@ interface IProps {
   altID: string;
   attribution?: ReactElement<TextProps>;
   descriptionIDs: string[];
+  index: number;
   src: string;
   titleID: string;
 }

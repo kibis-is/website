@@ -8,6 +8,7 @@ $social-image-size: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 4rem;
     width: 100%;
   }
 
@@ -40,6 +41,11 @@ $social-image-size: 24px;
         transition: fill var(--ifm-transition-fast) ease-in-out;
       }
     }
+  }
+
+  &__link-item {
+    align-items: center;
+    display: flex;
   }
 
   &__text {

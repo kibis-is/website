@@ -19,6 +19,7 @@ const FeatureItem: FC<IProps> = ({
   attribution,
   altID,
   descriptionIDs,
+  index,
   src,
   titleID,
 }) => {
@@ -26,15 +27,10 @@ const FeatureItem: FC<IProps> = ({
   const defaultTextColor = useDefaultTextColor();
   const desktopAndUp = useDesktopAndUp();
   // misc
+  const isEven = index % 2 === 0;
   const textAlign = desktopAndUp ? 'left' : 'center';
-
-  return (
-    <Stack
-      align="center"
-      direction={desktopAndUp ? 'row' : 'column'}
-      justify={desktopAndUp ? 'space-evenly' : 'center'}
-      w="full"
-    >
+  const renderContent = () => {
+    const imageElement = (
       <VStack maxW="400px" spacing={DEFAULT_GAP / 3} w="full">
         {/*image*/}
         <Image alt={translate({ id: altID })} src={src} w="full" />
@@ -46,7 +42,8 @@ const FeatureItem: FC<IProps> = ({
           </Stack>
         )}
       </VStack>
-
+    );
+    const textElement = (
       <VStack spacing={1} w={desktopAndUp ? '45%' : '75%'}>
         {/*title*/}
         <Heading color={defaultTextColor} textAlign={textAlign} w="full">
@@ -65,6 +62,34 @@ const FeatureItem: FC<IProps> = ({
           </Text>
         ))}
       </VStack>
+    );
+
+    if (!isEven || !desktopAndUp) {
+      return (
+        <>
+          {imageElement}
+          {textElement}
+        </>
+      );
+    }
+
+    return (
+      <>
+        {textElement}
+        {imageElement}
+      </>
+    );
+  };
+
+  return (
+    <Stack
+      align="center"
+      direction={desktopAndUp ? 'row' : 'column'}
+      justify={desktopAndUp ? 'space-evenly' : 'center'}
+      spacing={DEFAULT_GAP}
+      w="full"
+    >
+      {renderContent()}
     </Stack>
   );
 };

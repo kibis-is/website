@@ -371,11 +371,11 @@
     "description": "The title of the payment feature."
   },
   "feature.security.description1": {
-    "message": "Kibisis uses the best-in-class security techniques to insure your accounts are secure. Kibisis will never transfer your private keys from your device and is a fully self-custodial wallet.",
+    "message": "Kibisis uses the best-in-class security techniques to insure your accounts are secure.",
     "description": "A description of the security section."
   },
   "feature.security.description2": {
-    "message": "We are firmly committed to in empowering the individual.",
+    "message": "We are firmly committed to empowering the individual, so Kibisis is a fully self-custodial wallet and will never transfer your private keys from your device.",
     "description": "A description of the security section."
   },
   "feature.security.imageAlt": {
@@ -411,8 +411,8 @@
     "message": "Install on your preferred browser",
     "description": "The heading that appears on the web download section."
   },
-  "heading.yourAppFor": {
-    "message": "Your App For",
+  "heading.headerPrefix": {
+    "message": "The Wallet For Your",
     "description": "The prefix that appears on in the header before the rolling text."
   },
 

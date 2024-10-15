@@ -12,7 +12,6 @@ import {
 } from './src/constants';
 
 // directories
-const nodeModulesDir = resolve(__dirname, 'node_modules');
 const srcDir = resolve(__dirname, 'src');
 const staticDir = resolve(__dirname, 'static');
 const stylesDir = resolve(srcDir, 'styles');
@@ -57,16 +56,6 @@ const config: Config = {
             require.resolve(resolve(stylesDir, 'button.scss')),
             require.resolve(resolve(stylesDir, 'footer.scss')),
             require.resolve(resolve(stylesDir, 'global.scss')),
-            // vendor
-            require.resolve(
-              resolve(
-                nodeModulesDir,
-                'react-responsive-carousel',
-                'lib',
-                'styles',
-                'carousel.min.css'
-              )
-            ),
           ],
         },
         sitemap: {
@@ -131,9 +120,6 @@ const config: Config = {
     <p class="footer__text">
         Kibisis is committed to open source and all applications are licensed under <a class="footer__text--link" href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">GNU AGPL-3.0</a>.
     </p>
-    <p class="footer__text">
-        Icons provided by <a class="footer__text--link" href="https://www.flaticon.com/" target="_blank">flaticon</a>.
-    </p>
 </div>
         `,
       links: [
@@ -164,7 +150,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Social',
+          title: 'Connect',
           items: [
             {
               html: `

@@ -1,16 +1,16 @@
-import { Link, Text } from '@chakra-ui/react';
+import { Link, Text, VStack } from '@chakra-ui/react';
 import { useColorMode } from '@docusaurus/theme-common';
 import { translate } from '@docusaurus/Translate';
 import { type FC } from 'react';
 
 // components
-import Carousel from '@site/src/components/Carousel';
 import FeatureItem from '@site/src/components/FeatureItem';
 import Section from '@site/src/components/Section';
 
 // types
 import type { IDefaultSectionProps } from '@site/src/types';
 import type { IProps as IFeatureItemProps } from '@site/src/components/FeatureItem';
+import { DEFAULT_GAP } from '@site/src/constants';
 
 const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
   const { colorMode } = useColorMode();
@@ -30,7 +30,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
           >
             {translate(
               {
-                id: 'storysetAttribution',
+                id: 'caption.storysetAttribution',
               },
               {
                 type: 'Data',
@@ -43,6 +43,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
         'feature.security.description1',
         'feature.security.description2',
       ],
+      index: 0,
       src: `/images/features/security_feature-${colorMode}.svg`,
       titleID: 'feature.security.title',
     },
@@ -60,7 +61,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
           >
             {translate(
               {
-                id: 'storysetAttribution',
+                id: 'caption.storysetAttribution',
               },
               {
                 type: 'Work',
@@ -73,6 +74,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
         'feature.assets.description1',
         'feature.assets.description2',
       ],
+      index: 1,
       src: `/images/features/assets_feature-${colorMode}.svg`,
       titleID: 'feature.assets.title',
     },
@@ -90,7 +92,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
           >
             {translate(
               {
-                id: 'storysetAttribution',
+                id: 'caption.storysetAttribution',
               },
               {
                 type: 'Business',
@@ -100,6 +102,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
         </Text>
       ),
       descriptionIDs: ['feature.payment.description'],
+      index: 2,
       src: `/images/features/payments_feature-${colorMode}.svg`,
       titleID: 'feature.payment.title',
     },
@@ -117,7 +120,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
           >
             {translate(
               {
-                id: 'storysetAttribution',
+                id: 'caption.storysetAttribution',
               },
               {
                 type: 'Online',
@@ -131,6 +134,7 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
         'feature.identity.description2',
         'feature.identity.description3',
       ],
+      index: 3,
       src: `/images/features/identity_feature-${colorMode}.svg`,
       titleID: 'feature.identity.title',
     },
@@ -142,17 +146,14 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
       title={translate({ id: 'title.features' })}
       variant={variant}
     >
-      <Carousel
-        items={items.map((props, index) => ({
-          children: (
-            <FeatureItem
-              key={`${FeaturesSection.name}-feature-item-${index}`}
-              {...props}
-            />
-          ),
-          label: translate({ id: props.titleID }),
-        }))}
-      />
+      <VStack spacing={DEFAULT_GAP * 2} w="full">
+        {items.map((props, index) => (
+          <FeatureItem
+            key={`${FeaturesSection.name}-feature-item-${index}`}
+            {...props}
+          />
+        ))}
+      </VStack>
     </Section>
   );
 };

@@ -1,7 +1,6 @@
 import {
   Box,
   Heading,
-  HStack,
   Link,
   List,
   ListItem,
@@ -22,10 +21,12 @@ import LinkButton from '@site/src/components/LinkButton';
 import { DEFAULT_GAP } from '@site/src/constants';
 
 // hooks
+import useDesktopAndUp from '@site/src/hooks/useDesktopAndUp';
 import usePrimaryColor from '@site/src/hooks/usePrimaryColor';
 
 const Header: FC = () => {
   // hooks
+  const desktopAndUp = useDesktopAndUp();
   const primaryColor = usePrimaryColor();
   // misc
   const itemHeightInRem = 3.6;
@@ -35,14 +36,14 @@ const Header: FC = () => {
     translate({ id: 'heading.lifestyle' }),
   ];
   const scrollingAnimation = keyframes`
-    0% { margin-top: -${3.6 * 6}rem; }
-    5% { margin-top: -${3.6 * 4}rem; }
-    33% { margin-top: -${3.6 * 4}rem; }
-    38% { margin-top: -${3.6 * 2}rem; }
-    66% { margin-top: -${3.6 * 2}rem; }
+    0% { margin-top: -${itemHeightInRem * 6}rem; }
+    5% { margin-top: -${itemHeightInRem * 4}rem; }
+    33% { margin-top: -${itemHeightInRem * 4}rem; }
+    38% { margin-top: -${itemHeightInRem * 2}rem; }
+    66% { margin-top: -${itemHeightInRem * 2}rem; }
     71% { margin-top: 0; }
     99.99% { margin-top: 0; }
-    100% { margin-top: -${3.6 * 6}rem; }
+    100% { margin-top: -${itemHeightInRem * 6}rem; }
   `;
   const defaultHeadingColor = 'whiteAlpha.900';
 
@@ -59,32 +60,38 @@ const Header: FC = () => {
       <VStack
         justify="center"
         flexGrow={1}
-        maxW="700px"
         px={DEFAULT_GAP}
         spacing={DEFAULT_GAP - 2}
         w="full"
       >
         {/*title*/}
-        <HStack
+        <Stack
           align="center"
-          h={`${itemHeightInRem}rem`}
+          direction={desktopAndUp ? 'row' : 'column'}
           justify="center"
           spacing={DEFAULT_GAP - 2}
           w="full"
         >
-          <Heading color={defaultHeadingColor} fontSize="5xl" m={0} p={0}>
-            {translate({ id: 'heading.yourAppFor' })}
+          <Heading
+            color={defaultHeadingColor}
+            fontSize="5xl"
+            m={0}
+            p={0}
+            wordBreak="keep-all"
+          >
+            {translate({ id: 'heading.headerPrefix' })}
           </Heading>
 
           <Box h={`${itemHeightInRem}rem`} overflow="hidden">
             <List
-              animation={`${scrollingAnimation} 5s ease-in-out infinite`}
+              animation={`${scrollingAnimation} 5s linear infinite`}
               m={0}
               p={0}
             >
-              {headerItems.map((value) => (
+              {headerItems.map((value, index) => (
                 <ListItem
                   h={`${itemHeightInRem}rem`}
+                  key={`${value.toLowerCase().replace(' ', '_')}-${index}`}
                   mb={`${itemHeightInRem}rem`}
                   listStyleType="none"
                 >
@@ -93,7 +100,7 @@ const Header: FC = () => {
                     fontSize="5xl"
                     m={0}
                     p={0}
-                    textAlign="left"
+                    textAlign={desktopAndUp ? 'left' : 'center'}
                     w="full"
                   >
                     {value}
@@ -102,10 +109,15 @@ const Header: FC = () => {
               ))}
             </List>
           </Box>
-        </HStack>
+        </Stack>
 
         {/*subtitle*/}
-        <Text color="white" fontSize="2xl" textAlign="center" w="full">
+        <Text
+          color="white"
+          fontSize="2xl"
+          textAlign="center"
+          w={desktopAndUp ? '50%' : 'full'}
+        >
           {translate({ id: 'caption.header' })}
         </Text>
 
