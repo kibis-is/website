@@ -1,5 +1,6 @@
-import { Link, Stack, Text } from '@chakra-ui/react';
+import { Link, Text } from '@chakra-ui/react';
 import { useColorMode } from '@docusaurus/theme-common';
+import { translate } from '@docusaurus/Translate';
 import React, { type FC } from 'react';
 
 // components
@@ -31,8 +32,10 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
           </Link>
         </Text>
       ),
-      description:
-        'Kibisis using the best-in-class security techniques to insure your accounts are secure. Kibisis will never transfer your private keys from your device and is a fully self-custody wallet. We believe in empowering the individual.',
+      description: [
+        'Kibisis uses the best-in-class security techniques to insure your accounts are secure. Kibisis will never transfer your private keys from your device and is a fully self-custodial wallet.',
+        'We are firmly committed to in empowering the individual.',
+      ],
       src: `/images/features/security_feature-${colorMode}.svg`,
       title: 'Security Is Important',
     },
@@ -52,8 +55,10 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
           </Link>
         </Text>
       ),
-      description:
-        'A wallet is a place where you can view all your assets in one place. Kibisis supports a wide range of asset types and is always working with the latest dApps to provide a rich experience.',
+      description: [
+        'Kibisis supports a wide range of asset types and we believe accessing your assets should not be difficult. That is why Kibisis endeavors to make this process a rich and rewarding experience.',
+        'We always strive to work with the latest dApps to achieve this rich experience.',
+      ],
       src: `/images/features/assets_feature-${colorMode}.svg`,
       title: 'All Your Assets In One Place',
     },
@@ -73,8 +78,9 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
           </Link>
         </Text>
       ),
-      description:
+      description: [
         'Whether you are on your phone, your tablet or your desktop, Kibisis will always be there so you can make, or take, payments seamlessly.',
+      ],
       src: `/images/features/payments_feature-${colorMode}.svg`,
       title: 'Payments Made Easy',
     },
@@ -94,8 +100,11 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
           </Link>
         </Text>
       ),
-      description:
-        'A wallet is more than just a place to keep your assets; it is also your identity. You can use Kibisis to authenticate and prove your identity without having store your credentials in the cloud. You own your identity.',
+      description: [
+        'A wallet is more than just a place to keep your assets; it is your identity.',
+        'We see your wallet as away to prove your identity without having store your credentials in the cloud.',
+        'You should own your identity.',
+      ],
       src: `/images/features/identity_feature-${colorMode}.svg`,
       title: 'Your Online Identity',
     },
@@ -103,19 +112,17 @@ const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
 
   return (
     <Section id="features" title="Features" variant={variant}>
-      <Stack align="center" justify="center" w="full">
-        <Carousel
-          items={items.map((props, index) => ({
-            children: (
-              <FeatureItem
-                key={`${FeaturesSection.name}-feature-item-${index}`}
-                {...props}
-              />
-            ),
-            label: props.title,
-          }))}
-        />
-      </Stack>
+      <Carousel
+        items={items.map((props, index) => ({
+          children: (
+            <FeatureItem
+              key={`${FeaturesSection.name}-feature-item-${index}`}
+              {...props}
+            />
+          ),
+          label: props.title,
+        }))}
+      />
     </Section>
   );
 };

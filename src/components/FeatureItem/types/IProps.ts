@@ -4,7 +4,7 @@ import type { ReactElement } from 'react';
 interface IProps {
   alt: string;
   attribution?: ReactElement<TextProps>;
-  description: string;
+  description: string[];
   src: string;
   title: string;
 }

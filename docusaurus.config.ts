@@ -4,7 +4,6 @@ import { themes } from 'prism-react-renderer';
 
 // constants
 import {
-  AGORA_LABS_LINK,
   GITHUB_LINK,
   KIBISIS_LINK,
   REPORT_A_BUG_LINK,
@@ -19,7 +18,7 @@ const staticDir = resolve(__dirname, 'static');
 const stylesDir = resolve(srcDir, 'styles');
 
 // application
-const tagline = 'Your Ultimate AVM Utility Wallet';
+const tagline = 'Your Lifestyle App';
 const title = 'Kibisis';
 
 const config: Config = {
@@ -82,7 +81,7 @@ const config: Config = {
   ],
   projectName: 'kibisis-website',
   staticDirectories: [staticDir],
-  tagline: tagline,
+  tagline: 'Your Lifestyle App',
   themeConfig: {
     image: 'images/social_card.png',
     metadata: [
@@ -220,7 +219,7 @@ const config: Config = {
       darkTheme: themes.dracula,
     },
   },
-  title: title,
+  title: 'Kibisis',
   trailingSlash: false,
   url: KIBISIS_LINK,
 };

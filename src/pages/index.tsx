@@ -27,9 +27,9 @@ const IndexPage: FC = () => {
           <Header />
 
           <Main>
-            <DownloadSection variant="accent" />
-
             <FeaturesSection variant="primary" />
+
+            <DownloadSection variant="accent" />
           </Main>
         </ColorModeProvider>
       </ChakraProvider>

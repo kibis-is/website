@@ -1,5 +1,7 @@
 import { Heading, Link, Stack, Text, VStack } from '@chakra-ui/react';
+import Translate from '@docusaurus/Translate';
 import type { FC } from 'react';
+import { IoArrowDownOutline } from 'react-icons/io5';
 
 // components
 import Attribution from '@site/src/components/Attribution';
@@ -25,21 +27,26 @@ const Header: FC = () => {
         justify="center"
         flexGrow={1}
         maxW="700px"
+        px={DEFAULT_GAP}
         spacing={DEFAULT_GAP - 2}
         w="full"
       >
         {/*title*/}
-        <Heading color={fontColor} fontSize="5xl" textAlign="center" w="full">
-          {`Your Ultimate AVM Utility Wallet`}
+        <Heading color="white" fontSize="5xl" textAlign="center" w="full">
+          {`Your Lifestyle App`}
         </Heading>
 
         {/*subtitle*/}
-        <Text color={fontColor} fontSize="2xl" textAlign="center" w="full">
-          {`An AVM wallet that goes beyond just DeFi.`}
+        <Text color="white" fontSize="2xl" textAlign="center" w="full">
+          <Translate id="caption.header" />
         </Text>
 
         {/*button*/}
-        <LinkButton href="/#download" size="lg">
+        <LinkButton
+          href="/#download"
+          rightIcon={<IoArrowDownOutline />}
+          size="lg"
+        >
           Download Now
         </LinkButton>
       </VStack>

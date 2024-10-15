@@ -31,32 +31,24 @@ const FeatureItem: FC<IProps> = ({
     <Stack
       align="center"
       direction={desktopAndUp ? 'row' : 'column'}
-      justify={desktopAndUp ? 'flex-start' : 'center'}
-      p={DEFAULT_GAP * 2}
-      spacing={DEFAULT_GAP}
+      justify={desktopAndUp ? 'space-evenly' : 'center'}
+      spacing={DEFAULT_GAP - 2}
       w="full"
     >
-      <VStack spacing={DEFAULT_GAP / 3}>
+      <VStack maxW="400px" spacing={DEFAULT_GAP / 3} w="full">
         {/*image*/}
-        <Image
-          alt={alt}
-          src={src}
-          boxSize={96}
-          {...(desktopAndUp && {
-            mr: DEFAULT_GAP * 4,
-          })}
-        />
+        <Image alt={alt} src={src} w="full" />
 
         {/*attribution*/}
         {attribution && (
-          <Stack align="flex-end" justify="center" w="full">
+          <Stack align="flex-start" justify="center" w="full">
             <Attribution>{attribution}</Attribution>
           </Stack>
         )}
       </VStack>
 
-      {/*title/description*/}
-      <VStack spacing={1} w={desktopAndUp ? '55%' : 'full'}>
+      <VStack spacing={1} w={desktopAndUp ? '45%' : '75%'}>
+        {/*title*/}
         <Heading
           color={defaultTextColor}
           fontSize="2xl"
@@ -66,14 +58,18 @@ const FeatureItem: FC<IProps> = ({
           {title}
         </Heading>
 
-        <Text
-          color={defaultTextColor}
-          fontSize="lg"
-          textAlign={textAlign}
-          w="full"
-        >
-          {description}
-        </Text>
+        {/*descriptions*/}
+        {description.map((value) => (
+          <Text
+            color={defaultTextColor}
+            fontSize="lg"
+            key={value.replace(' ', '_')}
+            textAlign={textAlign}
+            w="full"
+          >
+            {value}
+          </Text>
+        ))}
       </VStack>
     </Stack>
   );

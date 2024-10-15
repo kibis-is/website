@@ -112,6 +112,8 @@
 
 /* overrides */
 .footer {
+  padding-top: 5rem;
+
   &__link-item {
     &:hover {
       color: primary-color("dark");

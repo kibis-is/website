@@ -1,4 +1,4 @@
-import { HStack, Image, Stack, Wrap, WrapItem } from '@chakra-ui/react';
+import { HStack, Image, Stack, VStack, Wrap, WrapItem } from '@chakra-ui/react';
 import { useColorMode } from '@docusaurus/theme-common';
 import { type FC } from 'react';
 
@@ -58,11 +58,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
         tabs={[
           {
             content: (
-              <HStack
-                justify="space-between"
-                spacing={DEFAULT_GAP * 2}
-                w="full"
-              >
+              <HStack justify="space-evenly" spacing={DEFAULT_GAP * 2} w="full">
                 {/*screenshot*/}
                 {desktopAndUp && (
                   <Image
@@ -114,7 +110,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
           },
           {
             content: (
-              <HStack justify="center" spacing={DEFAULT_GAP} w="full">
+              <HStack justify="space-evenly" spacing={DEFAULT_GAP} w="full">
                 {/*screenshot*/}
                 {desktopAndUp && (
                   <Stack align="center" justify="center" w="full">
@@ -130,7 +126,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                 <Wrap
                   align="center"
                   justify="center"
-                  spacing={DEFAULT_GAP - 2}
+                  spacing={DEFAULT_GAP}
                   w="full"
                 >
                   {/*play store*/}
@@ -166,7 +162,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
           },
           {
             content: (
-              <HStack justify="center" spacing={DEFAULT_GAP} w="full">
+              <HStack justify="space-evenly" spacing={DEFAULT_GAP - 2} w="full">
                 {/*screenshot*/}
                 {desktopAndUp && (
                   <Stack align="center" justify="center" w="full">
