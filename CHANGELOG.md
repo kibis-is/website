@@ -1,3 +1,51 @@
+# [2.0.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.29.0...v2.0.0) (2024-10-15)
+
+
+### Features
+
+* new website style ([#59](https://github.com/agoralabs-sh/kibisis-website/issues/59)) ([ebbcffa](https://github.com/agoralabs-sh/kibisis-website/commit/ebbcffa6ec5cb14d831ffe82defc5f19a28b059c))
+
+
+### BREAKING CHANGES
+
+* update to docusaurus v3
+
+* build: add chakra ui
+
+* chore: squash
+
+* feat: revert to chakra ui 2.x.x
+
+* feat: use chakra ui styles for button and link button
+
+* chore: squash
+
+* feat: add hooks and add tabs to the download site
+
+* feat: add android and ios download sections
+
+* feat: change download based on platform
+
+* chore: squash
+
+* feat: add featrures section and removed concepts section
+
+* refactor: use new themed versions of feature images and create attribution component
+
+* refactor: remove stylesheet from section title and use chakra
+
+* refactor: fix feature responsiveness
+
+* feat: add translation files
+
+* feat: add headings to the download section
+
+* feat: add header scrolling text animation
+
+* refactor: remove react carousel
+
+* feat: truncate blog posts
+
 # [1.29.0](https://github.com/agoralabs-sh/kibisis-website/compare/v1.28.0...v1.29.0) (2024-08-27)
 
 
