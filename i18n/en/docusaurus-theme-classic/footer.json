@@ -48,7 +48,7 @@
     "description": "The label of footer link with label=Privacy linking to /privacy-policy"
   },
   "copyright": {
-    "message": "\n<div class=\"footer__copyright-container\">\n    <p class=\"footer__text\">\n        Kibisis is owned and operated by Kibisis OÜ. Registry code 17034397.\n    </p>\n    <p class=\"footer__text\">\n        Kibisis is committed to open source and all applications are licensed under <a class=\"footer__text--link\" href=\"https://www.gnu.org/licenses/agpl-3.0.en.html\" target=\"_blank\">GNU AGPL-3.0</a>.\n    </p>\n    <p class=\"footer__text\">\n        Icons provided by <a class=\"footer__text--link\" href=\"https://www.flaticon.com/\" target=\"_blank\">flaticon</a>.\n    </p>\n</div>\n        ",
+    "message": "\n<div class=\"footer__copyright-container\">\n<p class=\"footer__text\">\nKibisis is owned and operated by Kibisis OÜ. Registry code 17034397.\n    </p>\n<p class=\"footer__text\">\nKibisis is committed to open source and all applications are licensed under <a class=\"footer__text--link\" href=\"https://www.gnu.org/licenses/agpl-3.0.en.html\" target=\"_blank\">GNU AGPL-3.0</a>.\n</p></div>\n",
     "description": "The footer copyright"
   }
 }

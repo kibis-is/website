@@ -77,6 +77,7 @@ const Header: FC = () => {
             fontSize="5xl"
             m={0}
             p={0}
+            textAlign={desktopAndUp ? 'right' : 'center'}
             wordBreak="keep-all"
           >
             {translate({ id: 'heading.headerPrefix' })}
