@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { useColorMode } from '@docusaurus/theme-common';
 import { translate } from '@docusaurus/Translate';
-import { type FC } from 'react';
+import { type FC, useEffect, useState } from 'react';
 
 // components
 import BraveIcon from '@site/src/components/BraveIcon';
@@ -42,25 +42,27 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
   // hooks
   const defaultTextColor = useDefaultTextColor();
   const desktopAndUp = useDesktopAndUp();
-  // misc
-  const determineIndex = () => {
+  // states
+  const [index, setIndex] = useState<number>(0);
+
+  useEffect(() => {
     const platform = checkPlatform();
-    let index = 0;
+    let _index = 0;
 
     switch (platform) {
       case PlatformEnum.Android:
-        index = 1;
+        _index = 1;
         break;
       case PlatformEnum.IOS:
-        index = 2;
+        _index = 2;
         break;
       case PlatformEnum.Web:
       default:
         break;
     }
 
-    return index;
-  };
+    setIndex(_index);
+  }, []);
 
   return (
     <Section
@@ -69,7 +71,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
       variant={variant}
     >
       <PillTabs
-        defaultIndex={determineIndex()}
+        defaultIndex={index}
         tabs={[
           {
             content: (

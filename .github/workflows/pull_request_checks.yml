@@ -18,12 +18,24 @@ jobs:
         uses: ./.github/actions/use-dependencies
 
   ##
-  # lint, build documentation, build package and test
+  # validate pr title, lint, build and test
   ##
+
+  validate_pr_title:
+    name: "Validate PR Title"
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: "🛎 Checkout"
+        uses: actions/checkout@v4
+      - name: "🔧 Setup"
+        uses: ./.github/actions/use-dependencies
+      - name: "✅ Validate"
+        run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
 
   lint:
     name: "Lint"
-    needs: install
+    needs: [install, validate_pr_title]
     runs-on: ubuntu-latest
     steps:
       - name: "🛎 Checkout"
@@ -35,7 +47,7 @@ jobs:
 
   build:
     name: "Build"
-    needs: install
+    needs: [install, validate_pr_title]
     runs-on: ubuntu-latest
     steps:
       - name: "🛎 Checkout"
@@ -47,7 +59,7 @@ jobs:
 
   test:
     name: "Test"
-    needs: install
+    needs: [install, validate_pr_title]
     runs-on: ubuntu-latest
     steps:
       - name: "🛎 Checkout"

@@ -10,9 +10,6 @@ import { DEFAULT_GAP } from '@site/src/constants';
 // hooks
 import useDefaultTextColor from '@site/src/hooks/useDefaultTextColor';
 
-// styles
-import styles from './styles.module.scss';
-
 // types
 import type { IProps } from './types';
 

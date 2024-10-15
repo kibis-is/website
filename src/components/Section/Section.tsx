@@ -7,9 +7,6 @@ import SectionTitle from '@site/src/components/SectionTitle';
 // constants
 import { DEFAULT_GAP } from '@site/src/constants';
 
-// hooks
-import useTabletAndUp from '@site/src/hooks/useTabletAndUp';
-
 // types
 import type { IProps } from './types';
 
@@ -19,9 +16,6 @@ const Section: FC<IProps & PropsWithChildren> = ({
   title,
   variant = 'primary',
 }) => {
-  // hooks
-  const tabletAndUp = useTabletAndUp();
-
   return (
     <VStack
       as="section"
