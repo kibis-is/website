@@ -140,7 +140,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                     <Image
                       alt="Home screen of the Android app"
                       maxW="400px"
-                      src={`/images/screens/ios_screen-${colorMode}.png`}
+                      src={`/images/screens/android_screen-${colorMode}.png`}
                     />
                   </Stack>
                 )}

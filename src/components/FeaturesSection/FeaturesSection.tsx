@@ -7,10 +7,12 @@ import { type FC } from 'react';
 import FeatureItem from '@site/src/components/FeatureItem';
 import Section from '@site/src/components/Section';
 
+// constants
+import { DEFAULT_GAP } from '@site/src/constants';
+
 // types
 import type { IDefaultSectionProps } from '@site/src/types';
 import type { IProps as IFeatureItemProps } from '@site/src/components/FeatureItem';
-import { DEFAULT_GAP } from '@site/src/constants';
 
 const FeaturesSection: FC<IDefaultSectionProps> = ({ variant }) => {
   const { colorMode } = useColorMode();
