@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/kibis-is/website/compare/v2.1.0...v2.2.0) (2024-10-16)
+
+
+### Features
+
+* add android screens ([#63](https://github.com/kibis-is/website/issues/63)) ([0bb3137](https://github.com/kibis-is/website/commit/0bb31372305800bdac05b4a39c28d5dfdb0bbde7))
+
 # [2.1.0](https://github.com/kibis-is/website/compare/v2.0.1...v2.1.0) (2024-10-16)
 
 
