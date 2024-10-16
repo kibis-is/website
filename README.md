@@ -13,20 +13,20 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/agoralabs-sh/kibisis-website/releases/latest">
-    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/agoralabs-sh/kibisis-website?&logo=github">
+  <a href="https://github.com/kibis-is/website/releases/latest">
+    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/kibis-is/website?&logo=github">
   </a>
-  <a href="https://github.com/agoralabs-sh/kibisis-website/releases/latest">
-    <img alt="GitHub Release Date - Published At" src="https://img.shields.io/github/release-date/agoralabs-sh/kibisis-website?logo=github">
+  <a href="https://github.com/kibis-is/website/releases/latest">
+    <img alt="GitHub Release Date - Published At" src="https://img.shields.io/github/release-date/kibis-is/website?logo=github">
   </a>
-  <a href="https://github.com/agoralabs-sh/kibisis-website/actions/workflows/deploy.yml">
-    <img alt="GitHub Actions Deploy Workflow Status" src="https://img.shields.io/github/actions/workflow/status/agoralabs-sh/kibisis-website/deploy.yml?label=deploy" />
+  <a href="https://github.com/kibis-is/website/actions/workflows/deploy.yml">
+    <img alt="GitHub Actions Deploy Workflow Status" src="https://img.shields.io/github/actions/workflow/status/kibis-is/website/deploy.yml?label=deploy" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/agoralabs-sh/kibisis-website/blob/main/LICENSE">
-    <img alt="GitHub License" src="https://img.shields.io/github/license/agoralabs-sh/kibisis-website">
+  <a href="https://github.com/kibis-is/website/blob/main/LICENSE">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/kibis-is/website">
   </a>
 </p>
 
