@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/kibis-is/website/compare/v2.0.1...v2.1.0) (2024-10-16)
+
+
+### Features
+
+* update new org references ([#61](https://github.com/kibis-is/website/issues/61)) ([125e366](https://github.com/kibis-is/website/commit/125e366b4a25c8cbb0deb566efe86efc9329755e))
+
 ## [2.0.1](https://github.com/kibis-is/website/compare/v2.0.0...v2.0.1) (2024-10-15)
 
 
