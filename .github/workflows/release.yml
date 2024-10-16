@@ -31,5 +31,5 @@ jobs:
           GIT_COMMITTER_NAME: kibi-bot
           GIT_COMMITTER_EMAIL: builders@kibis.is
           # used to push the release commit and create the tags
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.READ_AND_WRITE_REPOS_TOKEN }}
         run: semantic-release
