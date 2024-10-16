@@ -30,7 +30,7 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'throw',
   onDuplicateRoutes: 'throw',
-  organizationName: 'agoralabs-sh ',
+  organizationName: 'kibis-is',
   plugins: ['docusaurus-plugin-sass'],
   presets: [
     [
@@ -67,7 +67,7 @@ const config: Config = {
       },
     ],
   ],
-  projectName: 'kibisis-website',
+  projectName: 'website',
   staticDirectories: [staticDir],
   tagline: 'Your Lifestyle App',
   themeConfig: {
