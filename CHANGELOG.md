@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/kibis-is/website/compare/v2.2.0...v2.3.0) (2024-10-30)
+
+
+### Features
+
+* use resolution appropiate header images resolution ([#64](https://github.com/kibis-is/website/issues/64)) ([4441373](https://github.com/kibis-is/website/commit/44413733f5318409817ab1a0196058187c4b53b2))
+
 # [2.2.0](https://github.com/kibis-is/website/compare/v2.1.0...v2.2.0) (2024-10-16)
 
 
