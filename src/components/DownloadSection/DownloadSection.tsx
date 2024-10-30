@@ -22,7 +22,11 @@ import StoreBadge from '@site/src/components/StoreBadge';
 import WebDownloadItem from '@site/src/components/WebDownloadItem';
 
 // constants
-import { CHROME_STORE_LINK, DEFAULT_GAP } from '@site/src/constants';
+import {
+  APK_DIRECT_DOWNLOAD_LINK,
+  CHROME_STORE_LINK,
+  DEFAULT_GAP,
+} from '@site/src/constants';
 
 // enums
 import { PlatformEnum } from '@site/src/enums';
@@ -179,8 +183,9 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                     <WrapItem>
                       <StoreBadge
                         airaLabel="Direct download badge"
-                        href=""
+                        href={APK_DIRECT_DOWNLOAD_LINK}
                         src="/images/store_badges/apk_badge.png"
+                        type="beta"
                       />
                     </WrapItem>
                   </Wrap>
