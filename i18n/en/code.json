@@ -412,7 +412,7 @@
     "description": "The heading that appears on the web download section."
   },
   "heading.headerPrefix": {
-    "message": "The Wallet For Your",
+    "message": "A Wallet For Your",
     "description": "The prefix that appears on in the header before the rolling text."
   },
 

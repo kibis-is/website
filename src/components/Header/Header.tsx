@@ -52,7 +52,9 @@ const Header: FC = () => {
       align="center"
       as="header"
       bgColor="whiteAlpha.800"
-      bgImage="/images/header_background.jpg"
+      bgImage={`/images/${
+        desktopAndUp ? 'header_background@2x.jpg' : 'header_background.jpg'
+      }`}
       bgSize="cover"
       h="calc(100vh - var(--ifm-navbar-height))"
       justify="space-between"

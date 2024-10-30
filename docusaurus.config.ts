@@ -69,7 +69,7 @@ const config: Config = {
   ],
   projectName: 'website',
   staticDirectories: [staticDir],
-  tagline: 'Your Lifestyle App',
+  tagline: 'A Wallet For Your Lifestyle',
   themeConfig: {
     image: 'images/social_card.png',
     metadata: [
