@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/kibis-is/website/compare/v2.3.0...v2.4.0) (2024-10-31)
+
+
+### Features
+
+* add apk release ([#65](https://github.com/kibis-is/website/issues/65)) ([f9ae8c2](https://github.com/kibis-is/website/commit/f9ae8c2631f799bf658b496d227f318c6f8df6c1))
+
 # [2.3.0](https://github.com/kibis-is/website/compare/v2.2.0...v2.3.0) (2024-10-30)
 
 
