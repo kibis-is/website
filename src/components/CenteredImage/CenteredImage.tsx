@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import clsx from 'clsx';
+import { type FC } from 'react';
 
 // styles
 import styles from './styles.module.scss';
-import clsx from 'clsx';
 
 // types
 import type { IProps } from './types';

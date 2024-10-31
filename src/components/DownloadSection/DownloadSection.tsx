@@ -2,7 +2,9 @@ import {
   Heading,
   HStack,
   Image,
+  Link,
   Stack,
+  Text,
   VStack,
   Wrap,
   WrapItem,
@@ -34,6 +36,7 @@ import { PlatformEnum } from '@site/src/enums';
 // hooks
 import useDefaultTextColor from '@site/src/hooks/useDefaultTextColor';
 import useDesktopAndUp from '@site/src/hooks/useDesktopAndUp';
+import usePrimaryColor from '@site/src/hooks/usePrimaryColor';
 
 // types
 import type { IDefaultSectionProps } from '@site/src/types';
@@ -46,6 +49,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
   // hooks
   const defaultTextColor = useDefaultTextColor();
   const desktopAndUp = useDesktopAndUp();
+  const primaryColor = usePrimaryColor();
   // states
   const [index, setIndex] = useState<number>(0);
 
@@ -77,6 +81,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
       <PillTabs
         defaultIndex={index}
         tabs={[
+          // web
           {
             content: (
               <HStack justify="space-evenly" spacing={DEFAULT_GAP * 2} w="full">
@@ -135,6 +140,7 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
             ),
             title: 'Web',
           },
+          // android
           {
             content: (
               <HStack justify="space-evenly" spacing={DEFAULT_GAP} w="full">
@@ -189,11 +195,30 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                       />
                     </WrapItem>
                   </Wrap>
+
+                  <Text color={defaultTextColor} textAlign="center" w="full">
+                    {translate(
+                      {
+                        id: 'caption.troubleInstalling',
+                      },
+                      {
+                        link: (
+                          <Link
+                            color={primaryColor}
+                            href="/android/getting-started"
+                          >
+                            {translate({ id: 'caption.here' })}
+                          </Link>
+                        ),
+                      }
+                    )}
+                  </Text>
                 </VStack>
               </HStack>
             ),
             title: 'Android',
           },
+          // ios
           {
             content: (
               <HStack justify="space-evenly" spacing={DEFAULT_GAP - 2} w="full">
