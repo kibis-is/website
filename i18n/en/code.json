@@ -315,11 +315,17 @@
     "message": "Kibisis is more than just a wallet. It is your gateway to a secure and self-custodial lifestyle.",
     "description": "The caption that appears in the hero section."
   },
+  "caption.here": {
+    "message": "here"
+  },
   "caption.imageBy": {
     "message": "Image by"
   },
   "caption.storysetAttribution": {
     "message": "{type} illustrations by Storyset"
+  },
+  "caption.troubleInstalling": {
+    "message": "Trouble installing? See {link} for instructions on how to get started."
   },
 
   "feature.assets.description1": {

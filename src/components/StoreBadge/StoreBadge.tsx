@@ -1,4 +1,5 @@
 import { Box, Image, Link, Tooltip } from '@chakra-ui/react';
+import clsx from 'clsx';
 import type { FC } from 'react';
 
 // styles
@@ -7,7 +8,7 @@ import styles from './styles.module.scss';
 // types
 import type { IProps } from './types';
 
-const StoreBadge: FC<IProps> = ({ airaLabel, href, src }) => {
+const StoreBadge: FC<IProps> = ({ airaLabel, href, src, type }) => {
   // misc
   const image = (
     <Image aria-label={airaLabel} alt={airaLabel} h={20} src={src} />
@@ -19,8 +20,9 @@ const StoreBadge: FC<IProps> = ({ airaLabel, href, src }) => {
         <Box cursor="not-allowed" position="relative">
           {image}
 
-          <div className={styles.ribbon}>
-            <span>{`coming soon`.toUpperCase()}</span>
+          {/*ribbon*/}
+          <div className={styles.ribbon__container}>
+            <span className={styles.ribbon}>{`coming soon`.toUpperCase()}</span>
           </div>
         </Box>
       </Tooltip>
@@ -28,8 +30,21 @@ const StoreBadge: FC<IProps> = ({ airaLabel, href, src }) => {
   }
 
   return (
-    <Link aria-label={airaLabel} href={href} isExternal={true}>
+    <Link
+      aria-label={airaLabel}
+      href={href}
+      isExternal={true}
+      position="relative"
+    >
       {image}
+
+      {type === 'beta' && (
+        <div className={styles.ribbon__container}>
+          <span className={clsx(styles.ribbon, styles['ribbon--blue'])}>
+            {`beta`.toUpperCase()}
+          </span>
+        </div>
+      )}
     </Link>
   );
 };
