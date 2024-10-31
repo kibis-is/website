@@ -1,0 +1,141 @@
+# Getting Started
+
+import TOCInline from '@theme/TOCInline';
+
+<!-- components -->
+import CenteredImage from '@site/src/components/CenteredImage';
+
+<!-- images -->
+import allowFromSourceImage from './images/allow_from_source.png';
+import allowUnknownSourcesImage from './images/allow_unknown_sources-legacy.png';
+import installFromSourceImage from './images/install_from_source.png';
+import installKibisisImage from './images/install_kibisis.png';
+
+<TOCInline
+  maxHeadingLevel={4}
+  toc={toc}
+/>
+
+## Overview
+
+Android is an open source operating system created by Google and, much like Apple's iOS, revolutionized how we interact with devices. However, unlike iOS, with Android being open source, this allowed developers to create their own "flavors" of Android.
+
+Android is a natural choice for Kibisis, as Android, much like Kibisis, is committed to FOSS (Free and Open Source Software).
+
+:::caution
+
+Please be aware that Kibisis Android is currently in beta and so there will most likely be bugs and missing features before we launch a full release. Furthermore, we will often be releasing which will mean there will be breaking changes, this could include irrecoverable accounts/private keys so if you add/create an account please ensure that you back up your seed phrase.
+
+:::
+
+## Play Store
+
+The majority of Android apps are installed via Google's Play Store.
+
+### Installation
+
+1. Go to: .
+
+2.
+
+## F-Droid
+
+F-Droid is an open source alternative app store that allows users to download apps that are more aligned to features that focus on privacy and FOSS.
+
+:::note
+
+We currently do not have an app in the F-Droid store, but we are working hard make it available.
+
+:::
+
+## APK Direct Download
+
+For those that do not use an app store to download apps, and opt to install apps manually, Kibisis offers the option to download and install an APK directly.
+
+:::caution
+
+Direct downloads of the APK is **NOT RECOMMENDED** for most Android users. Please ensure that you verify the APK is signed by the below [signature](#verify-the-apk-optional). Also note that the key used to sign the Google Play Store app is different to the key used to sign the deirect download APK. The Google Play Store signing key is maintained by Google.
+
+:::
+
+By default, Android does not allow you to install an APK from outside the Play Store, and there are a few fairly simple steps involved to get your device set up, depending on your version of Android.
+
+### Installation (Android 8+)
+
+1. From you Android device's browser, download the latest APK from [here](https://github.com/kibis-is/mobile-app/releases/latest/download/kibisis_release.apk).
+
+2. When installing from an app from another app (such as a Chrome browser), you will be asked to allow unknown apps to be installed:
+
+<CenteredImage
+  label="A screenshot on an Android device showing a warning message to allow apps to be installed from source"
+  maxWidth="400px"
+  src={installFromSourceImage}
+/>
+
+3. Pressing the "Settings" button will take you to the app's settings where you can choose to "Allow from this source":
+
+<CenteredImage
+  label="A screenshot on an Android device showing the option to allow apps to be installed from the source (Chrome)"
+  maxWidth="400px"
+  src={allowFromSourceImage}
+/>
+
+4. Toggling the "Allow from this source" will then open a modal that will allow you to install Kibisis:
+
+<CenteredImage
+  label="A screenshot on an Android device showing the option to install Kibisis"
+  maxWidth="400px"
+  src={installKibisisImage}
+/>
+
+:::note
+
+You may be asked to scan the app using Google's Play Protect.
+
+:::
+
+### Installation (Before Android 8+)
+
+1. First, you will need to navigate to **Settings** > **Security** and ensure the "Unknown Sources" option is enabled:
+
+<CenteredImage
+  label="A screenshot on an Android device showing the unknown sources option enabled"
+  maxWidth="400px"
+  src={allowUnknownSourcesImage}
+/>
+
+2. From your Android device's browser, download and install the latest APK from [here](https://github.com/kibis-is/mobile-app/releases/latest/download/kibisis_release.apk).
+
+### Verify The APK (optional)
+
+The direct download APK is signed by our own signing key, and you can verify that the APK was signed with the correct key by using [`apksigner`](https://developer.android.com/tools/apksigner)'s [`verify`](https://developer.android.com/tools/apksigner#options-verify) command.
+
+From your terminal, run this command:
+```shell
+apksigner verify --print-certs kibisis_release.apk
+```
+
+This should output:
+```shell
+Signer #1 certificate DN: CN=Unknown, OU=Unknown, O=Kibisis, L=Unknown, ST=Unknown, C=Unknown
+Signer #1 certificate SHA-256 digest: <hex encoded hash>
+Signer #1 certificate SHA-1 digest: <hex encoded hash>
+Signer #1 certificate MD5 digest: <hex encoded hash>
+```
+
+Make sure the above hashes match the following:
+
+| Type    | Value                                                                                             |
+|:--------|:--------------------------------------------------------------------------------------------------|
+| SHA-1   | `6C:95:E9:ED:0D:C9:9B:02:B4:0E:86:B0:DD:DA:1C:47:0D:7D:EF:73`                                     |
+| SHA-256 | `BB:96:6B:02:D9:45:9A:D5:4D:95:A1:19:F7:DE:C8:D2:94:37:BB:12:7E:E4:58:4F:ED:86:42:45:80:4D:46:EC` |
+
+### Updating The APK
+
+A major drawback for not using an app store is updates will need to be maintained manually.
+
+To update Kibisis, you will simply need to download the latest APK.
+
+### Releases
+
+We maintain a list of releases through our GitHub page. If you would like to install a previous release, or you would like to get your hands on the pre-release versions, check out our [releases](https://github.com/kibis-is/mobile-app/releases) page.
