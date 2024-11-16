@@ -8,6 +8,8 @@ export const EDGE_STORE_LINK =
 export const FIREFOX_ADD_ON_LINK = 'https://addons.mozilla.org/addon/kibisis/';
 export const GITHUB_LINK = 'https://github.com/kibis-is/web-extension';
 export const KIBISIS_LINK = 'https://kibis.is';
+export const PLAY_STORE_LINK =
+  'https://play.google.com/store/apps/details?id=is.kibis.kibisis';
 export const REPORT_A_BUG_LINK =
   'https://github.com/kibis-is/web-extension/issues/new?assignees=kieranroneill&labels=%F0%9F%90%9B+bug&projects=&template=bug_report_template.yml&title=%5BBug%5D%3A+';
 export const SUGGEST_A_FEATURE_LINK =
