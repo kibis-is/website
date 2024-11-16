@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/kibis-is/website/compare/v2.4.0...v2.5.0) (2024-11-16)
+
+
+### Features
+
+* add play store link ([#66](https://github.com/kibis-is/website/issues/66)) ([2b0bc9d](https://github.com/kibis-is/website/commit/2b0bc9d36fd2b3101543fb8b63321978b173c4f1))
+
 # [2.4.0](https://github.com/kibis-is/website/compare/v2.3.0...v2.4.0) (2024-10-31)
 
 
