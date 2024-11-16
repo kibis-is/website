@@ -28,6 +28,7 @@ import {
   APK_DIRECT_DOWNLOAD_LINK,
   CHROME_STORE_LINK,
   DEFAULT_GAP,
+  PLAY_STORE_LINK,
 } from '@site/src/constants';
 
 // enums
@@ -171,8 +172,9 @@ const DownloadSection: FC<IDefaultSectionProps> = ({ variant }) => {
                     <WrapItem>
                       <StoreBadge
                         airaLabel="Play Store badge"
-                        href=""
+                        href={PLAY_STORE_LINK}
                         src="/images/store_badges/play_store_badge.png"
+                        type="beta"
                       />
                     </WrapItem>
 
