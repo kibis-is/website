@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/kibis-is/website/compare/v2.5.0...v2.6.0) (2024-11-18)
+
+
+### Features
+
+* add new blog post introducing the kibisis token ([#67](https://github.com/kibis-is/website/issues/67)) ([7bef375](https://github.com/kibis-is/website/commit/7bef37501b05f58b61dd5cd4e8fe50d89c45b776))
+
 # [2.5.0](https://github.com/kibis-is/website/compare/v2.4.0...v2.5.0) (2024-11-16)
 
 
