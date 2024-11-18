@@ -1,3 +1,10 @@
+## [2.6.1](https://github.com/kibis-is/website/compare/v2.6.0...v2.6.1) (2024-11-18)
+
+
+### Bug Fixes
+
+* update the kibisis token blog post title ([#68](https://github.com/kibis-is/website/issues/68)) ([f097bc6](https://github.com/kibis-is/website/commit/f097bc628c8b59b413c9f1c7fd6eb5318bbe1ced))
+
 # [2.6.0](https://github.com/kibis-is/website/compare/v2.5.0...v2.6.0) (2024-11-18)
 
 
